@@ -35,16 +35,19 @@
             this.bunifuImageButton4 = new ns1.BunifuImageButton();
             this.bunifuImageButton3 = new ns1.BunifuImageButton();
             this.bunifuImageButton2 = new ns1.BunifuImageButton();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelText = new System.Windows.Forms.Panel();
             this.bunifuImageButton1 = new ns1.BunifuImageButton();
             this.panelTop = new System.Windows.Forms.Panel();
             this.panelBottom = new System.Windows.Forms.Panel();
             this.panelBack = new System.Windows.Forms.Panel();
+            this.bunifuDragControlMenu = new ns1.BunifuDragControl(this.components);
+            this.bunifuDragControlText = new ns1.BunifuDragControl(this.components);
+            this.bunifuDragControlTop = new ns1.BunifuDragControl(this.components);
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panelText.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +62,7 @@
             this.panelMenu.Controls.Add(this.bunifuImageButton4);
             this.panelMenu.Controls.Add(this.bunifuImageButton3);
             this.panelMenu.Controls.Add(this.bunifuImageButton2);
-            this.panelMenu.Controls.Add(this.panel1);
+            this.panelMenu.Controls.Add(this.panelText);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
@@ -108,24 +111,24 @@
             this.bunifuImageButton2.Zoom = 10;
             this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
             // 
-            // panel1
+            // panelText
             // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.bunifuImageButton1);
-            this.panel1.Location = new System.Drawing.Point(12, 28);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(182, 126);
-            this.panel1.TabIndex = 0;
+            this.panelText.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelText.BackgroundImage")));
+            this.panelText.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelText.Controls.Add(this.bunifuImageButton1);
+            this.panelText.Location = new System.Drawing.Point(12, 31);
+            this.panelText.Name = "panelText";
+            this.panelText.Size = new System.Drawing.Size(182, 123);
+            this.panelText.TabIndex = 0;
             // 
             // bunifuImageButton1
             // 
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Black;
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(12, 55);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(13, 53);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(25, 19);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(20, 20);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 0;
             this.bunifuImageButton1.TabStop = false;
@@ -160,6 +163,27 @@
             this.panelBack.Size = new System.Drawing.Size(684, 346);
             this.panelBack.TabIndex = 3;
             // 
+            // bunifuDragControlMenu
+            // 
+            this.bunifuDragControlMenu.Fixed = true;
+            this.bunifuDragControlMenu.Horizontal = true;
+            this.bunifuDragControlMenu.TargetControl = this.panelMenu;
+            this.bunifuDragControlMenu.Vertical = true;
+            // 
+            // bunifuDragControlText
+            // 
+            this.bunifuDragControlText.Fixed = true;
+            this.bunifuDragControlText.Horizontal = true;
+            this.bunifuDragControlText.TargetControl = this.panelText;
+            this.bunifuDragControlText.Vertical = true;
+            // 
+            // bunifuDragControlTop
+            // 
+            this.bunifuDragControlTop.Fixed = true;
+            this.bunifuDragControlTop.Horizontal = true;
+            this.bunifuDragControlTop.TargetControl = this.panelTop;
+            this.bunifuDragControlTop.Vertical = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,7 +200,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.panelText.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
 
@@ -192,8 +216,11 @@
         private ns1.BunifuImageButton bunifuImageButton4;
         private ns1.BunifuImageButton bunifuImageButton3;
         private ns1.BunifuImageButton bunifuImageButton2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelText;
         private ns1.BunifuImageButton bunifuImageButton1;
+        private ns1.BunifuDragControl bunifuDragControlMenu;
+        private ns1.BunifuDragControl bunifuDragControlText;
+        private ns1.BunifuDragControl bunifuDragControlTop;
     }
 }
 
