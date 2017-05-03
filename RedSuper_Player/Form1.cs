@@ -38,5 +38,10 @@ namespace RedSuper_Player
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void Form_Resize(object sender, EventArgs e)
+        {
+            panelTop.Width = this.Width;
+        }
     }
 }
