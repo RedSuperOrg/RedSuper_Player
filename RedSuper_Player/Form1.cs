@@ -43,5 +43,10 @@ namespace RedSuper_Player
         {
             panelTop.Width = this.Width;
         }
+
+        private void panelTop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
