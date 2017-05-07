@@ -446,7 +446,7 @@
             this.bunifuThinButtonPlayAlbum.ActiveFillColor = System.Drawing.Color.White;
             this.bunifuThinButtonPlayAlbum.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
             this.bunifuThinButtonPlayAlbum.ActiveLineColor = System.Drawing.Color.White;
-            this.bunifuThinButtonPlayAlbum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
+            this.bunifuThinButtonPlayAlbum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
             this.bunifuThinButtonPlayAlbum.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButtonPlayAlbum.BackgroundImage")));
             this.bunifuThinButtonPlayAlbum.ButtonText = "Play Album";
             this.bunifuThinButtonPlayAlbum.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -471,7 +471,7 @@
             this.bunifuThinButtonPlaySong.ActiveFillColor = System.Drawing.Color.White;
             this.bunifuThinButtonPlaySong.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
             this.bunifuThinButtonPlaySong.ActiveLineColor = System.Drawing.Color.White;
-            this.bunifuThinButtonPlaySong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
+            this.bunifuThinButtonPlaySong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
             this.bunifuThinButtonPlaySong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButtonPlaySong.BackgroundImage")));
             this.bunifuThinButtonPlaySong.ButtonText = "Play Song";
             this.bunifuThinButtonPlaySong.Cursor = System.Windows.Forms.Cursors.Hand;
