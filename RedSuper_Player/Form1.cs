@@ -48,11 +48,5 @@ namespace RedSuper_Player
         {
 
         }
-
-        private void bunifuFlatButtonBrowse_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog myOpenFileDialog1 = new OpenFileDialog();
-            myOpenFileDialog1.ShowDialog();
-        }
     }
 }
