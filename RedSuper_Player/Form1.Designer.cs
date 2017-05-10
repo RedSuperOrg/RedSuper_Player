@@ -47,15 +47,15 @@
             this.bunifuCustomTextboxSearch = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.bunifuImageButtonSearch = new ns1.BunifuImageButton();
             this.panelTop = new System.Windows.Forms.Panel();
-            this.bunifuThinButton22 = new ns1.BunifuThinButton2();
             this.bunifuCustomLabelVersionText = new ns1.BunifuCustomLabel();
-            this.bunifuThinButton21 = new ns1.BunifuThinButton2();
             this.bunifuCustomLabelTopText = new ns1.BunifuCustomLabel();
             this.panelBottom = new System.Windows.Forms.Panel();
             this.panelBack = new System.Windows.Forms.Panel();
             this.bunifuDragControlMenu = new ns1.BunifuDragControl(this.components);
             this.bunifuDragControlText = new ns1.BunifuDragControl(this.components);
             this.bunifuDragControlTop = new ns1.BunifuDragControl(this.components);
+            this.bunifuThinButton21 = new ns1.BunifuThinButton2();
+            this.bunifuThinButton22 = new ns1.BunifuThinButton2();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
@@ -201,9 +201,9 @@
             this.bunifuCustomLabelLibrary.ForeColor = System.Drawing.Color.White;
             this.bunifuCustomLabelLibrary.Location = new System.Drawing.Point(16, 322);
             this.bunifuCustomLabelLibrary.Name = "bunifuCustomLabelLibrary";
-            this.bunifuCustomLabelLibrary.Size = new System.Drawing.Size(72, 16);
+            this.bunifuCustomLabelLibrary.Size = new System.Drawing.Size(56, 16);
             this.bunifuCustomLabelLibrary.TabIndex = 8;
-            this.bunifuCustomLabelLibrary.Text = "LIBRARY";
+            this.bunifuCustomLabelLibrary.Text = "Library";
             // 
             // bunifuFlatButtonYoutube
             // 
@@ -415,31 +415,6 @@
             this.panelTop.TabIndex = 1;
             this.panelTop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTop_Paint);
             // 
-            // bunifuThinButton22
-            // 
-            this.bunifuThinButton22.ActiveBorderThickness = 1;
-            this.bunifuThinButton22.ActiveCornerRadius = 6;
-            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
-            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
-            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
-            this.bunifuThinButton22.ButtonText = "Play Album";
-            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton22.ForeColor = System.Drawing.Color.White;
-            this.bunifuThinButton22.IdleBorderThickness = 1;
-            this.bunifuThinButton22.IdleCornerRadius = 6;
-            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
-            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(152, 103);
-            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(126, 51);
-            this.bunifuThinButton22.TabIndex = 2;
-            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // bunifuCustomLabelVersionText
             // 
             this.bunifuCustomLabelVersionText.AutoSize = true;
@@ -451,31 +426,6 @@
             this.bunifuCustomLabelVersionText.Size = new System.Drawing.Size(68, 16);
             this.bunifuCustomLabelVersionText.TabIndex = 3;
             this.bunifuCustomLabelVersionText.Text = "v0.5 (WIP)";
-            // 
-            // bunifuThinButton21
-            // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 6;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Play Song";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 6;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(15, 103);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(126, 51);
-            this.bunifuThinButton21.TabIndex = 1;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuCustomLabelTopText
             // 
@@ -527,6 +477,56 @@
             this.bunifuDragControlTop.Horizontal = true;
             this.bunifuDragControlTop.TargetControl = this.panelTop;
             this.bunifuDragControlTop.Vertical = true;
+            // 
+            // bunifuThinButton21
+            // 
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 6;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "Play Song";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 6;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.Location = new System.Drawing.Point(15, 103);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(126, 51);
+            this.bunifuThinButton21.TabIndex = 1;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuThinButton22
+            // 
+            this.bunifuThinButton22.ActiveBorderThickness = 1;
+            this.bunifuThinButton22.ActiveCornerRadius = 6;
+            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.White;
+            this.bunifuThinButton22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(14)))));
+            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
+            this.bunifuThinButton22.ButtonText = "Play Album";
+            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton22.ForeColor = System.Drawing.Color.White;
+            this.bunifuThinButton22.IdleBorderThickness = 1;
+            this.bunifuThinButton22.IdleCornerRadius = 6;
+            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.White;
+            this.bunifuThinButton22.Location = new System.Drawing.Point(152, 103);
+            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton22.Name = "bunifuThinButton22";
+            this.bunifuThinButton22.Size = new System.Drawing.Size(126, 51);
+            this.bunifuThinButton22.TabIndex = 2;
+            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
