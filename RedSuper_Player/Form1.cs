@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RedSuper_Player.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -107,12 +108,31 @@ namespace RedSuper_Player
         {
             if (panelMenu.Width == 55)
             {
+                panelMenu.Visible = false;
                 panelMenu.Width = 200;
                 bunifuTransitionSlidingMenu.ShowSync(panelMenu);
+                bunifuImageButtonSlideMenu.Image = System.Drawing.Image.FromFile(@"C:\Users\Lucas Vicente\Desktop\RedSuper Project\Assests\Icons\Expand Arrow-96.png");
+                bunifuFlatButtonBrowse.OnHovercolor = Color.Transparent;
+                bunifuFlatButtonVideo.OnHovercolor = Color.Transparent;
+                bunifuFlatButtonYoutube.OnHovercolor = Color.Transparent;
+                bunifuFlatButtonMySongs.OnHovercolor = Color.Transparent;
+                bunifuFlatButtonPlaylists.OnHovercolor = Color.Transparent;
+                bunifuTransitionSlidingMenu1.ShowSync(panelText);
+                bunifuTransitionSlidingMenu.HideSync(pictureBoxLogo);
             }
             else
             {
+                bunifuTransitionSlidingMenu1.HideSync(panelText);
+                panelMenu.Visible = false;
                 panelMenu.Width = 55;
+                bunifuImageButtonSlideMenu.Image = System.Drawing.Image.FromFile(@"C:\Users\Lucas Vicente\Desktop\RedSuper Project\Assests\Icons\CollapseArrow.png");
+                bunifuFlatButtonBrowse.OnHovercolor = Color.DimGray;
+                bunifuFlatButtonVideo.OnHovercolor = Color.DimGray;
+                bunifuFlatButtonYoutube.OnHovercolor = Color.DimGray;
+                bunifuFlatButtonMySongs.OnHovercolor = Color.DimGray;
+                bunifuFlatButtonPlaylists.OnHovercolor = Color.DimGray;
+                bunifuTransitionSlidingMenu.ShowSync(panelMenu);
+                bunifuTransitionSlidingMenu.ShowSync(pictureBoxLogo);
             }
         }
 
