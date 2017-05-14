@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RedSuper_Player.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +13,9 @@ namespace RedSuper_Player
 {
     public partial class Form1 : Form
     {
-        private IList<string> musicList = new BindingList<string>();
-        private WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
-
         public Form1()
         {
             InitializeComponent();
-            listBoxMusic.DataSource = musicList;
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -94,7 +91,6 @@ namespace RedSuper_Player
         private void bunifuFlatButtonBrowse_Click_1(object sender, EventArgs e)
         {
             // ASSIGN THE CLASS
-            Console.WriteLine("I am here");
             OpenFileDialog myOpenFileDialog = new OpenFileDialog();
 
             // CORRECTS THE INITIAL DIRECTORY, FILTERS, ENABLES MULTISELECT
@@ -103,63 +99,41 @@ namespace RedSuper_Player
             myOpenFileDialog.FilterIndex = 1;
             myOpenFileDialog.RestoreDirectory = false;
             myOpenFileDialog.Multiselect = true;
+
             // POPS THE FILE DIALOG
             myOpenFileDialog.ShowDialog();
-
-            string[] songs = myOpenFileDialog.FileNames;
-            foreach(string song in songs)
-            {
-                if (!musicList.Contains(song))
-                {
-                    musicList.Add(song);
-                    listBoxMusic.Refresh();
-                    //listBoxMusic.Items.Add(song);
-                    //listBoxMusic.DataSource = musicList;
-                }
-            }
         }
 
         private void bunifuImageButtonSlideMenu_Click(object sender, EventArgs e)
         {
             if (panelMenu.Width == 55)
             {
+                panelMenu.Visible = false;
                 panelMenu.Width = 200;
                 bunifuTransitionSlidingMenu.ShowSync(panelMenu);
+                bunifuImageButtonSlideMenu.Image = System.Drawing.Image.FromFile(@"C:\Users\Lucas Vicente\Desktop\RedSuper Project\Assests\Icons\Expand Arrow-96.png");
+                bunifuFlatButtonBrowse.OnHovercolor = Color.Transparent;
+                bunifuFlatButtonVideo.OnHovercolor = Color.Transparent;
+                bunifuFlatButtonYoutube.OnHovercolor = Color.Transparent;
+                bunifuFlatButtonMySongs.OnHovercolor = Color.Transparent;
+                bunifuFlatButtonPlaylists.OnHovercolor = Color.Transparent;
+                bunifuTransitionSlidingMenu1.ShowSync(panelText);
+                bunifuTransitionSlidingMenu.HideSync(pictureBoxLogo);
             }
             else
             {
+                bunifuTransitionSlidingMenu1.HideSync(panelText);
+                panelMenu.Visible = false;
                 panelMenu.Width = 55;
+                bunifuImageButtonSlideMenu.Image = System.Drawing.Image.FromFile(@"C:\Users\Lucas Vicente\Desktop\RedSuper Project\Assests\Icons\CollapseArrow.png");
+                bunifuFlatButtonBrowse.OnHovercolor = Color.DimGray;
+                bunifuFlatButtonVideo.OnHovercolor = Color.DimGray;
+                bunifuFlatButtonYoutube.OnHovercolor = Color.DimGray;
+                bunifuFlatButtonMySongs.OnHovercolor = Color.DimGray;
+                bunifuFlatButtonPlaylists.OnHovercolor = Color.DimGray;
+                bunifuTransitionSlidingMenu.ShowSync(panelMenu);
+                bunifuTransitionSlidingMenu.ShowSync(pictureBoxLogo);
             }
-        }
-
-        private void bunifuFlatButtonVideo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBoxMusic_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuImageButtonPlay_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine(wplayer.status);
-            string songPath = listBoxMusic.SelectedItem.ToString();
-            if(songPath != null && !songPath.Equals(""))
-            {
-                wplayer.URL = songPath;
-                wplayer.controls.play();
-                string a =  wplayer.status;
-                Console.WriteLine(a);
-
-                //bunifuImageButtonPlay.Image = 
-            }
-        }
-
-        private void bunifuSliderVolume_ValueChanged(object sender, EventArgs e)
-        {
-            wplayer.settings.volume = bunifuSliderVolume.Value;
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
