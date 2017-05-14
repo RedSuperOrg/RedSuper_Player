@@ -103,6 +103,19 @@ namespace RedSuper_Player
             myOpenFileDialog.ShowDialog();
         }
 
+        private void bunifuImageButtonSlideMenu_Click(object sender, EventArgs e)
+        {
+            if (panelMenu.Width == 55)
+            {
+                panelMenu.Width = 200;
+                bunifuTransitionSlidingMenu.ShowSync(panelMenu);
+            }
+            else
+            {
+                panelMenu.Width = 55;
+            }
+        }
+
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     }
 }
