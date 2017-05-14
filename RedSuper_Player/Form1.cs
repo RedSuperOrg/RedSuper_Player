@@ -111,7 +111,7 @@ namespace RedSuper_Player
                 panelMenu.Visible = false;
                 panelMenu.Width = 200;
                 bunifuTransitionSlidingMenu.ShowSync(panelMenu);
-                bunifuImageButtonSlideMenu.Image = System.Drawing.Image.FromFile(@"C:\Users\Lucas Vicente\Desktop\RedSuper Project\Assests\Icons\Expand Arrow-96.png");
+                bunifuImageButtonSlideMenu.Image = Resources.Expand_Arrow_96;
                 bunifuFlatButtonBrowse.OnHovercolor = Color.Transparent;
                 bunifuFlatButtonVideo.OnHovercolor = Color.Transparent;
                 bunifuFlatButtonYoutube.OnHovercolor = Color.Transparent;
@@ -125,7 +125,7 @@ namespace RedSuper_Player
                 bunifuTransitionSlidingMenu1.HideSync(panelText);
                 panelMenu.Visible = false;
                 panelMenu.Width = 55;
-                bunifuImageButtonSlideMenu.Image = System.Drawing.Image.FromFile(@"C:\Users\Lucas Vicente\Desktop\RedSuper Project\Assests\Icons\CollapseArrow.png");
+                bunifuImageButtonSlideMenu.Image = Resources.CollapseArrow;
                 bunifuFlatButtonBrowse.OnHovercolor = Color.DimGray;
                 bunifuFlatButtonVideo.OnHovercolor = Color.DimGray;
                 bunifuFlatButtonYoutube.OnHovercolor = Color.DimGray;
