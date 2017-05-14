@@ -63,6 +63,26 @@ namespace RedSuper_Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Circled_Pause_100 {
+            get {
+                object obj = ResourceManager.GetObject("Circled Pause-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Circled_Play_100__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Circled Play-100 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CollapseArrow {
             get {
                 object obj = ResourceManager.GetObject("CollapseArrow", resourceCulture);

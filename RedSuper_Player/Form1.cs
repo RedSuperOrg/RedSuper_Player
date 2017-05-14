@@ -18,6 +18,10 @@ namespace RedSuper_Player
             InitializeComponent();
         }
 
+        private NAudio.Wave.BlockAlignReductionStream stream = null;
+
+        private NAudio.Wave.DirectSoundOut output = null;
+
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////// MISTAKES WERE MADE //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -102,8 +106,38 @@ namespace RedSuper_Player
 
             // POPS THE FILE DIALOG
             myOpenFileDialog.ShowDialog();
+
+            if (myOpenFileDialog.ShowDialog() != DialogResult.OK) return;
+
+            DisposeWave();
+
+            if (myOpenFileDialog.FileName.EndsWith(".mp3"))
+            {
+                NAudio.Wave.WaveStream pcm = NAudio.Wave.WaveFormatConversionStream.CreatePcmStream(new NAudio.Wave.Mp3FileReader(myOpenFileDialog.FileName));
+                stream = new NAudio.Wave.BlockAlignReductionStream(pcm);
+            }
+            else if (myOpenFileDialog.FileName.EndsWith(".wav"))
+            {
+                NAudio.Wave.WaveStream pcm = new NAudio.Wave.WaveChannel32(new NAudio.Wave.WaveFileReader(myOpenFileDialog.FileName));
+                stream = new NAudio.Wave.BlockAlignReductionStream(pcm);
+            }
+            else throw new InvalidOperationException("Not a correct audio file type.");
+
+            output = new NAudio.Wave.DirectSoundOut();
+            output.Init(stream);
+            output.Play();
+
+            bunifuImageButtonPlay.Enabled = true;
+            bunifuImageButtonPlay.Image = Resources.Circled_Pause_100;
         }
 
+        /// <summary>
+        /// Changes colors to default or new
+        /// Slides the Menu in or out
+        /// Slides the logo in or out
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bunifuImageButtonSlideMenu_Click(object sender, EventArgs e)
         {
             if (panelMenu.Width == 55)
@@ -134,6 +168,46 @@ namespace RedSuper_Player
                 bunifuTransitionSlidingMenu.ShowSync(panelMenu);
                 bunifuTransitionSlidingMenu.ShowSync(pictureBoxLogo);
             }
+        }
+
+        private void DisposeWave()
+        {
+            if (output != null)
+            {
+                if (output.PlaybackState == NAudio.Wave.PlaybackState.Playing) output.Stop();
+                output.Dispose();
+                output = null;
+            }
+            if (stream != null)
+            {
+                stream.Dispose();
+                stream = null;
+            }
+        }
+
+        private void bunifuImageButtonPlay_Click(object sender, EventArgs e)
+        {
+            if (output != null)
+            {
+                if (output.PlaybackState == NAudio.Wave.PlaybackState.Playing)
+                {
+                    output.Pause();
+                    bunifuImageButtonPlay.Image = Resources.Circled_Play_100__1_;
+                }
+                else
+                {
+                    if (output.PlaybackState == NAudio.Wave.PlaybackState.Paused)
+                    {
+                        output.Play();
+                        bunifuImageButtonPlay.Image = Resources.Circled_Pause_100;
+                    }
+                }
+            }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DisposeWave();
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
