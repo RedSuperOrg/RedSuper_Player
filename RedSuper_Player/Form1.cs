@@ -18,9 +18,13 @@ namespace RedSuper_Player
             InitializeComponent();
         }
 
+        private IList<string> musicList = new BindingList<string>();
+
         private NAudio.Wave.BlockAlignReductionStream stream = null;
 
         private NAudio.Wave.DirectSoundOut output = null;
+
+
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////// MISTAKES WERE MADE //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -123,6 +127,16 @@ namespace RedSuper_Player
             }
             else throw new InvalidOperationException("Not a correct audio file type.");
 
+            string[] songs = myOpenFileDialog.FileNames;
+            foreach (string song in songs)
+            {
+                if (!musicList.Contains(song))
+                {
+                    musicList.Add(song);
+                    listBoxMusic.Refresh();
+                }
+            }
+
             output = new NAudio.Wave.DirectSoundOut();
             output.Init(stream);
             output.Play();
@@ -208,6 +222,12 @@ namespace RedSuper_Player
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             DisposeWave();
+        }
+
+        private void bunifuFlatButtonVideo_Click(object sender, EventArgs e)
+        {
+            Form2 video = new Form2(this);
+            video.Show();
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
