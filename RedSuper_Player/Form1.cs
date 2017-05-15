@@ -16,9 +16,12 @@ namespace RedSuper_Player
         public Form1()
         {
             InitializeComponent();
+            listBoxMusic.DataSource = musicList;
         }
 
         private IList<string> musicList = new BindingList<string>();
+
+        private bool playing = false;
 
         private NAudio.Wave.BlockAlignReductionStream stream = null;
 
@@ -109,23 +112,7 @@ namespace RedSuper_Player
             myOpenFileDialog.Multiselect = true;
 
             // POPS THE FILE DIALOG
-            myOpenFileDialog.ShowDialog();
-
             if (myOpenFileDialog.ShowDialog() != DialogResult.OK) return;
-
-            DisposeWave();
-
-            if (myOpenFileDialog.FileName.EndsWith(".mp3"))
-            {
-                NAudio.Wave.WaveStream pcm = NAudio.Wave.WaveFormatConversionStream.CreatePcmStream(new NAudio.Wave.Mp3FileReader(myOpenFileDialog.FileName));
-                stream = new NAudio.Wave.BlockAlignReductionStream(pcm);
-            }
-            else if (myOpenFileDialog.FileName.EndsWith(".wav"))
-            {
-                NAudio.Wave.WaveStream pcm = new NAudio.Wave.WaveChannel32(new NAudio.Wave.WaveFileReader(myOpenFileDialog.FileName));
-                stream = new NAudio.Wave.BlockAlignReductionStream(pcm);
-            }
-            else throw new InvalidOperationException("Not a correct audio file type.");
 
             string[] songs = myOpenFileDialog.FileNames;
             foreach (string song in songs)
@@ -136,13 +123,9 @@ namespace RedSuper_Player
                     listBoxMusic.Refresh();
                 }
             }
+            listBoxMusic.ClearSelected();
 
-            output = new NAudio.Wave.DirectSoundOut();
-            output.Init(stream);
-            output.Play();
 
-            bunifuImageButtonPlay.Enabled = true;
-            bunifuImageButtonPlay.Image = Resources.Circled_Pause_100;
         }
 
         /// <summary>
@@ -198,14 +181,16 @@ namespace RedSuper_Player
                 stream = null;
             }
         }
-
+        
         private void bunifuImageButtonPlay_Click(object sender, EventArgs e)
         {
+
             if (output != null)
             {
                 if (output.PlaybackState == NAudio.Wave.PlaybackState.Playing)
                 {
                     output.Pause();
+                    playing = false;
                     bunifuImageButtonPlay.Image = Resources.Circled_Play_100__1_;
                 }
                 else
@@ -216,7 +201,7 @@ namespace RedSuper_Player
                         bunifuImageButtonPlay.Image = Resources.Circled_Pause_100;
                     }
                 }
-            }
+            } 
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -228,6 +213,47 @@ namespace RedSuper_Player
         {
             Form2 video = new Form2(this);
             video.Show();
+        }
+
+        private void listBoxMusic_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DisposeWave();
+
+            var selected = listBoxMusic.SelectedItem;
+            string song = null;
+            if (selected != null)
+            {
+                song = selected.ToString();
+
+            }
+            if (song != null && !song.Equals(""))
+            {
+                if (song.EndsWith(".mp3"))
+                {
+                    NAudio.Wave.WaveStream pcm = NAudio.Wave.WaveFormatConversionStream.CreatePcmStream(new NAudio.Wave.Mp3FileReader(song));
+                    stream = new NAudio.Wave.BlockAlignReductionStream(pcm);
+                }
+                else if (song.EndsWith(".wav"))
+                {
+                    NAudio.Wave.WaveStream pcm = new NAudio.Wave.WaveChannel32(new NAudio.Wave.WaveFileReader(song));
+                    stream = new NAudio.Wave.BlockAlignReductionStream(pcm);
+                }
+                else throw new InvalidOperationException("Not a correct audio file type.");
+
+
+                output = new NAudio.Wave.DirectSoundOut();
+                output.Init(stream);
+                output.Play();
+
+                bunifuImageButtonPlay.Enabled = true;
+                bunifuImageButtonPlay.Image = Resources.Circled_Pause_100;
+            }
+        }
+
+        private void bunifuSliderVolume_ValueChanged(object sender, EventArgs e)
+        {
+            float volume =  bunifuSliderVolume.Value;
+            output.Volume = volume;
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
