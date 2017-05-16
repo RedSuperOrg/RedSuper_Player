@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NAudio;
+using TagLib;
+using System.IO;
 
 namespace RedSuper_Player
 {
@@ -180,6 +183,7 @@ namespace RedSuper_Player
                 stream.Dispose();
                 stream = null;
             }
+            timerAudio.Enabled = false;
         }
         
         private void bunifuImageButtonPlay_Click(object sender, EventArgs e)
@@ -198,9 +202,10 @@ namespace RedSuper_Player
                     if (output.PlaybackState == NAudio.Wave.PlaybackState.Paused)
                     {
                         output.Play();
-                        bunifuImageButtonPlay.Image = Resources.Circled_Pause_100;
+                        bunifuImageButtonPlay.Image = Resources.Circled_Pause_Filled_100;
                     }
                 }
+                timerAudio.Enabled = true;
             } 
         }
 
@@ -224,7 +229,6 @@ namespace RedSuper_Player
             if (selected != null)
             {
                 song = selected.ToString();
-
             }
             if (song != null && !song.Equals(""))
             {
@@ -244,9 +248,40 @@ namespace RedSuper_Player
                 output = new NAudio.Wave.DirectSoundOut();
                 output.Init(stream);
                 output.Play();
+                timerAudio.Enabled = true;
+
+                TagLib.File tagFile = TagLib.File.Create(song);
+                string artist = tagFile.Tag.FirstAlbumArtist;
+                string album = tagFile.Tag.Album;
+                string title = tagFile.Tag.Title;
+
+                bunifuCustomLabelArtistName.Text = artist;
+                bunifuCustomLabelArtistExtraInfo.Text = album;
+                //Protection
+                if (bunifuCustomLabelArtistName.Text.Length < 1)
+                {
+                    bunifuCustomLabelArtistName.Text = "Artist Name";
+                }
+
+                if (bunifuCustomLabelArtistExtraInfo.Text.Length < 1)
+                {
+                    bunifuCustomLabelArtistExtraInfo.Text = "Album";
+                }
+
+                var file = TagLib.File.Create(song);
+                //Protection
+                if (file.Tag.Pictures.Length >= 1)
+                {
+                    var bin = (byte[])(file.Tag.Pictures[0].Data.Data);
+                    pictureBoxCoverSlider.Image = Image.FromStream(new MemoryStream(bin)).GetThumbnailImage(100, 100, null, IntPtr.Zero);
+                }
+                else
+                {
+                    pictureBoxCoverSlider.Image = Resources.Music_Record_Filled_100;
+                }
 
                 bunifuImageButtonPlay.Enabled = true;
-                bunifuImageButtonPlay.Image = Resources.Circled_Pause_100;
+                bunifuImageButtonPlay.Image = Resources.Circled_Pause_Filled_100;
             }
         }
 
@@ -254,6 +289,35 @@ namespace RedSuper_Player
         {
             float volume =  bunifuSliderVolume.Value;
             output.Volume = volume;
+        }
+
+        private void bunifuImageButtonStart_Click(object sender, EventArgs e)
+        {
+            if (output != null)
+            {
+                if (stream.Position != 0)
+                {  
+                    output.Stop();
+                    stream.Position = 0;
+                }
+            }
+        }
+
+        private void tmrAudio_Tick(object sender, EventArgs e)
+        {
+            string duration = stream.TotalTime.ToString("mm\\:ss");
+            bunifuCustomLabelEndTimer.Text = duration;
+            bunifuSliderMain.MaximumValue = (int)stream.TotalTime.TotalSeconds;
+
+            string curTime = stream.CurrentTime.ToString("mm\\:ss");
+            bunifuCustomLabelStartTimer.Text = curTime;
+            bunifuSliderMain.Value = (int)stream.CurrentTime.TotalSeconds; 
+        }
+
+        private void bunifuSliderMain_Scroll(object sender, ScrollEventArgs e)
+        {
+            TimeSpan newPos = new TimeSpan(bunifuSliderMain.Value * 10000000); 
+            stream.CurrentTime = newPos;
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

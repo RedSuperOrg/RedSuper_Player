@@ -73,6 +73,16 @@ namespace RedSuper_Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Circled_Pause_Filled_100 {
+            get {
+                object obj = ResourceManager.GetObject("Circled Pause Filled-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Circled_Play_100__1_ {
             get {
                 object obj = ResourceManager.GetObject("Circled Play-100 (1)", resourceCulture);
@@ -96,6 +106,16 @@ namespace RedSuper_Player.Properties {
         internal static System.Drawing.Bitmap Expand_Arrow_96 {
             get {
                 object obj = ResourceManager.GetObject("Expand Arrow-96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Music_Record_Filled_100 {
+            get {
+                object obj = ResourceManager.GetObject("Music Record Filled-100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
