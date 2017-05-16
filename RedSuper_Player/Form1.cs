@@ -26,6 +26,8 @@ namespace RedSuper_Player
 
         private bool playing = false;
 
+        private WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+
         private NAudio.Wave.BlockAlignReductionStream stream = null;
 
         private NAudio.Wave.DirectSoundOut output = null;
@@ -287,8 +289,7 @@ namespace RedSuper_Player
 
         private void bunifuSliderVolume_ValueChanged(object sender, EventArgs e)
         {
-            float volume =  bunifuSliderVolume.Value;
-            output.Volume = volume;
+            wplayer.settings.volume = bunifuSliderVolume.Value;
         }
 
         private void bunifuImageButtonStart_Click(object sender, EventArgs e)
@@ -318,6 +319,16 @@ namespace RedSuper_Player
         {
             TimeSpan newPos = new TimeSpan(bunifuSliderMain.Value * 10000000); 
             stream.CurrentTime = newPos;
+        }
+
+        private void bunifuImageButtonMute_Click(object sender, EventArgs e)
+        {
+            double sound = bunifuSliderVolume.Value;
+            var imageSound = bunifuImageButtonMute.Image;
+
+            imageSound = Resources.Muted_;
+            bunifuSliderVolume.Value = 0;
+
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
