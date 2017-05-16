@@ -20,15 +20,20 @@ namespace RedSuper_Player
         {
             InitializeComponent();
             listBoxMusic.DataSource = musicList;
+            wave = new NAudio.Wave.WaveOut();
+            wave.Volume = 1.0f;
         }
 
         private IList<string> musicList = new BindingList<string>();
 
-        private bool playing = false;
-
         private NAudio.Wave.BlockAlignReductionStream stream = null;
 
         private NAudio.Wave.DirectSoundOut output = null;
+
+        private NAudio.Wave.WaveOut wave;
+
+        private float lastVolume = 1.0f;
+
 
 
 
@@ -194,7 +199,6 @@ namespace RedSuper_Player
                 if (output.PlaybackState == NAudio.Wave.PlaybackState.Playing)
                 {
                     output.Pause();
-                    playing = false;
                     bunifuImageButtonPlay.Image = Resources.Circled_Play_100__1_;
                 }
                 else
@@ -287,17 +291,22 @@ namespace RedSuper_Player
 
         private void bunifuSliderVolume_ValueChanged(object sender, EventArgs e)
         {
-            float volume =  bunifuSliderVolume.Value;
-            output.Volume = volume;
+            float volume =  bunifuSliderVolume.Value / 100.0f;
+            lastVolume = volume;
+            wave.Volume = Math.Max(0.01f, volume);
+
         }
 
         private void bunifuImageButtonStart_Click(object sender, EventArgs e)
         {
             if (output != null)
             {
-                if (stream.Position != 0)
-                {  
-                    output.Stop();
+                if (output.PlaybackState == NAudio.Wave.PlaybackState.Paused || stream.CurrentTime.TotalSeconds < 1)
+                {
+                    listBoxMusic.SelectedIndex = (listBoxMusic.SelectedIndex - 1) % musicList.Count;
+                }
+                else
+                {
                     stream.Position = 0;
                 }
             }
@@ -318,6 +327,35 @@ namespace RedSuper_Player
         {
             TimeSpan newPos = new TimeSpan(bunifuSliderMain.Value * 10000000); 
             stream.CurrentTime = newPos;
+        }
+
+        private void bunifuImageButtonEnd_Click(object sender, EventArgs e)
+        {
+            listBoxMusic.SelectedIndex = (listBoxMusic.SelectedIndex + 1) % musicList.Count;
+        }
+
+        private void bunifuImageButtonMute_Click(object sender, EventArgs e)
+        {
+            float volume = wave.Volume;
+            if (volume >= 0.01)
+            {
+                wave.Volume = 0.01f;
+                bunifuImageButtonMute.Image = Resources.Muted_;
+            } else
+            {
+                wave.Volume = lastVolume;
+                bunifuImageButtonMute.Image = Resources.Unmuted_;
+            }
+        }
+
+        private void bunifuSliderMain_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuCustomLabelEndTimer_Click(object sender, EventArgs e)
+        {
+
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
