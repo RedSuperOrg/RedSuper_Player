@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using NAudio;
 using TagLib;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace RedSuper_Player
 {
@@ -19,27 +20,52 @@ namespace RedSuper_Player
         public Form1()
         {
             InitializeComponent();
+
+            // LIST BOX WILL HAVE THE SAME DATA AS THE MUSIC LIST 
             listBoxMusic.DataSource = musicList;
+
+            // CREATED DEFAULT DEVICE FOR VOLUME ON CALLOUT
             wave = new NAudio.Wave.WaveOut();
+
+            // INITIAL VOLUME
             wave.Volume = 1.0f;
         }
 
+        // VARIABLE FOR THE URL FOR YOUTUBE
+        string _ytUrl;
+
+        // LIST CREATED FOR THE SONGS ADDED TO THE MUSIC LISTBOX
         private IList<string> musicList = new BindingList<string>();
 
+        // STREAM TO NULL UNTIL SOMETHING'S CHOSEN
         private NAudio.Wave.BlockAlignReductionStream stream = null;
 
+        // OUTPUT IS NULL WHILE NOTHING'S CHOSEN 
         private NAudio.Wave.DirectSoundOut output = null;
 
+        // CREATED VARIABLE TO ADJUST VOLUME OF THE AUDIO CONTEXT
         private NAudio.Wave.WaveOut wave;
 
+        // VARIABLE TO ASSIGN LAST VOLUME ON "MUTE" CLICK
         private float lastVolume = 1.0f;
-
-
-
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////// MISTAKES WERE MADE //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        private void bunifuSliderMain_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuCustomLabelEndTimer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuCustomTextboxSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
 
         private void Form_Resize(object sender, EventArgs e)
         {
@@ -52,6 +78,16 @@ namespace RedSuper_Player
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        public string VideoId
+        {
+            // MATCH URL WITH VIDEO ON YOUTUBE
+            get
+            {
+                var ytMatch = new Regex(@"youtu(?:\.be|be\.com)/(?:.*v(?:/|=)|(?:.*/)?)([a-zA-z0-9-_]+)").Match(_ytUrl);
+                return ytMatch.Success ? ytMatch.Groups[1].Value : string.Empty;
+            }
+        }
 
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -122,6 +158,7 @@ namespace RedSuper_Player
             // POPS THE FILE DIALOG
             if (myOpenFileDialog.ShowDialog() != DialogResult.OK) return;
 
+            // FOR EACH SONG BROWSED, ADD TO THE LISTBOX IF THERE'S NOT A COPY
             string[] songs = myOpenFileDialog.FileNames;
             foreach (string song in songs)
             {
@@ -131,10 +168,15 @@ namespace RedSuper_Player
                     listBoxMusic.Refresh();
                 }
             }
+
+            // START WITH NO SOUND SELECTED
             listBoxMusic.ClearSelected();
-
-
         }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////// MENU SLIDE (HIDE AND BACK) ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
         /// <summary>
         /// Changes colors to default or new
@@ -145,6 +187,7 @@ namespace RedSuper_Player
         /// <param name="e"></param>
         private void bunifuImageButtonSlideMenu_Click(object sender, EventArgs e)
         {
+            // IF IT'S HIDDEN, SHOW, ELSE HIDE
             if (panelMenu.Width == 55)
             {
                 panelMenu.Visible = false;
@@ -175,6 +218,13 @@ namespace RedSuper_Player
             }
         }
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////// METHOD TO RESET OUTPUT ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        /// <summary>
+        /// READY TO USE THIS METHOD TO RESET OUTPUT
+        /// </summary>
         private void DisposeWave()
         {
             if (output != null)
@@ -190,12 +240,14 @@ namespace RedSuper_Player
             }
             timerAudio.Enabled = false;
         }
-        
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
         private void bunifuImageButtonPlay_Click(object sender, EventArgs e)
         {
-
+            //IF OUTPUT IS ASSIGNED
             if (output != null)
             {
+                //IF IT'S PLAYING, BUTTON PAUSES AND CHANGES TO PLAY IMAGE, ELSE, PLAY AND PAUSE IMAGE
                 if (output.PlaybackState == NAudio.Wave.PlaybackState.Playing)
                 {
                     output.Pause();
@@ -203,39 +255,69 @@ namespace RedSuper_Player
                 }
                 else
                 {
+                    // IF IT'S PAUSED, PLAY (PROTECTED FROM NO MUSIC CHOICE)
                     if (output.PlaybackState == NAudio.Wave.PlaybackState.Paused)
                     {
                         output.Play();
                         bunifuImageButtonPlay.Image = Resources.Circled_Pause_Filled_100;
                     }
                 }
+                
+                // RESETS TIMER WHEN MUSIC SELECTED CHANGES
                 timerAudio.Enabled = true;
             } 
         }
 
+       ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        /// <summary>
+        /// CLEARS EVERYTHING ON EXIT
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             DisposeWave();
         }
 
+        /// <summary>
+        /// POPS VIDEO PLAYER FORM (WIP)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bunifuFlatButtonVideo_Click(object sender, EventArgs e)
         {
             Form2 video = new Form2(this);
             video.Show();
         }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////// LIST BOX (SELECTING SONGS) ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>
+        /// WILL PLAY SELECTED SONG
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void listBoxMusic_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // METHOD RESET
             DisposeWave();
 
+            // SELECT SONG FROM LISTBOX 
             var selected = listBoxMusic.SelectedItem;
             string song = null;
+
+            // IF SONG SELECTED, ADD STRING VARIABLE
             if (selected != null)
             {
                 song = selected.ToString();
             }
+
+            // IF SELECTED SONG'S RESULT == OK, ADD TO THE LIST BOX
             if (song != null && !song.Equals(""))
             {
+                // CORRECT PROCEEDURE FOR EITHER MP3 OR WAV
                 if (song.EndsWith(".mp3"))
                 {
                     NAudio.Wave.WaveStream pcm = NAudio.Wave.WaveFormatConversionStream.CreatePcmStream(new NAudio.Wave.Mp3FileReader(song));
@@ -248,32 +330,45 @@ namespace RedSuper_Player
                 }
                 else throw new InvalidOperationException("Not a correct audio file type.");
 
-
+                // ASSINGS NAUDIO TO OUTPUT AND PLAY
                 output = new NAudio.Wave.DirectSoundOut();
                 output.Init(stream);
                 output.Play();
+
+                // BOOL TO RESET TIMER
                 timerAudio.Enabled = true;
 
+                // TAGS FROM FILE TO EXTRA INFORMATION
                 TagLib.File tagFile = TagLib.File.Create(song);
                 string artist = tagFile.Tag.FirstAlbumArtist;
                 string album = tagFile.Tag.Album;
                 string title = tagFile.Tag.Title;
 
+                // EXTRA INFORMATION PLACED ON LABEL
                 bunifuCustomLabelArtistName.Text = artist;
                 bunifuCustomLabelArtistExtraInfo.Text = album;
-                //Protection
+                
+                //////////////Protection FROM ERRORS
+
+                //Needs to have something written
                 if (bunifuCustomLabelArtistName.Text.Length < 1)
                 {
                     bunifuCustomLabelArtistName.Text = "Artist Name";
                 }
 
+                //SAME
                 if (bunifuCustomLabelArtistExtraInfo.Text.Length < 1)
                 {
                     bunifuCustomLabelArtistExtraInfo.Text = "Album";
                 }
 
+                // FILE TO ADD TO TABS
+
                 var file = TagLib.File.Create(song);
-                //Protection
+                
+                ////////////////Protection FROM ERRORS
+
+                // If tag has lenght (!= 0) Add the picture
                 if (file.Tag.Pictures.Length >= 1)
                 {
                     var bin = (byte[])(file.Tag.Pictures[0].Data.Data);
@@ -289,6 +384,11 @@ namespace RedSuper_Player
             }
         }
 
+        /// <summary>
+        /// VOLUME = SLIDER VALUE WILL BE THE AUDIO VOLUME FOR THE SONG
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bunifuSliderVolume_ValueChanged(object sender, EventArgs e)
         {
             float volume =  bunifuSliderVolume.Value / 100.0f;
@@ -297,10 +397,17 @@ namespace RedSuper_Player
 
         }
 
+        /// <summary>
+        /// IF IT HAS AN OUTPUT GO TO PREVIOUS SONG
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bunifuImageButtonStart_Click(object sender, EventArgs e)
         {
+            // IF OUTPUT ISN'T NULL
             if (output != null)
             {
+                // IF SONG ISN'T AHEAD OF 1 SECOND, CHANGE TO PREVIOUS SONG, ELSE CHANGE IT'S TIME TO 0 SECONDS
                 if (output.PlaybackState == NAudio.Wave.PlaybackState.Paused || stream.CurrentTime.TotalSeconds < 1)
                 {
                     listBoxMusic.SelectedIndex = (listBoxMusic.SelectedIndex - 1) % musicList.Count;
@@ -312,51 +419,103 @@ namespace RedSuper_Player
             }
         }
 
+        /// <summary>
+        /// GET TOTAL DURATION FROM THE AUDIO STREAM AND ASSIGN IT TO LABEL
+        /// GET CURRENT TIME TO TRACK THE TIME
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tmrAudio_Tick(object sender, EventArgs e)
         {
+            // TOTAL DURATION
             string duration = stream.TotalTime.ToString("mm\\:ss");
             bunifuCustomLabelEndTimer.Text = duration;
             bunifuSliderMain.MaximumValue = (int)stream.TotalTime.TotalSeconds;
 
+            // CURRENT TIMER
             string curTime = stream.CurrentTime.ToString("mm\\:ss");
             bunifuCustomLabelStartTimer.Text = curTime;
             bunifuSliderMain.Value = (int)stream.CurrentTime.TotalSeconds; 
         }
 
+        // MAIN SLIDER WILL KEEP TRACK OF CURRENT TIME ON ITS VALUE
         private void bunifuSliderMain_Scroll(object sender, ScrollEventArgs e)
         {
             TimeSpan newPos = new TimeSpan(bunifuSliderMain.Value * 10000000); 
             stream.CurrentTime = newPos;
         }
 
+        /// <summary>
+        /// ON CLICK, MOVE TO NEXT SONG
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bunifuImageButtonEnd_Click(object sender, EventArgs e)
         {
+            // MOVE TO NEXT SONG ON MUSIC LIST BOX
             listBoxMusic.SelectedIndex = (listBoxMusic.SelectedIndex + 1) % musicList.Count;
         }
 
+        /// <summary>
+        /// IF IMAGE HAS BEEN CLICKED CHANGE TO OPPOSING IMAGE AND CHANGE SOUND
+        /// IF CHANGED TO MUTED IMAGE, SOUND EQUALS TO MINIMUM VOLUME, ELSE CHANGE TO UNMUTED IMAGE AND LAST VOLUME 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bunifuImageButtonMute_Click(object sender, EventArgs e)
         {
             float volume = wave.Volume;
+
+            // if volume is minimum, muted image, else move to last volume shown and unmuted image
             if (volume >= 0.01)
             {
                 wave.Volume = 0.01f;
                 bunifuImageButtonMute.Image = Resources.Muted_;
-            } else
+            }
+            else
             {
                 wave.Volume = lastVolume;
                 bunifuImageButtonMute.Image = Resources.Unmuted_;
             }
         }
 
-        private void bunifuSliderMain_ValueChanged(object sender, EventArgs e)
+        // ON 'YOUTUBE' CLICK HIDE PANELS FROM AUDIO AND SHOW YOUTUBE CONTROLS
+        private void bunifuFlatButtonYoutube_Click(object sender, EventArgs e)
         {
-
+            webBrowserYoutube.Visible = true;
+            panelYoutube.Visible = false;
+            bunifuTransitionSlidingMenu.ShowSync(panelYoutube);
+            panelYoutube.Visible = true;
         }
 
-        private void bunifuCustomLabelEndTimer_Click(object sender, EventArgs e)
+        // ON 'MYSONGS' CLICK RETURN TO AUDIO PLAYER
+        private void bunifuFlatButtonMySongs_Click(object sender, EventArgs e)
         {
-
+            webBrowserYoutube.Visible = false;
+            panelYoutube.Visible = false;
         }
+
+        // ON GO PRESS NAVIGATE THE PRESENT URL
+        private void bunifuImageButtonGo_Click_1(object sender, EventArgs e)
+        {
+            _ytUrl = bunifuCustomTextboxYoutube.Text;
+            webBrowserYoutube.Navigate($"http://youtube.com/v/{VideoId}?version=3");
+        }
+
+        // POPS NEW FORM WITH COLORS
+        private void bunifuThinButton23_Click(object sender, EventArgs e)
+        {
+            FormOptions myOptions= new FormOptions(this);
+            myOptions.ShowDialog();
+        }
+
+        // POPS FORM WITH FOUNDERS INFORMATION
+        private void bunifuThinButton24_Click(object sender, EventArgs e)
+        {
+            FormAbout aboutUs = new FormAbout(this);
+            aboutUs.ShowDialog();
+        }
+
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     }

@@ -117,35 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Music Record Filled-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Music Record Filled-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuGradientPanelMain.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD9SURBVChTFcpnK4VhAADQ2026Sbd0/5mMkBWyMkLICCEj
+        ZIWsjBAyQsgIWSHjHz3Oez6f2GssFt7i8fCelhY+0tPDZyIRvjIywndmZvhJJsNvVlb4S6VC7Fq8EW/F
+        O/FefBAfxSfxWXyJ4qF4JB6LJ+KpeCaeixfipXgVxXVxQ9wUt8RtcUfcFffEffEgirPinDgvLoiL4pK4
+        LK6Iq+JaFIfFEXFUHBPHxQlxUpwSp8WZKHaKXWK32CP2in1ivzggDopDUawXG8RGsUlsFlvEVrFNbBc7
+        olgqlonlYoVYKVaJ1WKNWCvWRTFbzBFzxTwxXywQC8UisVgsSaXCPwu7o4pmIFnWAAAAAElFTkSuQmCC
+</value>
   </data>
-  <data name="Circled Pause-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Circled Pause-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bunifuGradientPanelTop.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADZSURBVChTFcpBYYMwAADAGKiATgAGEFAEUAExEAEgIAiI
+        gQgoAqgADCBgFbAJmIHscu8LOeS2htJSqC2GV5vD0aZwtjFcbQjf7R5+2i38NXEVN7GIVdzFt3iKl/gR
+        f3tM4ipmsYhV3MVDPMVL/PQYxSQuYhaLWMWXeIinePU4i1FM4iJmsYhVfImHePY4iU8xiklcxU0sYhV3
+        8d3jKE7iLEYxiauYxSJWce9xEEfxIc5iFJO4iFksYu3xLg7iKD7EWYxiEhcxi6XHm/glDuIoTuJTjGIS
+        V3Fr/5iesLVCxuh0AAAAAElFTkSuQmCC
+</value>
   </data>
-  <data name="Expand Arrow-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Expand Arrow-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bunifuImageButtonCloseAbout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAATCAYAAABlcqYFAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFBSURBVEhLtZTNasJAFIWDitCNLnyLJFCt7g260S6r
+        tjvbByitvohmEcF3Ed8iGN9DFyot13tCBH9uMoODFz4Ik5xzmJmba2mUzUyYiNklrJI1m4gsFVnlMIFd
+        KdGkWaXos0u7n0HMip+xhnf8zZx5lsxPpNVbMZ+joPVC/6N3ovGHCN7N2w16KuTh1JcCgFQuAhY9TzSW
+        WPY9goa1jm7IbNaqi2ZZYNesDXRCHKdSpr+MI0oDGmjhoQqZTps10UQHaOGhConQRZKBDtDCQxWy33OL
+        SgY6QAuPh4Zsvntw3KhCjI4rHHbgGKpCjC7e9+KL91UhrmvQwtDCQxWCuutnhAba64C0EJOxcrOLtBDU
+        wwfkqeJRj1GBC11/vdLhd0BbblN0EdaSO7h71J8XwnxmzRyYLRMma+LxXGNckuklZB0B0xKYT5cnaKEA
+        AAAASUVORK5CYII=
+</value>
   </data>
-  <data name="CollapseArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CollapseArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Unmuted_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Unmuted_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Muted_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Muted_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Circled Play-100 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Circled Play-100 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Circled Pause Filled-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Circled Pause Filled-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ATT10008" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ATT10008.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="bunifuDragControlTopAbout.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>141, 17</value>
+  </metadata>
+  <metadata name="bunifuDragControlMainAbout.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>301, 17</value>
+  </metadata>
 </root>
