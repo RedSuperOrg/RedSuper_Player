@@ -32,19 +32,25 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAbout));
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             this.bunifuDragControlTopAbout = new ns1.BunifuDragControl(this.components);
+            this.bunifuGradientPanelTop = new ns1.BunifuGradientPanel();
+            this.bunifuDatepicker2 = new ns1.BunifuDatepicker();
+            this.bunifuDatepicker1 = new ns1.BunifuDatepicker();
+            this.bunifuImageButtonCloseAbout = new ns1.BunifuImageButton();
             this.bunifuDragControlMainAbout = new ns1.BunifuDragControl(this.components);
             this.bunifuGradientPanelMain = new ns1.BunifuGradientPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bunifuGradientPanelTop = new ns1.BunifuGradientPanel();
-            this.bunifuDatepicker1 = new ns1.BunifuDatepicker();
-            this.bunifuImageButtonCloseAbout = new ns1.BunifuImageButton();
-            this.bunifuDatepicker2 = new ns1.BunifuDatepicker();
+            this.bunifuCustomLabelRedDr3ad = new ns1.BunifuCustomLabel();
+            this.bunifuCustomLabelSkeletonWar = new ns1.BunifuCustomLabel();
+            this.bunifuCustomLabelAKA = new ns1.BunifuCustomLabel();
+            this.bunifuCustomLabelNameJ = new ns1.BunifuCustomLabel();
+            this.bunifuCustomLabelNameL = new ns1.BunifuCustomLabel();
+            this.bunifuCustomLabelBuilders = new ns1.BunifuCustomLabel();
+            this.bunifuGradientPanelTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonCloseAbout)).BeginInit();
             this.bunifuGradientPanelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.bunifuGradientPanelTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonCloseAbout)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -59,6 +65,65 @@
             this.bunifuDragControlTopAbout.TargetControl = this.bunifuGradientPanelTop;
             this.bunifuDragControlTopAbout.Vertical = true;
             // 
+            // bunifuGradientPanelTop
+            // 
+            this.bunifuGradientPanelTop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanelTop.BackgroundImage")));
+            this.bunifuGradientPanelTop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanelTop.Controls.Add(this.bunifuDatepicker2);
+            this.bunifuGradientPanelTop.Controls.Add(this.bunifuDatepicker1);
+            this.bunifuGradientPanelTop.Controls.Add(this.bunifuImageButtonCloseAbout);
+            this.bunifuGradientPanelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuGradientPanelTop.GradientBottomLeft = System.Drawing.Color.Blue;
+            this.bunifuGradientPanelTop.GradientBottomRight = System.Drawing.Color.Black;
+            this.bunifuGradientPanelTop.GradientTopLeft = System.Drawing.Color.Red;
+            this.bunifuGradientPanelTop.GradientTopRight = System.Drawing.Color.Blue;
+            this.bunifuGradientPanelTop.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanelTop.Name = "bunifuGradientPanelTop";
+            this.bunifuGradientPanelTop.Quality = 10;
+            this.bunifuGradientPanelTop.Size = new System.Drawing.Size(339, 56);
+            this.bunifuGradientPanelTop.TabIndex = 0;
+            // 
+            // bunifuDatepicker2
+            // 
+            this.bunifuDatepicker2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDatepicker2.BorderRadius = 0;
+            this.bunifuDatepicker2.ForeColor = System.Drawing.Color.White;
+            this.bunifuDatepicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.bunifuDatepicker2.FormatCustom = null;
+            this.bunifuDatepicker2.Location = new System.Drawing.Point(20, 8);
+            this.bunifuDatepicker2.Name = "bunifuDatepicker2";
+            this.bunifuDatepicker2.Size = new System.Drawing.Size(275, 45);
+            this.bunifuDatepicker2.TabIndex = 4;
+            this.bunifuDatepicker2.Value = new System.DateTime(2017, 5, 16, 16, 43, 2, 374);
+            // 
+            // bunifuDatepicker1
+            // 
+            this.bunifuDatepicker1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDatepicker1.BorderRadius = 0;
+            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
+            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.bunifuDatepicker1.FormatCustom = null;
+            this.bunifuDatepicker1.Location = new System.Drawing.Point(20, 8);
+            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
+            this.bunifuDatepicker1.Size = new System.Drawing.Size(275, 45);
+            this.bunifuDatepicker1.TabIndex = 3;
+            this.bunifuDatepicker1.Value = new System.DateTime(2017, 5, 16, 16, 34, 31, 817);
+            // 
+            // bunifuImageButtonCloseAbout
+            // 
+            this.bunifuImageButtonCloseAbout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuImageButtonCloseAbout.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButtonCloseAbout.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButtonCloseAbout.Image")));
+            this.bunifuImageButtonCloseAbout.ImageActive = null;
+            this.bunifuImageButtonCloseAbout.Location = new System.Drawing.Point(301, 8);
+            this.bunifuImageButtonCloseAbout.Name = "bunifuImageButtonCloseAbout";
+            this.bunifuImageButtonCloseAbout.Size = new System.Drawing.Size(25, 19);
+            this.bunifuImageButtonCloseAbout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButtonCloseAbout.TabIndex = 2;
+            this.bunifuImageButtonCloseAbout.TabStop = false;
+            this.bunifuImageButtonCloseAbout.Zoom = 10;
+            this.bunifuImageButtonCloseAbout.Click += new System.EventHandler(this.bunifuImageButtonCloseAbout_Click);
+            // 
             // bunifuDragControlMainAbout
             // 
             this.bunifuDragControlMainAbout.Fixed = true;
@@ -70,6 +135,12 @@
             // 
             this.bunifuGradientPanelMain.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanelMain.BackgroundImage")));
             this.bunifuGradientPanelMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanelMain.Controls.Add(this.bunifuCustomLabelBuilders);
+            this.bunifuGradientPanelMain.Controls.Add(this.bunifuCustomLabelNameL);
+            this.bunifuGradientPanelMain.Controls.Add(this.bunifuCustomLabelNameJ);
+            this.bunifuGradientPanelMain.Controls.Add(this.bunifuCustomLabelAKA);
+            this.bunifuGradientPanelMain.Controls.Add(this.bunifuCustomLabelSkeletonWar);
+            this.bunifuGradientPanelMain.Controls.Add(this.bunifuCustomLabelRedDr3ad);
             this.bunifuGradientPanelMain.Controls.Add(this.pictureBox2);
             this.bunifuGradientPanelMain.Controls.Add(this.pictureBox1);
             this.bunifuGradientPanelMain.Controls.Add(this.bunifuGradientPanelTop);
@@ -103,64 +174,71 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // bunifuGradientPanelTop
+            // bunifuCustomLabelRedDr3ad
             // 
-            this.bunifuGradientPanelTop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanelTop.BackgroundImage")));
-            this.bunifuGradientPanelTop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanelTop.Controls.Add(this.bunifuDatepicker2);
-            this.bunifuGradientPanelTop.Controls.Add(this.bunifuDatepicker1);
-            this.bunifuGradientPanelTop.Controls.Add(this.bunifuImageButtonCloseAbout);
-            this.bunifuGradientPanelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuGradientPanelTop.GradientBottomLeft = System.Drawing.Color.Blue;
-            this.bunifuGradientPanelTop.GradientBottomRight = System.Drawing.Color.Black;
-            this.bunifuGradientPanelTop.GradientTopLeft = System.Drawing.Color.Red;
-            this.bunifuGradientPanelTop.GradientTopRight = System.Drawing.Color.Blue;
-            this.bunifuGradientPanelTop.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanelTop.Name = "bunifuGradientPanelTop";
-            this.bunifuGradientPanelTop.Quality = 10;
-            this.bunifuGradientPanelTop.Size = new System.Drawing.Size(339, 56);
-            this.bunifuGradientPanelTop.TabIndex = 0;
+            this.bunifuCustomLabelRedDr3ad.AutoSize = true;
+            this.bunifuCustomLabelRedDr3ad.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabelRedDr3ad.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabelRedDr3ad.Location = new System.Drawing.Point(67, 181);
+            this.bunifuCustomLabelRedDr3ad.Name = "bunifuCustomLabelRedDr3ad";
+            this.bunifuCustomLabelRedDr3ad.Size = new System.Drawing.Size(67, 17);
+            this.bunifuCustomLabelRedDr3ad.TabIndex = 3;
+            this.bunifuCustomLabelRedDr3ad.Text = "RedDr3ad";
             // 
-            // bunifuDatepicker1
+            // bunifuCustomLabelSkeletonWar
             // 
-            this.bunifuDatepicker1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDatepicker1.BorderRadius = 0;
-            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(20, 8);
-            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(275, 45);
-            this.bunifuDatepicker1.TabIndex = 3;
-            this.bunifuDatepicker1.Value = new System.DateTime(2017, 5, 16, 16, 34, 31, 817);
+            this.bunifuCustomLabelSkeletonWar.AutoSize = true;
+            this.bunifuCustomLabelSkeletonWar.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabelSkeletonWar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabelSkeletonWar.Location = new System.Drawing.Point(204, 181);
+            this.bunifuCustomLabelSkeletonWar.Name = "bunifuCustomLabelSkeletonWar";
+            this.bunifuCustomLabelSkeletonWar.Size = new System.Drawing.Size(85, 17);
+            this.bunifuCustomLabelSkeletonWar.TabIndex = 4;
+            this.bunifuCustomLabelSkeletonWar.Text = "SkeletonWar";
             // 
-            // bunifuImageButtonCloseAbout
+            // bunifuCustomLabelAKA
             // 
-            this.bunifuImageButtonCloseAbout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuImageButtonCloseAbout.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButtonCloseAbout.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButtonCloseAbout.Image")));
-            this.bunifuImageButtonCloseAbout.ImageActive = null;
-            this.bunifuImageButtonCloseAbout.Location = new System.Drawing.Point(301, 8);
-            this.bunifuImageButtonCloseAbout.Name = "bunifuImageButtonCloseAbout";
-            this.bunifuImageButtonCloseAbout.Size = new System.Drawing.Size(25, 19);
-            this.bunifuImageButtonCloseAbout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButtonCloseAbout.TabIndex = 2;
-            this.bunifuImageButtonCloseAbout.TabStop = false;
-            this.bunifuImageButtonCloseAbout.Zoom = 10;
-            this.bunifuImageButtonCloseAbout.Click += new System.EventHandler(this.bunifuImageButtonCloseAbout_Click);
+            this.bunifuCustomLabelAKA.AutoSize = true;
+            this.bunifuCustomLabelAKA.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabelAKA.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabelAKA.Location = new System.Drawing.Point(148, 205);
+            this.bunifuCustomLabelAKA.Name = "bunifuCustomLabelAKA";
+            this.bunifuCustomLabelAKA.Size = new System.Drawing.Size(39, 18);
+            this.bunifuCustomLabelAKA.TabIndex = 5;
+            this.bunifuCustomLabelAKA.Text = "AKA";
             // 
-            // bunifuDatepicker2
+            // bunifuCustomLabelNameJ
             // 
-            this.bunifuDatepicker2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDatepicker2.BorderRadius = 0;
-            this.bunifuDatepicker2.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker2.FormatCustom = null;
-            this.bunifuDatepicker2.Location = new System.Drawing.Point(20, 8);
-            this.bunifuDatepicker2.Name = "bunifuDatepicker2";
-            this.bunifuDatepicker2.Size = new System.Drawing.Size(275, 45);
-            this.bunifuDatepicker2.TabIndex = 4;
-            this.bunifuDatepicker2.Value = new System.DateTime(2017, 5, 16, 16, 43, 2, 374);
+            this.bunifuCustomLabelNameJ.AutoSize = true;
+            this.bunifuCustomLabelNameJ.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabelNameJ.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabelNameJ.Location = new System.Drawing.Point(43, 248);
+            this.bunifuCustomLabelNameJ.Name = "bunifuCustomLabelNameJ";
+            this.bunifuCustomLabelNameJ.Size = new System.Drawing.Size(112, 18);
+            this.bunifuCustomLabelNameJ.TabIndex = 6;
+            this.bunifuCustomLabelNameJ.Text = "João Almeida";
+            // 
+            // bunifuCustomLabelNameL
+            // 
+            this.bunifuCustomLabelNameL.AutoSize = true;
+            this.bunifuCustomLabelNameL.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabelNameL.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabelNameL.Location = new System.Drawing.Point(181, 248);
+            this.bunifuCustomLabelNameL.Name = "bunifuCustomLabelNameL";
+            this.bunifuCustomLabelNameL.Size = new System.Drawing.Size(112, 18);
+            this.bunifuCustomLabelNameL.TabIndex = 7;
+            this.bunifuCustomLabelNameL.Text = "Lucas Vicente";
+            // 
+            // bunifuCustomLabelBuilders
+            // 
+            this.bunifuCustomLabelBuilders.AutoSize = true;
+            this.bunifuCustomLabelBuilders.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabelBuilders.Font = new System.Drawing.Font("Segoe Script", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabelBuilders.Location = new System.Drawing.Point(17, 282);
+            this.bunifuCustomLabelBuilders.Name = "bunifuCustomLabelBuilders";
+            this.bunifuCustomLabelBuilders.Size = new System.Drawing.Size(119, 20);
+            this.bunifuCustomLabelBuilders.TabIndex = 8;
+            this.bunifuCustomLabelBuilders.Text = "(main builders)";
             // 
             // FormAbout
             // 
@@ -172,11 +250,12 @@
             this.Name = "FormAbout";
             this.Text = "About";
             this.Load += new System.EventHandler(this.FormAbout_Load);
-            this.bunifuGradientPanelMain.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bunifuGradientPanelTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonCloseAbout)).EndInit();
+            this.bunifuGradientPanelMain.ResumeLayout(false);
+            this.bunifuGradientPanelMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -193,5 +272,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private ns1.BunifuDatepicker bunifuDatepicker1;
         private ns1.BunifuDatepicker bunifuDatepicker2;
+        private ns1.BunifuCustomLabel bunifuCustomLabelNameL;
+        private ns1.BunifuCustomLabel bunifuCustomLabelNameJ;
+        private ns1.BunifuCustomLabel bunifuCustomLabelAKA;
+        private ns1.BunifuCustomLabel bunifuCustomLabelSkeletonWar;
+        private ns1.BunifuCustomLabel bunifuCustomLabelRedDr3ad;
+        private ns1.BunifuCustomLabel bunifuCustomLabelBuilders;
     }
 }

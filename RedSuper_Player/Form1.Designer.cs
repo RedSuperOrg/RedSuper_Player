@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             this.panelMenu = new System.Windows.Forms.Panel();
             this.bunifuImageButtonSlideMenu = new ns1.BunifuImageButton();
@@ -47,6 +47,10 @@
             this.bunifuFlatButtonBrowse = new ns1.BunifuFlatButton();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelBottom = new System.Windows.Forms.Panel();
+            this.panelYoutube = new System.Windows.Forms.Panel();
+            this.bunifuCustomTextboxYoutube = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.bunifuCustomLabelUrlYoutube = new ns1.BunifuCustomLabel();
+            this.bunifuImageButtonGo = new ns1.BunifuImageButton();
             this.bunifuImageButtonMute = new ns1.BunifuImageButton();
             this.bunifuImageButtonSettings = new ns1.BunifuImageButton();
             this.bunifuImageButtonEnd = new ns1.BunifuImageButton();
@@ -60,6 +64,7 @@
             this.bunifuSliderMain = new ns1.BunifuSlider();
             this.pictureBoxCoverSlider = new System.Windows.Forms.PictureBox();
             this.panelBack = new System.Windows.Forms.Panel();
+            this.webBrowserYoutube = new System.Windows.Forms.WebBrowser();
             this.listBoxMusic = new System.Windows.Forms.ListBox();
             this.bunifuDragControlMenu = new ns1.BunifuDragControl(this.components);
             this.bunifuDragControlText = new ns1.BunifuDragControl(this.components);
@@ -75,17 +80,14 @@
             this.bunifuTransitionSlidingMenu = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.bunifuTransitionSlidingMenu1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.timerAudio = new System.Windows.Forms.Timer(this.components);
-            this.panelYoutube = new System.Windows.Forms.Panel();
-            this.bunifuCustomTextboxYoutube = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.bunifuCustomLabelUrlYoutube = new ns1.BunifuCustomLabel();
-            this.bunifuImageButtonGo = new ns1.BunifuImageButton();
-            this.webBrowserYoutube = new System.Windows.Forms.WebBrowser();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonSlideMenu)).BeginInit();
             this.panelText.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelBottom.SuspendLayout();
+            this.panelYoutube.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonGo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonMute)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonEnd)).BeginInit();
@@ -97,8 +99,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
-            this.panelYoutube.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonGo)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -442,6 +442,69 @@
             this.panelBottom.Size = new System.Drawing.Size(715, 111);
             this.panelBottom.TabIndex = 2;
             // 
+            // panelYoutube
+            // 
+            this.panelYoutube.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelYoutube.Controls.Add(this.bunifuCustomTextboxYoutube);
+            this.panelYoutube.Controls.Add(this.bunifuCustomLabelUrlYoutube);
+            this.panelYoutube.Controls.Add(this.bunifuImageButtonGo);
+            this.bunifuTransitionSlidingMenu1.SetDecoration(this.panelYoutube, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransitionSlidingMenu.SetDecoration(this.panelYoutube, BunifuAnimatorNS.DecorationType.None);
+            this.panelYoutube.Location = new System.Drawing.Point(0, 0);
+            this.panelYoutube.Name = "panelYoutube";
+            this.panelYoutube.Size = new System.Drawing.Size(715, 111);
+            this.panelYoutube.TabIndex = 18;
+            this.panelYoutube.Visible = false;
+            // 
+            // bunifuCustomTextboxYoutube
+            // 
+            this.bunifuCustomTextboxYoutube.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuCustomTextboxYoutube.BackColor = System.Drawing.Color.Black;
+            this.bunifuCustomTextboxYoutube.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(1)))), ((int)(((byte)(15)))));
+            this.bunifuCustomTextboxYoutube.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuTransitionSlidingMenu.SetDecoration(this.bunifuCustomTextboxYoutube, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransitionSlidingMenu1.SetDecoration(this.bunifuCustomTextboxYoutube, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuCustomTextboxYoutube.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomTextboxYoutube.ForeColor = System.Drawing.Color.White;
+            this.bunifuCustomTextboxYoutube.Location = new System.Drawing.Point(62, 47);
+            this.bunifuCustomTextboxYoutube.Multiline = true;
+            this.bunifuCustomTextboxYoutube.Name = "bunifuCustomTextboxYoutube";
+            this.bunifuCustomTextboxYoutube.Size = new System.Drawing.Size(527, 25);
+            this.bunifuCustomTextboxYoutube.TabIndex = 16;
+            // 
+            // bunifuCustomLabelUrlYoutube
+            // 
+            this.bunifuCustomLabelUrlYoutube.AutoSize = true;
+            this.bunifuCustomLabelUrlYoutube.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTransitionSlidingMenu.SetDecoration(this.bunifuCustomLabelUrlYoutube, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransitionSlidingMenu1.SetDecoration(this.bunifuCustomLabelUrlYoutube, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuCustomLabelUrlYoutube.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabelUrlYoutube.ForeColor = System.Drawing.Color.White;
+            this.bunifuCustomLabelUrlYoutube.Location = new System.Drawing.Point(24, 47);
+            this.bunifuCustomLabelUrlYoutube.Name = "bunifuCustomLabelUrlYoutube";
+            this.bunifuCustomLabelUrlYoutube.Size = new System.Drawing.Size(32, 20);
+            this.bunifuCustomLabelUrlYoutube.TabIndex = 15;
+            this.bunifuCustomLabelUrlYoutube.Text = "Url:";
+            // 
+            // bunifuImageButtonGo
+            // 
+            this.bunifuImageButtonGo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuImageButtonGo.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTransitionSlidingMenu1.SetDecoration(this.bunifuImageButtonGo, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransitionSlidingMenu.SetDecoration(this.bunifuImageButtonGo, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuImageButtonGo.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButtonGo.Image")));
+            this.bunifuImageButtonGo.ImageActive = null;
+            this.bunifuImageButtonGo.Location = new System.Drawing.Point(612, 21);
+            this.bunifuImageButtonGo.Name = "bunifuImageButtonGo";
+            this.bunifuImageButtonGo.Size = new System.Drawing.Size(71, 71);
+            this.bunifuImageButtonGo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButtonGo.TabIndex = 0;
+            this.bunifuImageButtonGo.TabStop = false;
+            this.bunifuImageButtonGo.Zoom = 10;
+            this.bunifuImageButtonGo.Click += new System.EventHandler(this.bunifuImageButtonGo_Click_1);
+            // 
             // bunifuImageButtonMute
             // 
             this.bunifuImageButtonMute.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -646,6 +709,20 @@
             this.panelBack.Size = new System.Drawing.Size(715, 335);
             this.panelBack.TabIndex = 3;
             // 
+            // webBrowserYoutube
+            // 
+            this.webBrowserYoutube.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuTransitionSlidingMenu1.SetDecoration(this.webBrowserYoutube, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransitionSlidingMenu.SetDecoration(this.webBrowserYoutube, BunifuAnimatorNS.DecorationType.None);
+            this.webBrowserYoutube.Location = new System.Drawing.Point(0, 0);
+            this.webBrowserYoutube.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowserYoutube.Name = "webBrowserYoutube";
+            this.webBrowserYoutube.Size = new System.Drawing.Size(715, 335);
+            this.webBrowserYoutube.TabIndex = 17;
+            this.webBrowserYoutube.Visible = false;
+            // 
             // listBoxMusic
             // 
             this.listBoxMusic.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -716,7 +793,7 @@
             this.bunifuThinButton23.ActiveLineColor = System.Drawing.Color.White;
             this.bunifuThinButton23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
             this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
-            this.bunifuThinButton23.ButtonText = "Colors";
+            this.bunifuThinButton23.ButtonText = "Colors (WIP)";
             this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransitionSlidingMenu1.SetDecoration(this.bunifuThinButton23, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransitionSlidingMenu.SetDecoration(this.bunifuThinButton23, BunifuAnimatorNS.DecorationType.None);
@@ -846,124 +923,47 @@
             // 
             this.bunifuTransitionSlidingMenu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.bunifuTransitionSlidingMenu.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 0;
-            animation4.Padding = new System.Windows.Forms.Padding(0);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 0F;
-            this.bunifuTransitionSlidingMenu.DefaultAnimation = animation4;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.bunifuTransitionSlidingMenu.DefaultAnimation = animation2;
             // 
             // bunifuTransitionSlidingMenu1
             // 
             this.bunifuTransitionSlidingMenu1.AnimationType = BunifuAnimatorNS.AnimationType.ScaleAndRotate;
             this.bunifuTransitionSlidingMenu1.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(30);
-            animation3.RotateCoeff = 0.5F;
-            animation3.RotateLimit = 0.2F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.bunifuTransitionSlidingMenu1.DefaultAnimation = animation3;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(30);
+            animation1.RotateCoeff = 0.5F;
+            animation1.RotateLimit = 0.2F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.bunifuTransitionSlidingMenu1.DefaultAnimation = animation1;
             // 
             // timerAudio
             // 
             this.timerAudio.Tick += new System.EventHandler(this.tmrAudio_Tick);
-            // 
-            // panelYoutube
-            // 
-            this.panelYoutube.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelYoutube.Controls.Add(this.bunifuCustomTextboxYoutube);
-            this.panelYoutube.Controls.Add(this.bunifuCustomLabelUrlYoutube);
-            this.panelYoutube.Controls.Add(this.bunifuImageButtonGo);
-            this.bunifuTransitionSlidingMenu1.SetDecoration(this.panelYoutube, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransitionSlidingMenu.SetDecoration(this.panelYoutube, BunifuAnimatorNS.DecorationType.None);
-            this.panelYoutube.Location = new System.Drawing.Point(0, 0);
-            this.panelYoutube.Name = "panelYoutube";
-            this.panelYoutube.Size = new System.Drawing.Size(715, 111);
-            this.panelYoutube.TabIndex = 18;
-            this.panelYoutube.Visible = false;
-            // 
-            // bunifuCustomTextboxYoutube
-            // 
-            this.bunifuCustomTextboxYoutube.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuCustomTextboxYoutube.BackColor = System.Drawing.Color.Black;
-            this.bunifuCustomTextboxYoutube.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(1)))), ((int)(((byte)(15)))));
-            this.bunifuCustomTextboxYoutube.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuTransitionSlidingMenu.SetDecoration(this.bunifuCustomTextboxYoutube, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransitionSlidingMenu1.SetDecoration(this.bunifuCustomTextboxYoutube, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuCustomTextboxYoutube.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomTextboxYoutube.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomTextboxYoutube.Location = new System.Drawing.Point(62, 47);
-            this.bunifuCustomTextboxYoutube.Multiline = true;
-            this.bunifuCustomTextboxYoutube.Name = "bunifuCustomTextboxYoutube";
-            this.bunifuCustomTextboxYoutube.Size = new System.Drawing.Size(527, 25);
-            this.bunifuCustomTextboxYoutube.TabIndex = 16;
-            // 
-            // bunifuCustomLabelUrlYoutube
-            // 
-            this.bunifuCustomLabelUrlYoutube.AutoSize = true;
-            this.bunifuCustomLabelUrlYoutube.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTransitionSlidingMenu.SetDecoration(this.bunifuCustomLabelUrlYoutube, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransitionSlidingMenu1.SetDecoration(this.bunifuCustomLabelUrlYoutube, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuCustomLabelUrlYoutube.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabelUrlYoutube.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabelUrlYoutube.Location = new System.Drawing.Point(24, 47);
-            this.bunifuCustomLabelUrlYoutube.Name = "bunifuCustomLabelUrlYoutube";
-            this.bunifuCustomLabelUrlYoutube.Size = new System.Drawing.Size(32, 20);
-            this.bunifuCustomLabelUrlYoutube.TabIndex = 15;
-            this.bunifuCustomLabelUrlYoutube.Text = "Url:";
-            // 
-            // bunifuImageButtonGo
-            // 
-            this.bunifuImageButtonGo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuImageButtonGo.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTransitionSlidingMenu1.SetDecoration(this.bunifuImageButtonGo, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransitionSlidingMenu.SetDecoration(this.bunifuImageButtonGo, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuImageButtonGo.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButtonGo.Image")));
-            this.bunifuImageButtonGo.ImageActive = null;
-            this.bunifuImageButtonGo.Location = new System.Drawing.Point(612, 21);
-            this.bunifuImageButtonGo.Name = "bunifuImageButtonGo";
-            this.bunifuImageButtonGo.Size = new System.Drawing.Size(71, 71);
-            this.bunifuImageButtonGo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButtonGo.TabIndex = 0;
-            this.bunifuImageButtonGo.TabStop = false;
-            this.bunifuImageButtonGo.Zoom = 10;
-            this.bunifuImageButtonGo.Click += new System.EventHandler(this.bunifuImageButtonGo_Click_1);
-            // 
-            // webBrowserYoutube
-            // 
-            this.webBrowserYoutube.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuTransitionSlidingMenu1.SetDecoration(this.webBrowserYoutube, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransitionSlidingMenu.SetDecoration(this.webBrowserYoutube, BunifuAnimatorNS.DecorationType.None);
-            this.webBrowserYoutube.Location = new System.Drawing.Point(0, 0);
-            this.webBrowserYoutube.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowserYoutube.Name = "webBrowserYoutube";
-            this.webBrowserYoutube.Size = new System.Drawing.Size(715, 335);
-            this.webBrowserYoutube.TabIndex = 17;
-            this.webBrowserYoutube.Visible = false;
             // 
             // Form1
             // 
@@ -990,6 +990,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panelBottom.ResumeLayout(false);
             this.panelBottom.PerformLayout();
+            this.panelYoutube.ResumeLayout(false);
+            this.panelYoutube.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonGo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonMute)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonSettings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonEnd)).EndInit();
@@ -1002,9 +1005,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
-            this.panelYoutube.ResumeLayout(false);
-            this.panelYoutube.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonGo)).EndInit();
             this.ResumeLayout(false);
 
         }
