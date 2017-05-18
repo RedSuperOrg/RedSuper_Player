@@ -165,6 +165,15 @@
   <ItemGroup>
     <None Include="Resources\ATT10008.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\68858aa046861bcb905675ad64f7217fb7eb891e.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spotify-Effect-OP1T3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spotify-Effect-The-OneBlue.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

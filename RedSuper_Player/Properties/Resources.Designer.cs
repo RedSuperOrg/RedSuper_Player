@@ -63,6 +63,16 @@ namespace RedSuper_Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _68858aa046861bcb905675ad64f7217fb7eb891e {
+            get {
+                object obj = ResourceManager.GetObject("68858aa046861bcb905675ad64f7217fb7eb891e", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ATT10008 {
             get {
                 object obj = ResourceManager.GetObject("ATT10008", resourceCulture);
@@ -146,6 +156,26 @@ namespace RedSuper_Player.Properties {
         internal static System.Drawing.Bitmap Muted_ {
             get {
                 object obj = ResourceManager.GetObject("Muted_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Spotify_Effect_OP1T3 {
+            get {
+                object obj = ResourceManager.GetObject("Spotify-Effect-OP1T3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Spotify_Effect_The_OneBlue {
+            get {
+                object obj = ResourceManager.GetObject("Spotify-Effect-The-OneBlue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

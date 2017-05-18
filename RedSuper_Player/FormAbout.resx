@@ -124,21 +124,18 @@
   <data name="bunifuGradientPanelMain.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD9SURBVChTFcpnK4VhAADQ2026Sbd0/5mMkBWyMkLICCEj
-        ZIWsjBAyQsgIWSHjHz3Oez6f2GssFt7i8fCelhY+0tPDZyIRvjIywndmZvhJJsNvVlb4S6VC7Fq8EW/F
-        O/FefBAfxSfxWXyJ4qF4JB6LJ+KpeCaeixfipXgVxXVxQ9wUt8RtcUfcFffEffEgirPinDgvLoiL4pK4
-        LK6Iq+JaFIfFEXFUHBPHxQlxUpwSp8WZKHaKXWK32CP2in1ivzggDopDUawXG8RGsUlsFlvEVrFNbBc7
-        olgqlonlYoVYKVaJ1WKNWCvWRTFbzBFzxTwxXywQC8UisVgsSaXCPwu7o4pmIFnWAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABASURBVChTjcRRAYAgEAXBDXUFKGAACliAAgawgAUoYD94
+        DdiPGf6qZTCTwZcM3mTwJIORDO5k0JPBlQxaOqu1AeA8vANrzVlTAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="bunifuGradientPanelTop.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADZSURBVChTFcpBYYMwAADAGKiATgAGEFAEUAExEAEgIAiI
-        gQgoAqgADCBgFbAJmIHscu8LOeS2htJSqC2GV5vD0aZwtjFcbQjf7R5+2i38NXEVN7GIVdzFt3iKl/gR
-        f3tM4ipmsYhV3MVDPMVL/PQYxSQuYhaLWMWXeIinePU4i1FM4iJmsYhVfImHePY4iU8xiklcxU0sYhV3
-        8d3jKE7iLEYxiauYxSJWce9xEEfxIc5iFJO4iFksYu3xLg7iKD7EWYxiEhcxi6XHm/glDuIoTuJTjGIS
-        V3Fr/5iesLVCxuh0AAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD9SURBVChTFcpnK4VhAADQ2026Sbd0/5mMkBWyMkLICCEj
+        ZIWsjBAyQsgIWSHjHz3Oez6f2GssFt7i8fCelhY+0tPDZyIRvjIywndmZvhJJsNvVlb4S6VC7Fq8EW/F
+        O/FefBAfxSfxWXyJ4qF4JB6LJ+KpeCaeixfipXgVxXVxQ9wUt8RtcUfcFffEffEgirPinDgvLoiL4pK4
+        LK6Iq+JaFIfFEXFUHBPHxQlxUpwSp8WZKHaKXWK32CP2in1ivzggDopDUawXG8RGsUlsFlvEVrFNbBc7
+        olgqlonlYoVYKVaJ1WKNWCvWRTFbzBFzxTwxXywQC8UisVgsSaXCPwu7o4pmIFnWAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="bunifuImageButtonCloseAbout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

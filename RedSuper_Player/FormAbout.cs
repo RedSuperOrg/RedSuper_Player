@@ -22,9 +22,39 @@ namespace RedSuper_Player
 
         }
 
+        /// <summary>
+        /// Closes the form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bunifuImageButtonCloseAbout_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void bunifuDatepickerAbout_MouseHover(object sender, EventArgs e)
+        {
+            bunifuDatepickerAbout.ForeColor = Color.Black;
+        }
+
+        /// <summary>
+        /// Opens github profile
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bunifuImageButtonWarSkeleton_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/WARSKELETON");
+        }
+
+        /// <summary>
+        /// Opens github profile
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bunifuImageButtonRedDr3ad_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/RedDr3ad");
         }
     }
 }
