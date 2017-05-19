@@ -44,10 +44,21 @@ namespace RedSuper_Player
         private void bunifuFlatButtonColorsBlue_Click(object sender, EventArgs e)
         {
             fr1Local.panelTopImage = Properties.Resources.Spotify_Effect_The_OneBlue;
-            fr1Local.colorsBlueForeColor = Color.FromArgb(0, 72, 251);
-            fr1Local.colorsBlueIdleFillColor = Color.FromArgb(0, 72, 251);
-            fr1Local.aboutBlueForeColor = Color.FromArgb(0, 72, 251);
-            fr1Local.aboutBlueIdleFillColor = Color.FromArgb(0, 72, 251);
+            fr1Local.colorsButtonForeColor = Color.FromArgb(0, 72, 251);
+            fr1Local.colorsButtonIdleFillColor = Color.FromArgb(0, 72, 251);
+            fr1Local.aboutButtonForeColor = Color.FromArgb(0, 72, 251);
+            fr1Local.aboutButtonIdleFillColor = Color.FromArgb(0, 72, 251);
+            fr1Local.browseButtonIcon = Properties.Resources.BrowseBlue;
+            fr1Local.browseButtonOnHoverTextColor = Color.FromArgb(0, 72, 251);
+            fr1Local.videoButtonIcon = Properties.Resources.videoBlue;
+            fr1Local.videoButtonOnHoverTextColor = Color.FromArgb(0, 72, 251);
+            fr1Local.youtubeButtonIcon = Properties.Resources.YouTubeBlue;
+            fr1Local.youtubeButtonOnHoverTextColor = Color.FromArgb(0, 72, 251);
+            fr1Local.mySongsButtonIcon = Properties.Resources.musicBlue;
+            fr1Local.mySongsButtonOnHoverTextColor = Color.FromArgb(0, 72, 251);
+            fr1Local.playlistsButtonIcon = Properties.Resources.playlistBlue;
+            fr1Local.playlistsButtonOnHoverTextColor = Color.FromArgb(0, 72, 251);
+            fr1Local.menuButtonIcon = Properties.Resources.Expand_Arrow_Blue;
         }
     }
 }

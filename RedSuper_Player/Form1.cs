@@ -207,7 +207,17 @@ namespace RedSuper_Player
                 bunifuTransitionSlidingMenu1.HideSync(panelText);
                 panelMenu.Visible = false;
                 panelMenu.Width = 55;
-                bunifuImageButtonSlideMenu.Image = Resources.CollapseArrow;
+                if (panelTopImage == Resources.Spotify_Effect_OP1T3)
+                {
+                    bunifuImageButtonSlideMenu.Image = Resources.CollapseArrow;
+                }
+                else
+                {
+                    if (panelTopImage == Resources.Spotify_Effect_The_OneBlue)
+                    {
+                        bunifuImageButtonSlideMenu.Image = Resources.CollapseArrowBlue;
+                    }
+                }
                 bunifuFlatButtonBrowse.OnHovercolor = Color.DimGray;
                 bunifuFlatButtonVideo.OnHovercolor = Color.DimGray;
                 bunifuFlatButtonYoutube.OnHovercolor = Color.DimGray;
@@ -527,33 +537,99 @@ namespace RedSuper_Player
         }
 
         /// <summary>
-        /// Cor para a letra
+        /// Font color for colors button
         /// </summary>
-        public Color colorsBlueForeColor
+        public Color colorsButtonForeColor
         {
             get { return bunifuThinButton23.ActiveForecolor; }
             set { bunifuThinButton23.ActiveForecolor = value; }
         }
 
         /// <summary>
-        /// Cor para a o fill
+        /// Fill Color for colors button
         /// </summary>
-        public Color colorsBlueIdleFillColor
+        public Color colorsButtonIdleFillColor
         {
             get { return bunifuThinButton23.IdleFillColor; }
             set { bunifuThinButton23.IdleFillColor = value; }
         }
 
-        public Color aboutBlueForeColor
+        public Color aboutButtonForeColor
         {
             get { return bunifuThinButton24.ActiveForecolor; }
             set { bunifuThinButton24.ActiveForecolor = value; }
         }
 
-        public Color aboutBlueIdleFillColor
+        public Color aboutButtonIdleFillColor
         {
             get { return bunifuThinButton24.IdleFillColor; }
             set { bunifuThinButton24.IdleFillColor = value; }
+        }
+
+        public Image browseButtonIcon
+        {
+            get { return bunifuFlatButtonBrowse.Iconimage; }
+            set { bunifuFlatButtonBrowse.Iconimage = value; }
+        }
+
+        public Color browseButtonOnHoverTextColor
+        {
+            get { return bunifuFlatButtonBrowse.OnHoverTextColor; }
+            set { bunifuFlatButtonBrowse.OnHoverTextColor = value; }
+        }
+
+        public Image videoButtonIcon
+        {
+            get { return bunifuFlatButtonVideo.Iconimage; }
+            set { bunifuFlatButtonVideo.Iconimage = value; }
+        }
+
+        public Color videoButtonOnHoverTextColor
+        {
+            get { return bunifuFlatButtonVideo.OnHoverTextColor; }
+            set { bunifuFlatButtonVideo.OnHoverTextColor = value; }
+        }
+
+        public Image youtubeButtonIcon
+        {
+            get { return bunifuFlatButtonYoutube.Iconimage; }
+            set { bunifuFlatButtonYoutube.Iconimage = value; }
+        }
+
+        public Color youtubeButtonOnHoverTextColor
+        {
+            get { return bunifuFlatButtonYoutube.OnHoverTextColor; }
+            set { bunifuFlatButtonYoutube.OnHoverTextColor = value; }
+        }
+
+        public Image mySongsButtonIcon
+        {
+            get { return bunifuFlatButtonMySongs.Iconimage; }
+            set { bunifuFlatButtonMySongs.Iconimage = value; }
+        }
+
+        public Color mySongsButtonOnHoverTextColor
+        {
+            get { return bunifuFlatButtonMySongs.OnHoverTextColor; }
+            set { bunifuFlatButtonMySongs.OnHoverTextColor = value; }
+        }
+
+        public Image playlistsButtonIcon
+        {
+            get { return bunifuFlatButtonPlaylists.Iconimage; }
+            set { bunifuFlatButtonPlaylists.Iconimage = value; }
+        }
+
+        public Color playlistsButtonOnHoverTextColor
+        {
+            get { return bunifuFlatButtonPlaylists.OnHoverTextColor; }
+            set { bunifuFlatButtonPlaylists.OnHoverTextColor = value; }
+        }
+
+        public Image menuButtonIcon
+        {
+            get { return bunifuImageButtonSlideMenu.Image; }
+            set { bunifuImageButtonSlideMenu.Image = value; }
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
