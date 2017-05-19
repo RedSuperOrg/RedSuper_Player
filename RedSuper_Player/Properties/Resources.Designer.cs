@@ -213,9 +213,29 @@ namespace RedSuper_Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Go_100 {
+            get {
+                object obj = ResourceManager.GetObject("Go-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Go_Blue {
             get {
                 object obj = ResourceManager.GetObject("Go-Blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Horizontal_Settings_Mixer_100 {
+            get {
+                object obj = ResourceManager.GetObject("Horizontal Settings Mixer-100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -366,6 +386,16 @@ namespace RedSuper_Player.Properties {
         internal static System.Drawing.Bitmap Spotify_Effect_The_OneBlue {
             get {
                 object obj = ResourceManager.GetObject("Spotify-Effect-The-OneBlue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Spotify_Effect_The_OneOrange {
+            get {
+                object obj = ResourceManager.GetObject("Spotify-Effect-The-OneOrange", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
