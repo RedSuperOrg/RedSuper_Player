@@ -29,6 +29,9 @@ namespace RedSuper_Player
 
             // INITIAL VOLUME
             wave.Volume = 1.0f;
+
+            bunifuThinButton23.BackColor = Color.Transparent;
+            bunifuThinButton24.BackColor = Color.Transparent;
         }
 
         // VARIABLE FOR THE URL FOR YOUTUBE
@@ -193,7 +196,20 @@ namespace RedSuper_Player
                 panelMenu.Visible = false;
                 panelMenu.Width = 200;
                 bunifuTransitionSlidingMenu.ShowSync(panelMenu);
-                bunifuImageButtonSlideMenu.Image = Resources.Expand_Arrow_96;
+
+                //CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON
+                if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(190, 1, 15))
+                {
+                    bunifuImageButtonSlideMenu.Image = Resources.Expand_Arrow_96;
+                }
+                else
+                {
+                    if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(0, 72, 251))
+                    {
+                        bunifuImageButtonSlideMenu.Image = Resources.Expand_Arrow_Blue;
+                    }
+                }
+
                 bunifuFlatButtonBrowse.OnHovercolor = Color.Transparent;
                 bunifuFlatButtonVideo.OnHovercolor = Color.Transparent;
                 bunifuFlatButtonYoutube.OnHovercolor = Color.Transparent;
@@ -207,17 +223,21 @@ namespace RedSuper_Player
                 bunifuTransitionSlidingMenu1.HideSync(panelText);
                 panelMenu.Visible = false;
                 panelMenu.Width = 55;
-                if (panelTopImage == Resources.Spotify_Effect_OP1T3)
+
+                //CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON
+                if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(190, 1, 15))
                 {
                     bunifuImageButtonSlideMenu.Image = Resources.CollapseArrow;
                 }
                 else
                 {
-                    if (panelTopImage == Resources.Spotify_Effect_The_OneBlue)
+                    if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(0, 72, 251))
                     {
                         bunifuImageButtonSlideMenu.Image = Resources.CollapseArrowBlue;
                     }
                 }
+
+
                 bunifuFlatButtonBrowse.OnHovercolor = Color.DimGray;
                 bunifuFlatButtonVideo.OnHovercolor = Color.DimGray;
                 bunifuFlatButtonYoutube.OnHovercolor = Color.DimGray;
@@ -261,7 +281,18 @@ namespace RedSuper_Player
                 if (output.PlaybackState == NAudio.Wave.PlaybackState.Playing)
                 {
                     output.Pause();
-                    bunifuImageButtonPlay.Image = Resources.Circled_Play_100__1_;
+                    //CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON
+                    if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(190, 1, 15))
+                    {
+                        bunifuImageButtonPlay.Image = Resources.Circled_Play_100__1_;
+                    }
+                    else
+                    {
+                        if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(0, 72, 251))
+                        {
+                            bunifuImageButtonPlay.Image = Resources.Circled_Play_100Blue;
+                        }
+                    }
                 }
                 else
                 {
@@ -269,7 +300,18 @@ namespace RedSuper_Player
                     if (output.PlaybackState == NAudio.Wave.PlaybackState.Paused)
                     {
                         output.Play();
-                        bunifuImageButtonPlay.Image = Resources.Circled_Pause_Filled_100;
+                        //CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON
+                        if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(190, 1, 15))
+                        {
+                            bunifuImageButtonPlay.Image = Resources.Circled_Pause_Filled_100;
+                        }
+                        else
+                        {
+                            if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(0, 72, 251))
+                            {
+                                bunifuImageButtonPlay.Image = Resources.Circled_Pause_Filled_Blue;
+                            }
+                        }
                     }
                 }
                 
@@ -386,11 +428,33 @@ namespace RedSuper_Player
                 }
                 else
                 {
-                    pictureBoxCoverSlider.Image = Resources.Music_Record_Filled_100;
+                    //CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON
+                    if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(190, 1, 15))
+                    {
+                        pictureBoxCoverSlider.Image = Resources.Music_Record_Filled_100;
+                    }
+                    else
+                    {
+                        if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(0, 72, 251))
+                        {
+                            pictureBoxCoverSlider.Image = Resources.Music_Record_FilledBlue;
+                        }
+                    }
                 }
 
                 bunifuImageButtonPlay.Enabled = true;
-                bunifuImageButtonPlay.Image = Resources.Circled_Pause_Filled_100;
+
+                if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(190, 1, 15))
+                {
+                    bunifuImageButtonPlay.Image = Resources.Circled_Pause_Filled_100;
+                }
+                else
+                {
+                    if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(0, 72, 251))
+                    {
+                        bunifuImageButtonPlay.Image = Resources.Circled_Pause_Filled_Blue;
+                    }
+                }
             }
         }
 
@@ -480,12 +544,34 @@ namespace RedSuper_Player
             if (volume >= 0.01)
             {
                 wave.Volume = 0.01f;
-                bunifuImageButtonMute.Image = Resources.Muted_;
+                //CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON
+                if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(190, 1, 15))
+                {
+                    bunifuImageButtonMute.Image = Resources.Muted_;
+                }
+                else
+                {
+                    if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(0, 72, 251))
+                    {
+                        bunifuImageButtonMute.Image = Resources.MuteBlue;
+                    }
+                }
             }
             else
             {
                 wave.Volume = lastVolume;
-                bunifuImageButtonMute.Image = Resources.Unmuted_;
+                //CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON
+                if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(190, 1, 15))
+                {
+                    bunifuImageButtonMute.Image = Resources.Unmuted_;
+                }
+                else
+                {
+                    if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(0, 72, 251))
+                    {
+                        bunifuImageButtonMute.Image = Resources.Room_SoundBlue;
+                    }
+                }
             }
         }
 
@@ -536,17 +622,23 @@ namespace RedSuper_Player
             set { panelTop.BackgroundImage = value; }
         }
 
+        public Color panelTopColor
+        {
+            get { return panelTop.BackColor; }
+            set { panelTop.BackColor = value; }
+        }
+
         /// <summary>
-        /// Font color for colors button
+        /// Font color for colors button (background color)
         /// </summary>
-        public Color colorsButtonForeColor
+        public Color colorsButtonActiveForeColor
         {
             get { return bunifuThinButton23.ActiveForecolor; }
             set { bunifuThinButton23.ActiveForecolor = value; }
         }
 
         /// <summary>
-        /// Fill Color for colors button
+        /// Fill Color for colors button (background color)
         /// </summary>
         public Color colorsButtonIdleFillColor
         {
@@ -554,7 +646,39 @@ namespace RedSuper_Player
             set { bunifuThinButton23.IdleFillColor = value; }
         }
 
-        public Color aboutButtonForeColor
+        public Color colorsButtonActiveFillColor
+        {
+            get { return bunifuThinButton23.ActiveFillColor; }
+            set { bunifuThinButton23.ActiveFillColor = value; }
+        }
+
+        public Color colorsButtonActiveLineColor
+        {
+            get { return bunifuThinButton23.ActiveLineColor; }
+            set { bunifuThinButton23.ActiveLineColor = value; }
+        }
+
+        public Color colorsButtonForeColor
+        {
+            get { return bunifuThinButton23.ForeColor; }
+            set { bunifuThinButton23.ForeColor = value; }
+        }
+
+        public Color colorsButtonIdleForeColor
+        {
+            get { return bunifuThinButton23.IdleForecolor; }
+            set { bunifuThinButton23.IdleForecolor = value; }
+        }
+
+        public Color colorsButtonIdleLineColor
+        {
+            get { return bunifuThinButton23.IdleLineColor; }
+            set { bunifuThinButton23.IdleLineColor = value; }
+        }
+
+        ////////////
+
+        public Color aboutButtonActiveForeColor
         {
             get { return bunifuThinButton24.ActiveForecolor; }
             set { bunifuThinButton24.ActiveForecolor = value; }
@@ -564,6 +688,48 @@ namespace RedSuper_Player
         {
             get { return bunifuThinButton24.IdleFillColor; }
             set { bunifuThinButton24.IdleFillColor = value; }
+        }
+
+        public Color aboutButtonActiveFillColor
+        {
+            get { return bunifuThinButton24.ActiveFillColor; }
+            set { bunifuThinButton24.ActiveFillColor = value; }
+        }
+
+        public Color aboutButtonActiveLineColor
+        {
+            get { return bunifuThinButton24.ActiveLineColor; }
+            set { bunifuThinButton24.ActiveLineColor = value; }
+        }
+
+        public Color aboutButtonForeColor
+        {
+            get { return bunifuThinButton24.ForeColor; }
+            set { bunifuThinButton24.ForeColor = value; }
+        }
+
+        public Color aboutButtonIdleForeColor
+        {
+            get { return bunifuThinButton24.IdleForecolor; }
+            set { bunifuThinButton24.IdleForecolor = value; }
+        }
+
+        public Color aboutButtonIdleLineColor
+        {
+            get { return bunifuThinButton24.IdleLineColor; }
+            set { bunifuThinButton24.IdleLineColor = value; }
+        }
+
+        public Color topSideLabel
+        {
+            get { return bunifuCustomLabelVersionText.ForeColor; }
+            set { bunifuCustomLabelVersionText.ForeColor = value; }
+        }
+
+        public Color topMainLabel
+        {
+            get { return bunifuCustomLabelTopText.ForeColor; }
+            set { bunifuCustomLabelTopText.ForeColor = value; }
         }
 
         public Image browseButtonIcon
@@ -630,6 +796,60 @@ namespace RedSuper_Player
         {
             get { return bunifuImageButtonSlideMenu.Image; }
             set { bunifuImageButtonSlideMenu.Image = value; }
+        }
+
+        public Image coverIcon
+        {
+            get { return pictureBoxCoverSlider.Image; }
+            set { pictureBoxCoverSlider.Image = value; }
+        }
+
+        public Color trackBarIndicatorColor
+        {
+            get { return bunifuSliderMain.IndicatorColor; }
+            set { bunifuSliderMain.IndicatorColor = value; }
+        }
+
+        public Image startButtonIcon
+        {
+            get { return bunifuImageButtonStart.Image; }
+            set { bunifuImageButtonStart.Image = value; }
+        }
+
+        public Image playButtonIcon
+        {
+            get { return bunifuImageButtonPlay.Image; }
+            set { bunifuImageButtonPlay.Image = value; }
+        }
+
+        public Image endButtonIcon
+        {
+            get { return bunifuImageButtonEnd.Image; }
+            set { bunifuImageButtonEnd.Image = value; }
+        }
+
+        public Image settingsButtonIcon
+        {
+            get { return bunifuImageButtonSettings.Image; }
+            set { bunifuImageButtonSettings.Image = value; }
+        }
+
+        public Image soundButtonIcon
+        {
+            get { return bunifuImageButtonMute.Image; }
+            set { bunifuImageButtonMute.Image = value; }
+        }
+
+        public Image goButtonIcon
+        {
+            get { return bunifuImageButtonGo.Image; }
+            set { bunifuImageButtonGo.Image = value; }
+        }
+
+        public Color volumeSliderIndicatorColor
+        {
+            get { return bunifuSliderVolume.IndicatorColor; }
+            set { bunifuSliderVolume.IndicatorColor = value; }
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

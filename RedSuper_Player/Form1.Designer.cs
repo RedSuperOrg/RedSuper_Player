@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             this.panelMenu = new System.Windows.Forms.Panel();
             this.bunifuCustomLabelMain = new ns1.BunifuCustomLabel();
@@ -55,13 +55,13 @@
             this.bunifuTransitionSlidingMenu = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.bunifuTransitionSlidingMenu1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.timerAudio = new System.Windows.Forms.Timer(this.components);
-            this.bunifuImageButtonGo = new ns1.BunifuImageButton();
             this.bunifuImageButtonMute = new ns1.BunifuImageButton();
             this.bunifuImageButtonSettings = new ns1.BunifuImageButton();
             this.bunifuImageButtonEnd = new ns1.BunifuImageButton();
             this.bunifuImageButtonStart = new ns1.BunifuImageButton();
             this.bunifuImageButtonPlay = new ns1.BunifuImageButton();
             this.pictureBoxCoverSlider = new System.Windows.Forms.PictureBox();
+            this.bunifuImageButtonGo = new ns1.BunifuImageButton();
             this.panelTop = new System.Windows.Forms.Panel();
             this.bunifuThinButton23 = new ns1.BunifuThinButton2();
             this.bunifuThinButton24 = new ns1.BunifuThinButton2();
@@ -84,13 +84,13 @@
             this.panelBottom.SuspendLayout();
             this.panelYoutube.SuspendLayout();
             this.panelBack.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonGo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonMute)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonEnd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonStart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonPlay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCoverSlider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonGo)).BeginInit();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
@@ -391,64 +391,47 @@
             // 
             this.bunifuTransitionSlidingMenu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.bunifuTransitionSlidingMenu.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.bunifuTransitionSlidingMenu.DefaultAnimation = animation2;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.bunifuTransitionSlidingMenu.DefaultAnimation = animation3;
             // 
             // bunifuTransitionSlidingMenu1
             // 
             this.bunifuTransitionSlidingMenu1.AnimationType = BunifuAnimatorNS.AnimationType.ScaleAndRotate;
             this.bunifuTransitionSlidingMenu1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(30);
-            animation1.RotateCoeff = 0.5F;
-            animation1.RotateLimit = 0.2F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.bunifuTransitionSlidingMenu1.DefaultAnimation = animation1;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(30);
+            animation4.RotateCoeff = 0.5F;
+            animation4.RotateLimit = 0.2F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.bunifuTransitionSlidingMenu1.DefaultAnimation = animation4;
             // 
             // timerAudio
             // 
             this.timerAudio.Tick += new System.EventHandler(this.tmrAudio_Tick);
-            // 
-            // bunifuImageButtonGo
-            // 
-            this.bunifuImageButtonGo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuImageButtonGo.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTransitionSlidingMenu1.SetDecoration(this.bunifuImageButtonGo, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransitionSlidingMenu.SetDecoration(this.bunifuImageButtonGo, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuImageButtonGo.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButtonGo.Image")));
-            this.bunifuImageButtonGo.ImageActive = null;
-            this.bunifuImageButtonGo.Location = new System.Drawing.Point(612, 21);
-            this.bunifuImageButtonGo.Name = "bunifuImageButtonGo";
-            this.bunifuImageButtonGo.Size = new System.Drawing.Size(71, 71);
-            this.bunifuImageButtonGo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButtonGo.TabIndex = 0;
-            this.bunifuImageButtonGo.TabStop = false;
-            this.bunifuImageButtonGo.Zoom = 10;
-            this.bunifuImageButtonGo.Click += new System.EventHandler(this.bunifuImageButtonGo_Click_1);
             // 
             // bunifuImageButtonMute
             // 
@@ -506,7 +489,7 @@
             this.bunifuImageButtonStart.BackColor = System.Drawing.Color.Black;
             this.bunifuTransitionSlidingMenu1.SetDecoration(this.bunifuImageButtonStart, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransitionSlidingMenu.SetDecoration(this.bunifuImageButtonStart, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuImageButtonStart.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButtonStart.Image")));
+            this.bunifuImageButtonStart.Image = global::RedSuper_Player.Properties.Resources.Skip_to_Start_100;
             this.bunifuImageButtonStart.ImageActive = null;
             this.bunifuImageButtonStart.Location = new System.Drawing.Point(272, 58);
             this.bunifuImageButtonStart.Name = "bunifuImageButtonStart";
@@ -545,6 +528,23 @@
             this.pictureBoxCoverSlider.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxCoverSlider.TabIndex = 0;
             this.pictureBoxCoverSlider.TabStop = false;
+            // 
+            // bunifuImageButtonGo
+            // 
+            this.bunifuImageButtonGo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuImageButtonGo.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTransitionSlidingMenu1.SetDecoration(this.bunifuImageButtonGo, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransitionSlidingMenu.SetDecoration(this.bunifuImageButtonGo, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuImageButtonGo.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButtonGo.Image")));
+            this.bunifuImageButtonGo.ImageActive = null;
+            this.bunifuImageButtonGo.Location = new System.Drawing.Point(612, 21);
+            this.bunifuImageButtonGo.Name = "bunifuImageButtonGo";
+            this.bunifuImageButtonGo.Size = new System.Drawing.Size(71, 71);
+            this.bunifuImageButtonGo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButtonGo.TabIndex = 0;
+            this.bunifuImageButtonGo.TabStop = false;
+            this.bunifuImageButtonGo.Zoom = 10;
+            this.bunifuImageButtonGo.Click += new System.EventHandler(this.bunifuImageButtonGo_Click_1);
             // 
             // panelTop
             // 
@@ -988,13 +988,13 @@
             this.panelYoutube.ResumeLayout(false);
             this.panelYoutube.PerformLayout();
             this.panelBack.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonGo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonMute)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonSettings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonEnd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonStart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonPlay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCoverSlider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonGo)).EndInit();
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();

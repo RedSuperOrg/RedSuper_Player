@@ -210,6 +210,39 @@
   <ItemGroup>
     <None Include="Resources\Expand-Arrow-Blue.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Music-Record-FilledBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Skip-to-Start-Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Skip to Start-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\End-Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\End-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Circled-Pause-Filled-Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Circled-Play-100Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Go-Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Horizontal-Settings-Mixer-Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MuteBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Room-SoundBlue.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
