@@ -43,7 +43,11 @@ namespace RedSuper_Player
 
         private void bunifuFlatButtonColorsBlue_Click(object sender, EventArgs e)
         {
-
+            fr1Local.panelTopImage = Properties.Resources.Spotify_Effect_The_OneBlue;
+            fr1Local.colorsBlueForeColor = Color.FromArgb(0, 72, 251);
+            fr1Local.colorsBlueIdleFillColor = Color.FromArgb(0, 72, 251);
+            fr1Local.aboutBlueForeColor = Color.FromArgb(0, 72, 251);
+            fr1Local.aboutBlueIdleFillColor = Color.FromArgb(0, 72, 251);
         }
     }
 }
