@@ -197,22 +197,32 @@ namespace RedSuper_Player
                 panelMenu.Width = 200;
                 bunifuTransitionSlidingMenu.ShowSync(panelMenu);
 
-                //CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON
+                //CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON (RED)
                 if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(190, 1, 15))
                 {
                     bunifuImageButtonSlideMenu.Image = Resources.Expand_Arrow_96;
                 }
                 else
                 {
+                    //BLUE
                     if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(0, 72, 251))
                     {
                         bunifuImageButtonSlideMenu.Image = Resources.Expand_Arrow_Blue;
                     }
                     else
                     {
+                        //ORANGE
                         if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(255, 102, 0))
                         {
                             bunifuImageButtonSlideMenu.Image = Resources.Expand_Arrow_Orange;
+                        }
+                        else
+                        {
+                            //GREEN
+                            if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(84, 204, 84))
+                            {
+                                bunifuImageButtonSlideMenu.Image = Resources.Expand_Arrow_Green;
+                            }
                         }
                     }
                 }
@@ -231,22 +241,32 @@ namespace RedSuper_Player
                 panelMenu.Visible = false;
                 panelMenu.Width = 55;
 
-                //CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON
+                //CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON (RED)
                 if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(190, 1, 15))
                 {
                     bunifuImageButtonSlideMenu.Image = Resources.CollapseArrow;
                 }
                 else
                 {
+                    //BLUE
                     if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(0, 72, 251))
                     {
                         bunifuImageButtonSlideMenu.Image = Resources.CollapseArrowBlue;
                     }
                     else
                     {
+                        //ORANGE
                         if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(255, 102, 0))
                         {
                             bunifuImageButtonSlideMenu.Image = Resources.CollapseArrowOrange;
+                        }
+                        else
+                        {
+                            //GREEN
+                            if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(84, 204, 84))
+                            {
+                                bunifuImageButtonSlideMenu.Image = Resources.CollapseArrowGreen;
+                            }
                         }
                     }
                 }
@@ -295,22 +315,32 @@ namespace RedSuper_Player
                 if (output.PlaybackState == NAudio.Wave.PlaybackState.Playing)
                 {
                     output.Pause();
-                    //CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON
+                    //CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON (RED)
                     if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(190, 1, 15))
                     {
                         bunifuImageButtonPlay.Image = Resources.Circled_Play_100__1_;
                     }
                     else
                     {
+                        //BLUE
                         if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(0, 72, 251))
                         {
                             bunifuImageButtonPlay.Image = Resources.Circled_Play_100Blue;
                         }
                         else
                         {
+                            //ORANGE
                             if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(255, 102, 0))
                             {
                                 bunifuImageButtonPlay.Image = Resources.Circled_Play_100Orange;
+                            }
+                            else
+                            {
+                                //GREEN
+                                if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(84, 204, 84))
+                                {
+                                    bunifuImageButtonPlay.Image = Resources.Circled_Play_100Green;
+                                }
                             }
                         }
                     }
@@ -321,22 +351,32 @@ namespace RedSuper_Player
                     if (output.PlaybackState == NAudio.Wave.PlaybackState.Paused)
                     {
                         output.Play();
-                        //CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON
+                        //CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON (RED)
                         if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(190, 1, 15))
                         {
                             bunifuImageButtonPlay.Image = Resources.Circled_Pause_Filled_100;
                         }
                         else
                         {
+                            //BLUE
                             if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(0, 72, 251))
                             {
                                 bunifuImageButtonPlay.Image = Resources.Circled_Pause_Filled_Blue;
                             }
                             else
                             {
+                                //ORANGE
                                 if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(255, 102, 0))
                                 {
                                     bunifuImageButtonPlay.Image = Resources.Circled_Pause_Filled_Orange;
+                                }
+                                else
+                                {
+                                    //GREEN
+                                    if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(84, 204, 84))
+                                    {
+                                        bunifuImageButtonPlay.Image = Resources.Circled_Pause_Filled_Green;
+                                    }
                                 }
                             }
                         }
@@ -456,22 +496,32 @@ namespace RedSuper_Player
                 }
                 else
                 {
-                    //CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON
+                    //CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON (RED)
                     if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(190, 1, 15))
                     {
                         pictureBoxCoverSlider.Image = Resources.Music_Record_Filled_100;
                     }
                     else
                     {
+                        //BLUE
                         if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(0, 72, 251))
                         {
                             pictureBoxCoverSlider.Image = Resources.Music_Record_FilledBlue;
                         }
                         else
                         {
+                            //ORANGE
                             if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(255, 102, 0))
                             {
                                 pictureBoxCoverSlider.Image = Resources.Music_Record_FilledOrange;
+                            }
+                            else
+                            {
+                                //GREEN
+                                if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(84, 204, 84))
+                                {
+                                    pictureBoxCoverSlider.Image = Resources.Music_Record_FilledGreen;
+                                }
                             }
                         }
                     }
@@ -479,21 +529,32 @@ namespace RedSuper_Player
 
                 bunifuImageButtonPlay.Enabled = true;
 
+                //CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON (RED)
                 if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(190, 1, 15))
                 {
                     bunifuImageButtonPlay.Image = Resources.Circled_Pause_Filled_100;
                 }
                 else
                 {
+                    //BLUE
                     if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(0, 72, 251))
                     {
                         bunifuImageButtonPlay.Image = Resources.Circled_Pause_Filled_Blue;
                     }
                     else
                     {
+                        //ORANGE
                         if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(255, 102, 0))
                         {
                             bunifuImageButtonPlay.Image = Resources.Circled_Pause_Filled_Orange;
+                        }
+                        else
+                        {
+                            //GREEN
+                            if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(84, 204, 84))
+                            {
+                                bunifuImageButtonPlay.Image = Resources.Circled_Pause_Filled_Green;
+                            }
                         }
                     }
                 }
@@ -586,7 +647,7 @@ namespace RedSuper_Player
             if (volume >= 0.01)
             {
                 wave.Volume = 0.01f;
-                //CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON
+                //CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON (RED)
                 if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(190, 1, 15))
                 {
                     bunifuImageButtonMute.Image = Resources.Muted_;
@@ -604,6 +665,14 @@ namespace RedSuper_Player
                         if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(255, 102, 0))
                         {
                             bunifuImageButtonMute.Image = Resources.MuteOrange;
+                        }
+                        else
+                        {
+                            //GREEN
+                            if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(84, 204, 84))
+                            {
+                                bunifuImageButtonMute.Image = Resources.MuteGreen;
+                            }
                         }
                     }
                 }
@@ -629,6 +698,14 @@ namespace RedSuper_Player
                         if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(255, 102, 0))
                         {
                             bunifuImageButtonMute.Image = Resources.Room_SoundOrange;
+                        }
+                        else
+                        {
+                            //GREEN
+                            if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(84, 204, 84))
+                            {
+                                bunifuImageButtonMute.Image = Resources.Room_SoundGreen;
+                            }
                         }
                     }
                 }

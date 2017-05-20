@@ -125,6 +125,48 @@ namespace RedSuper_Player
             fr1Local.volumeSliderIndicatorColor = Color.FromArgb(0, 72, 251);
         }
 
+        private void bunifuFlatButtonColorsGreen_Click(object sender, EventArgs e)
+        {
+            fr1Local.panelTopImage = Properties.Resources.Spotify_Effect_The_OneGreen;
+            fr1Local.panelTopColor = Color.FromArgb(113, 223, 110);
+            fr1Local.colorsButtonActiveForeColor = Color.FromArgb(113, 223, 110);
+            fr1Local.colorsButtonIdleFillColor = Color.FromArgb(113, 223, 110);
+            fr1Local.colorsButtonActiveFillColor = Color.Black;
+            fr1Local.colorsButtonActiveLineColor = Color.Black;
+            fr1Local.colorsButtonForeColor = Color.Black;
+            fr1Local.colorsButtonIdleForeColor = Color.Black;
+            fr1Local.colorsButtonIdleLineColor = Color.Black;
+            fr1Local.aboutButtonActiveForeColor = Color.FromArgb(113, 223, 110);
+            fr1Local.aboutButtonIdleFillColor = Color.FromArgb(113, 223, 110);
+            fr1Local.aboutButtonActiveFillColor = Color.Black;
+            fr1Local.aboutButtonActiveLineColor = Color.Black;
+            fr1Local.aboutButtonForeColor = Color.Black;
+            fr1Local.aboutButtonIdleForeColor = Color.Black;
+            fr1Local.aboutButtonIdleLineColor = Color.Black;
+            fr1Local.topMainLabel = Color.Black;
+            fr1Local.topSideLabel = Color.Black;
+            fr1Local.browseButtonIcon = Properties.Resources.BrowseGreen;
+            fr1Local.browseButtonOnHoverTextColor = Color.FromArgb(84, 204, 84);
+            fr1Local.videoButtonIcon = Properties.Resources.videoGreen;
+            fr1Local.videoButtonOnHoverTextColor = Color.FromArgb(84, 204, 84);
+            fr1Local.youtubeButtonIcon = Properties.Resources.YouTubeGreen;
+            fr1Local.youtubeButtonOnHoverTextColor = Color.FromArgb(84, 204, 84);
+            fr1Local.mySongsButtonIcon = Properties.Resources.musicGreen;
+            fr1Local.mySongsButtonOnHoverTextColor = Color.FromArgb(84, 204, 84);
+            fr1Local.playlistsButtonIcon = Properties.Resources.playlistGreen;
+            fr1Local.playlistsButtonOnHoverTextColor = Color.FromArgb(84, 204, 84);
+            fr1Local.menuButtonIcon = Properties.Resources.Expand_Arrow_Green;
+            fr1Local.coverIcon = Properties.Resources.Music_Record_FilledGreen;
+            fr1Local.trackBarIndicatorColor = Color.FromArgb(84, 204, 84);
+            fr1Local.startButtonIcon = Properties.Resources.Skip_to_Start_Green;
+            fr1Local.playButtonIcon = Properties.Resources.Circled_Play_100Green;
+            fr1Local.endButtonIcon = Properties.Resources.End_Green;
+            fr1Local.settingsButtonIcon = Properties.Resources.Horizontal_Settings_Mixer_Green;
+            fr1Local.soundButtonIcon = Properties.Resources.Room_SoundGreen;
+            fr1Local.goButtonIcon = Properties.Resources.Go_Green;
+            fr1Local.volumeSliderIndicatorColor = Color.FromArgb(84, 204, 84);
+        }
+
         private void bunifuFlatButtonColorsOrange_Click(object sender, EventArgs e)
         {
             fr1Local.panelTopImage = Properties.Resources.Spotify_Effect_The_OneOrange;
@@ -165,6 +207,11 @@ namespace RedSuper_Player
             fr1Local.soundButtonIcon = Properties.Resources.Room_SoundOrange;
             fr1Local.goButtonIcon = Properties.Resources.Go_Orange;
             fr1Local.volumeSliderIndicatorColor = Color.FromArgb(255, 102, 0);
+        }
+
+        private void bunifuFlatButtonColorsPink_Click(object sender, EventArgs e)
+        {
+            fr1Local.panelTopImage = Properties.Resources.Spotify_Effect_The_One;
         }
     }
 }
