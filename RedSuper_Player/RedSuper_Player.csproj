@@ -252,6 +252,54 @@
   <ItemGroup>
     <None Include="Resources\Spotify-Effect-The-OneOrange.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrowseOrange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Circled-Pause-Filled-Orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Circled-Play-100Orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CollapseArrowOrange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\End-Orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Expand-Arrow-Orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Go-Orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Horizontal-Settings-Mixer-Orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\musicOrange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Music-Record-FilledOrange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MuteOrange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playlistOrange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Room-SoundOrange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Skip-to-Start-Orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\videoOrange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YouTubeOrange.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

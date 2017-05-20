@@ -121,14 +121,11 @@
   <data name="Circled-Pause-Filled-Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Circled-Pause-Filled-Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Horizontal-Settings-Mixer-Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Horizontal-Settings-Mixer-Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Go-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Go-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ATT10008" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ATT10008.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Go-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Go-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="music" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\music.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,9 +160,6 @@
   <data name="Circled Play-100 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Circled Play-100 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Music-Record-FilledBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Music-Record-FilledBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="68858aa046861bcb905675ad64f7217fb7eb891e" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\68858aa046861bcb905675ad64f7217fb7eb891e.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -186,6 +180,9 @@
   </data>
   <data name="End-Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\End-Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Spotify-Effect-The-OneBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Spotify-Effect-The-OneBlue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,6 +214,9 @@
   <data name="BrowseBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BrowseBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Horizontal-Settings-Mixer-Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Horizontal-Settings-Mixer-Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Circled Pause Filled-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Circled Pause Filled-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -226,13 +226,61 @@
   <data name="MuteBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MuteBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Spotify-Effect-The-OneBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Spotify-Effect-The-OneBlue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Music-Record-FilledBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Music-Record-FilledBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Spotify-Effect-The-OneOrange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Spotify-Effect-The-OneOrange.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Spotify-Effect-OP1T3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Spotify-Effect-OP1T3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Spotify-Effect-The-OneOrange" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Spotify-Effect-The-OneOrange.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BrowseOrange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BrowseOrange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Circled-Pause-Filled-Orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Circled-Pause-Filled-Orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Circled-Play-100Orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Circled-Play-100Orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CollapseArrowOrange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CollapseArrowOrange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="End-Orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\End-Orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Expand-Arrow-Orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Expand-Arrow-Orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Go-Orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Go-Orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Horizontal-Settings-Mixer-Orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Horizontal-Settings-Mixer-Orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="musicOrange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\musicOrange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Music-Record-FilledOrange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Music-Record-FilledOrange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MuteOrange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MuteOrange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="playlistOrange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\playlistOrange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Room-SoundOrange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Room-SoundOrange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Skip-to-Start-Orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Skip-to-Start-Orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="videoOrange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\videoOrange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="YouTubeOrange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\YouTubeOrange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

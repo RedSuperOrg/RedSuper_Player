@@ -635,7 +635,7 @@
             this.bunifuCustomLabelVersionText.Name = "bunifuCustomLabelVersionText";
             this.bunifuCustomLabelVersionText.Size = new System.Drawing.Size(71, 17);
             this.bunifuCustomLabelVersionText.TabIndex = 3;
-            this.bunifuCustomLabelVersionText.Text = "v2.5 (WIP)";
+            this.bunifuCustomLabelVersionText.Text = "v3.0 (WIP)";
             // 
             // bunifuCustomLabelTopText
             // 

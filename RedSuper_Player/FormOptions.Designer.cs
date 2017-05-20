@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOptions));
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             this.bunifuDragControlColorsTop = new ns1.BunifuDragControl(this.components);
-            this.bunifuGradientPanel2 = new ns1.BunifuGradientPanel();
+            this.bunifuGradientPanelColorsPink = new ns1.BunifuGradientPanel();
             this.bunifuGradientPanelColorsOrange = new ns1.BunifuGradientPanel();
             this.bunifuFlatButtonColorsOrange = new ns1.BunifuFlatButton();
             this.bunifuGradientPanelColorsGreen = new ns1.BunifuGradientPanel();
@@ -45,6 +45,8 @@
             this.bunifuImageButtonColorsClose = new ns1.BunifuImageButton();
             this.bunifuGradientPanelColorsRed = new ns1.BunifuGradientPanel();
             this.bunifuFlatButtonColorsRed = new ns1.BunifuFlatButton();
+            this.bunifuFlatButtonColorsPink = new ns1.BunifuFlatButton();
+            this.bunifuGradientPanelColorsPink.SuspendLayout();
             this.bunifuGradientPanelColorsOrange.SuspendLayout();
             this.bunifuGradientPanelColorsGreen.SuspendLayout();
             this.bunifuGradientPanelColorsBlue.SuspendLayout();
@@ -66,19 +68,20 @@
             this.bunifuDragControlColorsTop.TargetControl = this.bunifuGradientPanelColorsTop;
             this.bunifuDragControlColorsTop.Vertical = true;
             // 
-            // bunifuGradientPanel2
+            // bunifuGradientPanelColorsPink
             // 
-            this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
-            this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.Black;
-            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.Green;
-            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.Black;
-            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.Green;
-            this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 238);
-            this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
-            this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(286, 59);
-            this.bunifuGradientPanel2.TabIndex = 3;
+            this.bunifuGradientPanelColorsPink.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanelColorsPink.BackgroundImage")));
+            this.bunifuGradientPanelColorsPink.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanelColorsPink.Controls.Add(this.bunifuFlatButtonColorsPink);
+            this.bunifuGradientPanelColorsPink.GradientBottomLeft = System.Drawing.Color.Black;
+            this.bunifuGradientPanelColorsPink.GradientBottomRight = System.Drawing.Color.Magenta;
+            this.bunifuGradientPanelColorsPink.GradientTopLeft = System.Drawing.Color.Black;
+            this.bunifuGradientPanelColorsPink.GradientTopRight = System.Drawing.Color.Magenta;
+            this.bunifuGradientPanelColorsPink.Location = new System.Drawing.Point(0, 238);
+            this.bunifuGradientPanelColorsPink.Name = "bunifuGradientPanelColorsPink";
+            this.bunifuGradientPanelColorsPink.Quality = 10;
+            this.bunifuGradientPanelColorsPink.Size = new System.Drawing.Size(286, 59);
+            this.bunifuGradientPanelColorsPink.TabIndex = 3;
             // 
             // bunifuGradientPanelColorsOrange
             // 
@@ -336,21 +339,57 @@
             this.bunifuFlatButtonColorsRed.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButtonColorsRed.Click += new System.EventHandler(this.bunifuFlatButtonColorsRed_Click);
             // 
+            // bunifuFlatButtonColorsPink
+            // 
+            this.bunifuFlatButtonColorsPink.Activecolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonColorsPink.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonColorsPink.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButtonColorsPink.BorderRadius = 0;
+            this.bunifuFlatButtonColorsPink.ButtonText = "   Pink";
+            this.bunifuFlatButtonColorsPink.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButtonColorsPink.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButtonColorsPink.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonColorsPink.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButtonColorsPink.Iconimage")));
+            this.bunifuFlatButtonColorsPink.Iconimage_right = null;
+            this.bunifuFlatButtonColorsPink.Iconimage_right_Selected = null;
+            this.bunifuFlatButtonColorsPink.Iconimage_Selected = null;
+            this.bunifuFlatButtonColorsPink.IconMarginLeft = 0;
+            this.bunifuFlatButtonColorsPink.IconMarginRight = 0;
+            this.bunifuFlatButtonColorsPink.IconRightVisible = true;
+            this.bunifuFlatButtonColorsPink.IconRightZoom = 0D;
+            this.bunifuFlatButtonColorsPink.IconVisible = true;
+            this.bunifuFlatButtonColorsPink.IconZoom = 45D;
+            this.bunifuFlatButtonColorsPink.IsTab = false;
+            this.bunifuFlatButtonColorsPink.Location = new System.Drawing.Point(0, 0);
+            this.bunifuFlatButtonColorsPink.Name = "bunifuFlatButtonColorsPink";
+            this.bunifuFlatButtonColorsPink.Normalcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonColorsPink.OnHovercolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonColorsPink.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))));
+            this.bunifuFlatButtonColorsPink.selected = false;
+            this.bunifuFlatButtonColorsPink.Size = new System.Drawing.Size(286, 51);
+            this.bunifuFlatButtonColorsPink.TabIndex = 5;
+            this.bunifuFlatButtonColorsPink.Text = "   Pink";
+            this.bunifuFlatButtonColorsPink.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButtonColorsPink.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButtonColorsPink.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
             // FormOptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(286, 291);
-            this.Controls.Add(this.bunifuGradientPanel2);
+            this.Controls.Add(this.bunifuGradientPanelColorsPink);
             this.Controls.Add(this.bunifuGradientPanelColorsOrange);
             this.Controls.Add(this.bunifuGradientPanelColorsGreen);
             this.Controls.Add(this.bunifuGradientPanelColorsBlue);
             this.Controls.Add(this.bunifuGradientPanelColorsTop);
             this.Controls.Add(this.bunifuGradientPanelColorsRed);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormOptions";
             this.Text = "Colors";
             this.Load += new System.EventHandler(this.FormOptions_Load);
+            this.bunifuGradientPanelColorsPink.ResumeLayout(false);
             this.bunifuGradientPanelColorsOrange.ResumeLayout(false);
             this.bunifuGradientPanelColorsGreen.ResumeLayout(false);
             this.bunifuGradientPanelColorsBlue.ResumeLayout(false);
@@ -373,12 +412,13 @@
         private ns1.BunifuFlatButton bunifuFlatButtonColorsRed;
         private ns1.BunifuGradientPanel bunifuGradientPanelColorsBlue;
         private ns1.BunifuFlatButton bunifuFlatButtonColorsBlue;
-        private ns1.BunifuGradientPanel bunifuGradientPanel2;
+        private ns1.BunifuGradientPanel bunifuGradientPanelColorsPink;
         private ns1.BunifuGradientPanel bunifuGradientPanelColorsOrange;
         private ns1.BunifuGradientPanel bunifuGradientPanelColorsGreen;
         private ns1.BunifuFlatButton bunifuFlatButtonColorsOrange;
         private ns1.BunifuFlatButton bunifuFlatButtonColorsGreen;
         private System.Windows.Forms.PictureBox pictureBoxColorsIcon;
         private ns1.BunifuCustomLabel bunifuCustomLabelColors;
+        private ns1.BunifuFlatButton bunifuFlatButtonColorsPink;
     }
 }

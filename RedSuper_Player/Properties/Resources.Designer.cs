@@ -103,6 +103,16 @@ namespace RedSuper_Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BrowseOrange {
+            get {
+                object obj = ResourceManager.GetObject("BrowseOrange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Circled_Pause_100 {
             get {
                 object obj = ResourceManager.GetObject("Circled Pause-100", resourceCulture);
@@ -133,6 +143,16 @@ namespace RedSuper_Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Circled_Pause_Filled_Orange {
+            get {
+                object obj = ResourceManager.GetObject("Circled-Pause-Filled-Orange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Circled_Play_100__1_ {
             get {
                 object obj = ResourceManager.GetObject("Circled Play-100 (1)", resourceCulture);
@@ -146,6 +166,16 @@ namespace RedSuper_Player.Properties {
         internal static System.Drawing.Bitmap Circled_Play_100Blue {
             get {
                 object obj = ResourceManager.GetObject("Circled-Play-100Blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Circled_Play_100Orange {
+            get {
+                object obj = ResourceManager.GetObject("Circled-Play-100Orange", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,6 +203,16 @@ namespace RedSuper_Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CollapseArrowOrange {
+            get {
+                object obj = ResourceManager.GetObject("CollapseArrowOrange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap End_100 {
             get {
                 object obj = ResourceManager.GetObject("End-100", resourceCulture);
@@ -186,6 +226,16 @@ namespace RedSuper_Player.Properties {
         internal static System.Drawing.Bitmap End_Blue {
             get {
                 object obj = ResourceManager.GetObject("End-Blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap End_Orange {
+            get {
+                object obj = ResourceManager.GetObject("End-Orange", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,6 +263,16 @@ namespace RedSuper_Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Expand_Arrow_Orange {
+            get {
+                object obj = ResourceManager.GetObject("Expand-Arrow-Orange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Go_100 {
             get {
                 object obj = ResourceManager.GetObject("Go-100", resourceCulture);
@@ -233,6 +293,16 @@ namespace RedSuper_Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Go_Orange {
+            get {
+                object obj = ResourceManager.GetObject("Go-Orange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Horizontal_Settings_Mixer_100 {
             get {
                 object obj = ResourceManager.GetObject("Horizontal Settings Mixer-100", resourceCulture);
@@ -246,6 +316,16 @@ namespace RedSuper_Player.Properties {
         internal static System.Drawing.Bitmap Horizontal_Settings_Mixer_Blue {
             get {
                 object obj = ResourceManager.GetObject("Horizontal-Settings-Mixer-Blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Horizontal_Settings_Mixer_Orange {
+            get {
+                object obj = ResourceManager.GetObject("Horizontal-Settings-Mixer-Orange", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,9 +373,29 @@ namespace RedSuper_Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Music_Record_FilledOrange {
+            get {
+                object obj = ResourceManager.GetObject("Music-Record-FilledOrange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap musicBlue {
             get {
                 object obj = ResourceManager.GetObject("musicBlue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap musicOrange {
+            get {
+                object obj = ResourceManager.GetObject("musicOrange", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,6 +423,16 @@ namespace RedSuper_Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MuteOrange {
+            get {
+                object obj = ResourceManager.GetObject("MuteOrange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap playlist {
             get {
                 object obj = ResourceManager.GetObject("playlist", resourceCulture);
@@ -343,9 +453,29 @@ namespace RedSuper_Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap playlistOrange {
+            get {
+                object obj = ResourceManager.GetObject("playlistOrange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Room_SoundBlue {
             get {
                 object obj = ResourceManager.GetObject("Room-SoundBlue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Room_SoundOrange {
+            get {
+                object obj = ResourceManager.GetObject("Room-SoundOrange", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -366,6 +496,16 @@ namespace RedSuper_Player.Properties {
         internal static System.Drawing.Bitmap Skip_to_Start_Blue {
             get {
                 object obj = ResourceManager.GetObject("Skip-to-Start-Blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Skip_to_Start_Orange {
+            get {
+                object obj = ResourceManager.GetObject("Skip-to-Start-Orange", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -433,6 +573,16 @@ namespace RedSuper_Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap videoOrange {
+            get {
+                object obj = ResourceManager.GetObject("videoOrange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap YouTube_1000 {
             get {
                 object obj = ResourceManager.GetObject("YouTube-1000", resourceCulture);
@@ -446,6 +596,16 @@ namespace RedSuper_Player.Properties {
         internal static System.Drawing.Bitmap YouTubeBlue {
             get {
                 object obj = ResourceManager.GetObject("YouTubeBlue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap YouTubeOrange {
+            get {
+                object obj = ResourceManager.GetObject("YouTubeOrange", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
