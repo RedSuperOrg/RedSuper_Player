@@ -497,6 +497,7 @@ namespace RedSuper_Player
                 {
                     var bin = (byte[])(file.Tag.Pictures[0].Data.Data);
                     pictureBoxCoverSlider.Image = Image.FromStream(new MemoryStream(bin)).GetThumbnailImage(100, 100, null, IntPtr.Zero);
+                    pictureBoxSideCover.Image = Image.FromStream(new MemoryStream(bin)).GetThumbnailImage(170, 170, null, IntPtr.Zero);
                 }
                 else
                 {
@@ -504,6 +505,7 @@ namespace RedSuper_Player
                     if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(190, 1, 15))
                     {
                         pictureBoxCoverSlider.Image = Resources.Music_Record_Filled_100;
+                        pictureBoxSideCover.Image = Resources.Music_Record_Filled_100;
                     }
                     else
                     {
@@ -511,6 +513,7 @@ namespace RedSuper_Player
                         if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(0, 72, 251))
                         {
                             pictureBoxCoverSlider.Image = Resources.Music_Record_FilledBlue;
+                            pictureBoxSideCover.Image = Resources.Music_Record_FilledBlue;
                         }
                         else
                         {
@@ -518,6 +521,7 @@ namespace RedSuper_Player
                             if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(255, 102, 0))
                             {
                                 pictureBoxCoverSlider.Image = Resources.Music_Record_FilledOrange;
+                                pictureBoxSideCover.Image = Resources.Music_Record_FilledOrange;
                             }
                             else
                             {
@@ -525,6 +529,7 @@ namespace RedSuper_Player
                                 if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(84, 204, 84))
                                 {
                                     pictureBoxCoverSlider.Image = Resources.Music_Record_FilledGreen;
+                                    pictureBoxSideCover.Image = Resources.Music_Record_FilledGreen;
                                 }
                                 else
                                 {
@@ -532,6 +537,7 @@ namespace RedSuper_Player
                                     if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(255, 0, 128))
                                     {
                                         pictureBoxCoverSlider.Image = Resources.Music_Record_FilledPink;
+                                        pictureBoxSideCover.Image = Resources.Music_Record_FilledPink;
                                     }
                                 }
                             }
