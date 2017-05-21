@@ -97,6 +97,24 @@ namespace RedSuper_Player
         }
 
         /// <summary>
+        /// Maximizes or returns to normal depending on current state with double click on the top panel
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void panelTop_DoubleClick(object sender, EventArgs e)
+        {
+            // If its maximized, go back to normal. Else, maximize
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+        }
+
+        /// <summary>
         /// Minimize program (HIDE)
         /// </summary>
         /// <param name="sender"></param>
