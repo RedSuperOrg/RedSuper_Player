@@ -73,7 +73,7 @@
             this.bunifuGradientPanelColorsPink.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanelColorsPink.BackgroundImage")));
             this.bunifuGradientPanelColorsPink.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanelColorsPink.Controls.Add(this.bunifuFlatButtonColorsPink);
-            this.bunifuGradientPanelColorsPink.GradientBottomLeft = System.Drawing.Color.Black;
+            this.bunifuGradientPanelColorsPink.GradientBottomLeft = System.Drawing.Color.Magenta;
             this.bunifuGradientPanelColorsPink.GradientBottomRight = System.Drawing.Color.Magenta;
             this.bunifuGradientPanelColorsPink.GradientTopLeft = System.Drawing.Color.Black;
             this.bunifuGradientPanelColorsPink.GradientTopRight = System.Drawing.Color.Magenta;
@@ -89,7 +89,7 @@
             this.bunifuFlatButtonColorsPink.BackColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButtonColorsPink.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButtonColorsPink.BorderRadius = 0;
-            this.bunifuFlatButtonColorsPink.ButtonText = "   Pink";
+            this.bunifuFlatButtonColorsPink.ButtonText = "      Pink";
             this.bunifuFlatButtonColorsPink.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButtonColorsPink.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButtonColorsPink.Iconcolor = System.Drawing.Color.Transparent;
@@ -102,7 +102,7 @@
             this.bunifuFlatButtonColorsPink.IconRightVisible = true;
             this.bunifuFlatButtonColorsPink.IconRightZoom = 0D;
             this.bunifuFlatButtonColorsPink.IconVisible = true;
-            this.bunifuFlatButtonColorsPink.IconZoom = 45D;
+            this.bunifuFlatButtonColorsPink.IconZoom = 49D;
             this.bunifuFlatButtonColorsPink.IsTab = false;
             this.bunifuFlatButtonColorsPink.Location = new System.Drawing.Point(0, 0);
             this.bunifuFlatButtonColorsPink.Name = "bunifuFlatButtonColorsPink";
@@ -112,7 +112,7 @@
             this.bunifuFlatButtonColorsPink.selected = false;
             this.bunifuFlatButtonColorsPink.Size = new System.Drawing.Size(286, 51);
             this.bunifuFlatButtonColorsPink.TabIndex = 5;
-            this.bunifuFlatButtonColorsPink.Text = "   Pink";
+            this.bunifuFlatButtonColorsPink.Text = "      Pink";
             this.bunifuFlatButtonColorsPink.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButtonColorsPink.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButtonColorsPink.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -123,10 +123,10 @@
             this.bunifuGradientPanelColorsOrange.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanelColorsOrange.BackgroundImage")));
             this.bunifuGradientPanelColorsOrange.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanelColorsOrange.Controls.Add(this.bunifuFlatButtonColorsOrange);
-            this.bunifuGradientPanelColorsOrange.GradientBottomLeft = System.Drawing.Color.Black;
-            this.bunifuGradientPanelColorsOrange.GradientBottomRight = System.Drawing.Color.Coral;
+            this.bunifuGradientPanelColorsOrange.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
+            this.bunifuGradientPanelColorsOrange.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
             this.bunifuGradientPanelColorsOrange.GradientTopLeft = System.Drawing.Color.Black;
-            this.bunifuGradientPanelColorsOrange.GradientTopRight = System.Drawing.Color.Coral;
+            this.bunifuGradientPanelColorsOrange.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
             this.bunifuGradientPanelColorsOrange.Location = new System.Drawing.Point(0, 187);
             this.bunifuGradientPanelColorsOrange.Name = "bunifuGradientPanelColorsOrange";
             this.bunifuGradientPanelColorsOrange.Quality = 10;
@@ -140,7 +140,7 @@
             this.bunifuFlatButtonColorsOrange.BackColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButtonColorsOrange.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButtonColorsOrange.BorderRadius = 0;
-            this.bunifuFlatButtonColorsOrange.ButtonText = "   Orange";
+            this.bunifuFlatButtonColorsOrange.ButtonText = "     Orange";
             this.bunifuFlatButtonColorsOrange.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButtonColorsOrange.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButtonColorsOrange.Iconcolor = System.Drawing.Color.Transparent;
@@ -153,7 +153,7 @@
             this.bunifuFlatButtonColorsOrange.IconRightVisible = true;
             this.bunifuFlatButtonColorsOrange.IconRightZoom = 0D;
             this.bunifuFlatButtonColorsOrange.IconVisible = true;
-            this.bunifuFlatButtonColorsOrange.IconZoom = 45D;
+            this.bunifuFlatButtonColorsOrange.IconZoom = 49D;
             this.bunifuFlatButtonColorsOrange.IsTab = false;
             this.bunifuFlatButtonColorsOrange.Location = new System.Drawing.Point(0, 0);
             this.bunifuFlatButtonColorsOrange.Name = "bunifuFlatButtonColorsOrange";
@@ -163,7 +163,7 @@
             this.bunifuFlatButtonColorsOrange.selected = false;
             this.bunifuFlatButtonColorsOrange.Size = new System.Drawing.Size(286, 51);
             this.bunifuFlatButtonColorsOrange.TabIndex = 4;
-            this.bunifuFlatButtonColorsOrange.Text = "   Orange";
+            this.bunifuFlatButtonColorsOrange.Text = "     Orange";
             this.bunifuFlatButtonColorsOrange.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButtonColorsOrange.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButtonColorsOrange.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -174,7 +174,7 @@
             this.bunifuGradientPanelColorsGreen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanelColorsGreen.BackgroundImage")));
             this.bunifuGradientPanelColorsGreen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanelColorsGreen.Controls.Add(this.bunifuFlatButtonColorsGreen);
-            this.bunifuGradientPanelColorsGreen.GradientBottomLeft = System.Drawing.Color.Black;
+            this.bunifuGradientPanelColorsGreen.GradientBottomLeft = System.Drawing.Color.SpringGreen;
             this.bunifuGradientPanelColorsGreen.GradientBottomRight = System.Drawing.Color.SpringGreen;
             this.bunifuGradientPanelColorsGreen.GradientTopLeft = System.Drawing.Color.Black;
             this.bunifuGradientPanelColorsGreen.GradientTopRight = System.Drawing.Color.SpringGreen;
@@ -190,7 +190,7 @@
             this.bunifuFlatButtonColorsGreen.BackColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButtonColorsGreen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButtonColorsGreen.BorderRadius = 0;
-            this.bunifuFlatButtonColorsGreen.ButtonText = "   Green";
+            this.bunifuFlatButtonColorsGreen.ButtonText = "     Green";
             this.bunifuFlatButtonColorsGreen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButtonColorsGreen.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButtonColorsGreen.Iconcolor = System.Drawing.Color.Transparent;
@@ -203,7 +203,7 @@
             this.bunifuFlatButtonColorsGreen.IconRightVisible = true;
             this.bunifuFlatButtonColorsGreen.IconRightZoom = 0D;
             this.bunifuFlatButtonColorsGreen.IconVisible = true;
-            this.bunifuFlatButtonColorsGreen.IconZoom = 45D;
+            this.bunifuFlatButtonColorsGreen.IconZoom = 49D;
             this.bunifuFlatButtonColorsGreen.IsTab = false;
             this.bunifuFlatButtonColorsGreen.Location = new System.Drawing.Point(0, 0);
             this.bunifuFlatButtonColorsGreen.Name = "bunifuFlatButtonColorsGreen";
@@ -213,7 +213,7 @@
             this.bunifuFlatButtonColorsGreen.selected = false;
             this.bunifuFlatButtonColorsGreen.Size = new System.Drawing.Size(286, 51);
             this.bunifuFlatButtonColorsGreen.TabIndex = 3;
-            this.bunifuFlatButtonColorsGreen.Text = "   Green";
+            this.bunifuFlatButtonColorsGreen.Text = "     Green";
             this.bunifuFlatButtonColorsGreen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButtonColorsGreen.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButtonColorsGreen.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -224,7 +224,7 @@
             this.bunifuGradientPanelColorsBlue.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanelColorsBlue.BackgroundImage")));
             this.bunifuGradientPanelColorsBlue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanelColorsBlue.Controls.Add(this.bunifuFlatButtonColorsBlue);
-            this.bunifuGradientPanelColorsBlue.GradientBottomLeft = System.Drawing.Color.Black;
+            this.bunifuGradientPanelColorsBlue.GradientBottomLeft = System.Drawing.Color.Blue;
             this.bunifuGradientPanelColorsBlue.GradientBottomRight = System.Drawing.Color.Blue;
             this.bunifuGradientPanelColorsBlue.GradientTopLeft = System.Drawing.Color.Black;
             this.bunifuGradientPanelColorsBlue.GradientTopRight = System.Drawing.Color.Blue;
@@ -240,7 +240,7 @@
             this.bunifuFlatButtonColorsBlue.BackColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButtonColorsBlue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButtonColorsBlue.BorderRadius = 0;
-            this.bunifuFlatButtonColorsBlue.ButtonText = "   Blue";
+            this.bunifuFlatButtonColorsBlue.ButtonText = "     Blue";
             this.bunifuFlatButtonColorsBlue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButtonColorsBlue.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButtonColorsBlue.Iconcolor = System.Drawing.Color.Transparent;
@@ -253,7 +253,7 @@
             this.bunifuFlatButtonColorsBlue.IconRightVisible = true;
             this.bunifuFlatButtonColorsBlue.IconRightZoom = 0D;
             this.bunifuFlatButtonColorsBlue.IconVisible = true;
-            this.bunifuFlatButtonColorsBlue.IconZoom = 45D;
+            this.bunifuFlatButtonColorsBlue.IconZoom = 49D;
             this.bunifuFlatButtonColorsBlue.IsTab = false;
             this.bunifuFlatButtonColorsBlue.Location = new System.Drawing.Point(0, 0);
             this.bunifuFlatButtonColorsBlue.Name = "bunifuFlatButtonColorsBlue";
@@ -263,7 +263,7 @@
             this.bunifuFlatButtonColorsBlue.selected = false;
             this.bunifuFlatButtonColorsBlue.Size = new System.Drawing.Size(286, 51);
             this.bunifuFlatButtonColorsBlue.TabIndex = 2;
-            this.bunifuFlatButtonColorsBlue.Text = "   Blue";
+            this.bunifuFlatButtonColorsBlue.Text = "     Blue";
             this.bunifuFlatButtonColorsBlue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButtonColorsBlue.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButtonColorsBlue.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -277,10 +277,10 @@
             this.bunifuGradientPanelColorsTop.Controls.Add(this.pictureBoxColorsIcon);
             this.bunifuGradientPanelColorsTop.Controls.Add(this.bunifuImageButtonColorsClose);
             this.bunifuGradientPanelColorsTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuGradientPanelColorsTop.GradientBottomLeft = System.Drawing.Color.Black;
-            this.bunifuGradientPanelColorsTop.GradientBottomRight = System.Drawing.Color.White;
-            this.bunifuGradientPanelColorsTop.GradientTopLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanelColorsTop.GradientTopRight = System.Drawing.Color.White;
+            this.bunifuGradientPanelColorsTop.GradientBottomLeft = System.Drawing.Color.DarkGray;
+            this.bunifuGradientPanelColorsTop.GradientBottomRight = System.Drawing.Color.DarkGray;
+            this.bunifuGradientPanelColorsTop.GradientTopLeft = System.Drawing.Color.Gray;
+            this.bunifuGradientPanelColorsTop.GradientTopRight = System.Drawing.Color.DarkGray;
             this.bunifuGradientPanelColorsTop.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanelColorsTop.Name = "bunifuGradientPanelColorsTop";
             this.bunifuGradientPanelColorsTop.Quality = 10;
@@ -293,7 +293,7 @@
             this.bunifuCustomLabelColors.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabelColors.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabelColors.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabelColors.Location = new System.Drawing.Point(33, 9);
+            this.bunifuCustomLabelColors.Location = new System.Drawing.Point(98, 13);
             this.bunifuCustomLabelColors.Name = "bunifuCustomLabelColors";
             this.bunifuCustomLabelColors.Size = new System.Drawing.Size(89, 16);
             this.bunifuCustomLabelColors.TabIndex = 4;
@@ -330,7 +330,7 @@
             this.bunifuGradientPanelColorsRed.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanelColorsRed.BackgroundImage")));
             this.bunifuGradientPanelColorsRed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanelColorsRed.Controls.Add(this.bunifuFlatButtonColorsRed);
-            this.bunifuGradientPanelColorsRed.GradientBottomLeft = System.Drawing.Color.Black;
+            this.bunifuGradientPanelColorsRed.GradientBottomLeft = System.Drawing.Color.Red;
             this.bunifuGradientPanelColorsRed.GradientBottomRight = System.Drawing.Color.Red;
             this.bunifuGradientPanelColorsRed.GradientTopLeft = System.Drawing.Color.Black;
             this.bunifuGradientPanelColorsRed.GradientTopRight = System.Drawing.Color.Red;
@@ -346,7 +346,7 @@
             this.bunifuFlatButtonColorsRed.BackColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButtonColorsRed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButtonColorsRed.BorderRadius = 0;
-            this.bunifuFlatButtonColorsRed.ButtonText = "   Red";
+            this.bunifuFlatButtonColorsRed.ButtonText = "    Red";
             this.bunifuFlatButtonColorsRed.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButtonColorsRed.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButtonColorsRed.Iconcolor = System.Drawing.Color.Transparent;
@@ -359,7 +359,7 @@
             this.bunifuFlatButtonColorsRed.IconRightVisible = true;
             this.bunifuFlatButtonColorsRed.IconRightZoom = 0D;
             this.bunifuFlatButtonColorsRed.IconVisible = true;
-            this.bunifuFlatButtonColorsRed.IconZoom = 45D;
+            this.bunifuFlatButtonColorsRed.IconZoom = 49D;
             this.bunifuFlatButtonColorsRed.IsTab = false;
             this.bunifuFlatButtonColorsRed.Location = new System.Drawing.Point(0, 3);
             this.bunifuFlatButtonColorsRed.Name = "bunifuFlatButtonColorsRed";
@@ -369,7 +369,7 @@
             this.bunifuFlatButtonColorsRed.selected = false;
             this.bunifuFlatButtonColorsRed.Size = new System.Drawing.Size(286, 54);
             this.bunifuFlatButtonColorsRed.TabIndex = 0;
-            this.bunifuFlatButtonColorsRed.Text = "   Red";
+            this.bunifuFlatButtonColorsRed.Text = "    Red";
             this.bunifuFlatButtonColorsRed.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButtonColorsRed.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButtonColorsRed.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
