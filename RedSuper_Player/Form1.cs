@@ -425,7 +425,13 @@ namespace RedSuper_Player
 
         private void bunifuFlatButtonVideo_Click(object sender, EventArgs e)
         {
-
+            if (panelVideo.Visible == false)
+            {
+                panelVideo.Visible = true;
+                webBrowserYoutube.Visible = false;
+                panelYoutube.Visible = false;
+                panelYoutube.Visible = false;
+            }
         }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -859,6 +865,7 @@ namespace RedSuper_Player
                 panelYoutube.Visible = false;
                 bunifuTransitionSlidingMenu.ShowSync(panelYoutube);
                 panelYoutube.Visible = true;
+                panelVideo.Visible = false;
             }
         }
 
@@ -867,6 +874,7 @@ namespace RedSuper_Player
         {
             webBrowserYoutube.Visible = false;
             panelYoutube.Visible = false;
+            panelVideo.Visible = false;
         }
 
         // ON GO PRESS NAVIGATE THE PRESENT URL
