@@ -422,15 +422,10 @@ namespace RedSuper_Player
             DisposeWave();
         }
 
-        /// <summary>
-        /// POPS VIDEO PLAYER FORM (WIP)
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void bunifuFlatButtonVideo_Click(object sender, EventArgs e)
         {
-            Form2 video = new Form2(this);
-            video.Show();
+
         }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -858,10 +853,13 @@ namespace RedSuper_Player
         // ON 'YOUTUBE' CLICK HIDE PANELS FROM AUDIO AND SHOW YOUTUBE CONTROLS
         private void bunifuFlatButtonYoutube_Click(object sender, EventArgs e)
         {
-            webBrowserYoutube.Visible = true;
-            panelYoutube.Visible = false;
-            bunifuTransitionSlidingMenu.ShowSync(panelYoutube);
-            panelYoutube.Visible = true;
+            if (webBrowserYoutube.Visible == false)
+            {
+                webBrowserYoutube.Visible = true;
+                panelYoutube.Visible = false;
+                bunifuTransitionSlidingMenu.ShowSync(panelYoutube);
+                panelYoutube.Visible = true;
+            }
         }
 
         // ON 'MYSONGS' CLICK RETURN TO AUDIO PLAYER
