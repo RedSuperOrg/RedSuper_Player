@@ -164,6 +164,7 @@ namespace RedSuper_Player
 
             // START WITH NO SOUND SELECTED
             listBoxMusic.ClearSelected();
+            pictureBoxEqualizer.Enabled = false;
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -358,6 +359,7 @@ namespace RedSuper_Player
                             }
                         }
                     }
+                    pictureBoxEqualizer.Enabled = false;
                 }
                 else
                 {
@@ -402,6 +404,7 @@ namespace RedSuper_Player
                                 }
                             }
                         }
+                        pictureBoxEqualizer.Enabled = true;
                     }
                 }
                 
@@ -420,18 +423,6 @@ namespace RedSuper_Player
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             DisposeWave();
-        }
-
-
-        private void bunifuFlatButtonVideo_Click(object sender, EventArgs e)
-        {
-            if (panelVideo.Visible == false)
-            {
-                panelVideo.Visible = true;
-                webBrowserYoutube.Visible = false;
-                panelYoutube.Visible = false;
-                panelYoutube.Visible = false;
-            }
         }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -517,6 +508,8 @@ namespace RedSuper_Player
                     var bin = (byte[])(file.Tag.Pictures[0].Data.Data);
                     pictureBoxCoverSlider.Image = Image.FromStream(new MemoryStream(bin)).GetThumbnailImage(100, 100, null, IntPtr.Zero);
                     pictureBoxSideCover.Image = Image.FromStream(new MemoryStream(bin)).GetThumbnailImage(170, 170, null, IntPtr.Zero);
+                    pictureBoxSideCover.Visible = false;
+                    bunifuTransitionSlidingMenu1.ShowSync(pictureBoxSideCover);
                 }
                 else
                 {
@@ -565,6 +558,8 @@ namespace RedSuper_Player
                 }
 
                 bunifuImageButtonPlay.Enabled = true;
+                pictureBoxEqualizer.Visible = true;
+                pictureBoxEqualizer.Enabled = true;
 
                 //CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON (RED)
                 if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(190, 1, 15))
@@ -746,8 +741,11 @@ namespace RedSuper_Player
         /// <param name="e"></param>
         private void bunifuSliderMain_ValueChanged(object sender, EventArgs e)
         {
-            TimeSpan newPos = new TimeSpan(bunifuSliderMain.Value * 10000000);
-            stream.CurrentTime = newPos;
+            if (output != null)
+            {
+                TimeSpan newPos = new TimeSpan(bunifuSliderMain.Value * 10000000);
+                stream.CurrentTime = newPos;
+            }
         }
 
         /// <summary>
@@ -861,6 +859,10 @@ namespace RedSuper_Player
         {
             if (webBrowserYoutube.Visible == false)
             {
+                bunifuImageButtonFullscreen.Visible = false;
+                bunifuImageButtonRewind.Visible = false;
+                bunifuImageButtonForward.Visible = false;
+                bunifuImageButtonStop.Visible = false;
                 webBrowserYoutube.Visible = true;
                 panelYoutube.Visible = false;
                 bunifuTransitionSlidingMenu.ShowSync(panelYoutube);
@@ -875,6 +877,46 @@ namespace RedSuper_Player
             webBrowserYoutube.Visible = false;
             panelYoutube.Visible = false;
             panelVideo.Visible = false;
+            bunifuImageButtonFullscreen.Visible = false;
+            bunifuImageButtonRewind.Visible = false;
+            bunifuImageButtonForward.Visible = false;
+            bunifuImageButtonStop.Visible = false;
+            pictureBoxCoverSlider.Visible = true;
+            bunifuCustomLabelArtistName.Visible = true;
+            bunifuCustomLabelArtistExtraInfo.Visible = true;
+            bunifuImageButtonSettings.Location = new Point(527, 60);
+            bunifuSliderMain.Size = new Size(527, 30);
+            bunifuSliderMain.Location = new Point(140, 13);
+            bunifuCustomLabelStartTimer.Location = new Point(106, 18);
+            bunifuCustomLabelEndTimer.Location = new Point(672, 18);
+            bunifuCustomLabelStartTimer.Text = "0:00";
+            bunifuCustomLabelEndTimer.Text = "0:00";
+            bunifuImageButtonSettings.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right);
+        }
+
+        private void bunifuFlatButtonVideo_Click(object sender, EventArgs e)
+        {
+            if (panelVideo.Visible == false)
+            {
+                panelVideo.Visible = true;
+                webBrowserYoutube.Visible = false;
+                panelYoutube.Visible = false;
+                bunifuImageButtonFullscreen.Visible = true;
+                bunifuImageButtonRewind.Visible = true;
+                bunifuImageButtonForward.Visible = true;
+                bunifuImageButtonStop.Visible = true;
+                pictureBoxCoverSlider.Visible = false;
+                bunifuCustomLabelArtistName.Visible = false;
+                bunifuCustomLabelArtistExtraInfo.Visible = false;
+                bunifuImageButtonSettings.Location = new Point(6, 65);
+                bunifuSliderMain.Size = new Size(596, 30);
+                bunifuSliderMain.Location = new Point(61, 13);
+                bunifuCustomLabelStartTimer.Location = new Point(6, 18);
+                bunifuCustomLabelEndTimer.Location = new Point(662, 18);
+                bunifuCustomLabelStartTimer.Text = "00:00:00";
+                bunifuCustomLabelEndTimer.Text = "00:00:00";
+                bunifuImageButtonSettings.Anchor = (AnchorStyles.Top | AnchorStyles.Left);
+            }
         }
 
         // ON GO PRESS NAVIGATE THE PRESENT URL
@@ -914,18 +956,14 @@ namespace RedSuper_Player
             set { panelTop.BackColor = value; }
         }
 
-        /// <summary>
-        /// Font color for colors button (background color)
-        /// </summary>
+        //Font color for colors button (background color)
         public Color colorsButtonActiveForeColor
         {
             get { return bunifuThinButton23.ActiveForecolor; }
             set { bunifuThinButton23.ActiveForecolor = value; }
         }
 
-        /// <summary>
-        /// Fill Color for colors button (background color)
-        /// </summary>
+        //Fill Color for colors button(background color)
         public Color colorsButtonIdleFillColor
         {
             get { return bunifuThinButton23.IdleFillColor; }
@@ -1136,6 +1174,12 @@ namespace RedSuper_Player
         {
             get { return bunifuSliderVolume.IndicatorColor; }
             set { bunifuSliderVolume.IndicatorColor = value; }
+        }
+
+        public Image equalizer
+        {
+            get { return pictureBoxEqualizer.Image; }
+            set { pictureBoxEqualizer.Image = value; }
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

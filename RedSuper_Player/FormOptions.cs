@@ -81,6 +81,7 @@ namespace RedSuper_Player
             fr1Local.soundButtonIcon = Properties.Resources.Unmuted_;
             fr1Local.goButtonIcon = Properties.Resources.Go_100;
             fr1Local.volumeSliderIndicatorColor = Color.FromArgb(190, 1, 15);
+            fr1Local.equalizer = Properties.Resources.rhythm;
         }
 
         private void bunifuFlatButtonColorsBlue_Click(object sender, EventArgs e)
@@ -123,6 +124,7 @@ namespace RedSuper_Player
             fr1Local.soundButtonIcon = Properties.Resources.Room_SoundBlue;
             fr1Local.goButtonIcon = Properties.Resources.Go_Blue;
             fr1Local.volumeSliderIndicatorColor = Color.FromArgb(0, 72, 251);
+            fr1Local.equalizer = Properties.Resources.equalizerBlue;
         }
 
         private void bunifuFlatButtonColorsGreen_Click(object sender, EventArgs e)
@@ -165,6 +167,7 @@ namespace RedSuper_Player
             fr1Local.soundButtonIcon = Properties.Resources.Room_SoundGreen;
             fr1Local.goButtonIcon = Properties.Resources.Go_Green;
             fr1Local.volumeSliderIndicatorColor = Color.FromArgb(84, 204, 84);
+            fr1Local.equalizer = Properties.Resources.equalizerGreen;
         }
 
         private void bunifuFlatButtonColorsOrange_Click(object sender, EventArgs e)
@@ -207,6 +210,7 @@ namespace RedSuper_Player
             fr1Local.soundButtonIcon = Properties.Resources.Room_SoundOrange;
             fr1Local.goButtonIcon = Properties.Resources.Go_Orange;
             fr1Local.volumeSliderIndicatorColor = Color.FromArgb(255, 102, 0);
+            fr1Local.equalizer = Properties.Resources.equalizerOrange;
         }
 
         private void bunifuFlatButtonColorsPink_Click(object sender, EventArgs e)
@@ -249,6 +253,7 @@ namespace RedSuper_Player
             fr1Local.soundButtonIcon = Properties.Resources.Room_SoundPink;
             fr1Local.goButtonIcon = Properties.Resources.Go_Pink;
             fr1Local.volumeSliderIndicatorColor = Color.FromArgb(255, 0, 128);
+            fr1Local.equalizer = Properties.Resources.equalizerPink;
         }
     }
 }

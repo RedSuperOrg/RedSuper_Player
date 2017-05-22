@@ -401,6 +401,33 @@
   <ItemGroup>
     <None Include="Resources\YouTubePink.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equalizerBlue.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rhythm.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equalizerGreen.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equalizerOrange.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equalizerPink.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rewind-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fast Forward-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Full Screen-100.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
