@@ -12,6 +12,7 @@ using NAudio;
 using TagLib;
 using System.IO;
 using System.Text.RegularExpressions;
+using Microsoft.DirectX.AudioVideoPlayback;
 
 namespace RedSuper_Player
 {
@@ -21,11 +22,14 @@ namespace RedSuper_Player
         {
             InitializeComponent();
 
-            // LIST BOX WILL HAVE THE SAME DATA AS THE MUSIC LIST 
+            // MUSIC LIST BOX WILL HAVE THE SAME DATA AS THE MUSIC LIST 
             listBoxMusic.DataSource = musicList;
 
             // CREATED DEFAULT DEVICE FOR VOLUME ON CALLOUT
             wave = new NAudio.Wave.WaveOut();
+
+            // VIDEO LIST BOX WILL HAVE THE SAME DATA AS THE VIDEO LIST 
+            listBoxVideos.DataSource = videoList;
 
             // INITIAL VOLUME
             wave.Volume = 1.0f;
@@ -34,11 +38,18 @@ namespace RedSuper_Player
             bunifuThinButton24.BackColor = Color.Transparent;
         }
 
+        private Video video;
+
+        private int selectedIndex = 0;
+
         // VARIABLE FOR THE URL FOR YOUTUBE
         string _ytUrl;
 
         // LIST CREATED FOR THE SONGS ADDED TO THE MUSIC LISTBOX
         private IList<string> musicList = new BindingList<string>();
+
+        // LIST CREATED FOR THE VIDEOS ADDED TO THE VIDEO LISTBOX
+        private IList<string> videoList = new BindingList<string>();
 
         // STREAM TO NULL UNTIL SOMETHING'S CHOSEN
         private NAudio.Wave.BlockAlignReductionStream stream = null;
@@ -51,6 +62,8 @@ namespace RedSuper_Player
 
         // VARIABLE TO ASSIGN LAST VOLUME ON "MUTE" CLICK
         private float lastVolume = 1.0f;
+
+        bool type = true;
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -141,30 +154,59 @@ namespace RedSuper_Player
             // ASSIGN THE CLASS
             OpenFileDialog myOpenFileDialog = new OpenFileDialog();
 
-            // CORRECTS THE INITIAL DIRECTORY, FILTERS, ENABLES MULTISELECT
-            myOpenFileDialog.InitialDirectory = "c:\\";
-            myOpenFileDialog.Filter = "MP3 Audio File (*.mp3)|*.mp3| Windows Media File (*.wma)|*.wma|WAV Audio File  (*.wav)|*.wav|All FILES (*.*)|*.*";
-            myOpenFileDialog.FilterIndex = 1;
-            myOpenFileDialog.RestoreDirectory = false;
-            myOpenFileDialog.Multiselect = true;
-
-            // POPS THE FILE DIALOG
-            if (myOpenFileDialog.ShowDialog() != DialogResult.OK) return;
-
-            // FOR EACH SONG BROWSED, ADD TO THE LISTBOX IF THERE'S NOT A COPY
-            string[] songs = myOpenFileDialog.FileNames;
-            foreach (string song in songs)
+            if (type == true)
             {
-                if (!musicList.Contains(song))
-                {
-                    musicList.Add(song);
-                    listBoxMusic.Refresh();
-                }
-            }
+                // CORRECTS THE INITIAL DIRECTORY, FILTERS, ENABLES MULTISELECT
+                myOpenFileDialog.InitialDirectory = "c:\\";
+                myOpenFileDialog.Filter = "MP3 Audio File (*.mp3)|*.mp3| Windows Media File (*.wma)|*.wma|WAV Audio File  (*.wav)|*.wav|All FILES (*.*)|*.*";
+                myOpenFileDialog.FilterIndex = 1;
+                myOpenFileDialog.RestoreDirectory = false;
+                myOpenFileDialog.Multiselect = true;
 
-            // START WITH NO SOUND SELECTED
-            listBoxMusic.ClearSelected();
-            pictureBoxEqualizer.Enabled = false;
+                // POPS THE FILE DIALOG
+                if (myOpenFileDialog.ShowDialog() != DialogResult.OK) return;
+
+                // FOR EACH SONG BROWSED, ADD TO THE LISTBOX IF THERE'S NOT A COPY
+                string[] songs = myOpenFileDialog.FileNames;
+                foreach (string song in songs)
+                {
+                    if (!musicList.Contains(song))
+                    {
+                        musicList.Add(song);
+                        listBoxMusic.Refresh();
+                    }
+                }
+
+                // START WITH NO SOUND SELECTED
+                listBoxMusic.ClearSelected();
+                pictureBoxEqualizer.Enabled = false;
+            }
+            else
+            {
+                myOpenFileDialog.InitialDirectory = "c:\\";
+                myOpenFileDialog.Filter = "MP3 Audio File (*.mp3)|*.mp3| Windows Media File (*.wma)|*.wma|WAV Audio File  (*.wav)|*.wav| WMV File (*.wmv)|*.wmv|All FILES (*.*)|*.*";
+                myOpenFileDialog.FilterIndex = 1;
+                myOpenFileDialog.RestoreDirectory = false;
+                myOpenFileDialog.Multiselect = true;
+
+                // POPS THE FILE DIALOG
+                if (myOpenFileDialog.ShowDialog() != DialogResult.OK) return;
+
+                // FOR EACH SONG BROWSED, ADD TO THE LISTBOX IF THERE'S NOT A COPY
+                string[] videos = myOpenFileDialog.FileNames;
+                foreach (string video in videos)
+                {
+                    if (!musicList.Contains(video))
+                    {
+                        musicList.Add(video);
+                        listBoxMusic.Refresh();
+                    }
+                }
+
+                // START WITH NO SOUND SELECTED
+                listBoxMusic.ClearSelected();
+                pictureBoxEqualizer.Enabled = false;
+            }
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -871,6 +913,7 @@ namespace RedSuper_Player
         // ON 'MYSONGS' CLICK RETURN TO AUDIO PLAYER
         private void bunifuFlatButtonMySongs_Click(object sender, EventArgs e)
         {
+            type = true;
             webBrowserYoutube.Visible = false;
             panelYoutube.Visible = false;
             panelVideo.Visible = false;
@@ -879,6 +922,7 @@ namespace RedSuper_Player
 
         private void bunifuFlatButtonVideo_Click(object sender, EventArgs e)
         {
+            type = false;
             if (panelVideo.Visible == false)
             {
                 panelVideo.Visible = true;
@@ -1220,6 +1264,61 @@ namespace RedSuper_Player
             set { bunifuImageButtonOptionsVideo.Image = value; }
         }
 
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////v
+
+        private void bunifuImageButtonSkipToEndVideo_Click(object sender, EventArgs e)
+        {
+            int index = listBoxVideos.SelectedIndex;
+            index++;
+            selectedIndex = index;
+            listBoxVideos.SelectedIndex = index;
+        }
+
+
+        private void listBoxVideos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                video.Stop();
+                video.Dispose();
+            }
+            catch { }
+
+            int index = listBoxVideos.SelectedIndex;
+            selectedIndex = index;
+            video.Play();
+        }
+
+        private void bunifuImageButtonSkipToStartVideo_Click(object sender, EventArgs e)
+        {
+            int index = listBoxVideos.SelectedIndex;
+            index--;
+            selectedIndex = index;
+            listBoxVideos.SelectedIndex = index;
+        }
+
+        private void bunifuImageButtonPlayVideo_Click(object sender, EventArgs e)
+        {
+            if (!video.Playing)
+            {
+                video.Play();
+            }
+            else if (video.Playing)
+            {
+                video.Pause();
+            }
+        }
+
+        private void bunifuSliderVolumeVideo_ValueChanged(object sender, EventArgs e)
+        {
+            video.Audio.Volume = bunifuSliderVolumeVideo.Value;
+        }
+
+        private void bunifuImageButtonFullScreenVideo_Click(object sender, EventArgs e)
+        {
+
+        }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     }
