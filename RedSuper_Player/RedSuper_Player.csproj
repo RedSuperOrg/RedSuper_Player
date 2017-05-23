@@ -428,6 +428,57 @@
   <ItemGroup>
     <None Include="Resources\Full Screen-100.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fast-ForwardBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Full-ScreenBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RewindBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StopBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Full-ScreenGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RewindGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Skip-to-Start-Green1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StopGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fast-ForwardOrange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Full-ScreenOrange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RewindOrange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StopOrange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fast-ForwardPink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Full-ScreenPink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RewindPink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StopPink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fast-ForwardGreen.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -859,15 +859,12 @@ namespace RedSuper_Player
         {
             if (webBrowserYoutube.Visible == false)
             {
-                bunifuImageButtonFullscreen.Visible = false;
-                bunifuImageButtonRewind.Visible = false;
-                bunifuImageButtonForward.Visible = false;
-                bunifuImageButtonStop.Visible = false;
+                panelVideo.Visible = false;
+                panelVideoTools.Visible = false;
                 webBrowserYoutube.Visible = true;
                 panelYoutube.Visible = false;
                 bunifuTransitionSlidingMenu.ShowSync(panelYoutube);
                 panelYoutube.Visible = true;
-                panelVideo.Visible = false;
             }
         }
 
@@ -877,21 +874,7 @@ namespace RedSuper_Player
             webBrowserYoutube.Visible = false;
             panelYoutube.Visible = false;
             panelVideo.Visible = false;
-            bunifuImageButtonFullscreen.Visible = false;
-            bunifuImageButtonRewind.Visible = false;
-            bunifuImageButtonForward.Visible = false;
-            bunifuImageButtonStop.Visible = false;
-            pictureBoxCoverSlider.Visible = true;
-            bunifuCustomLabelArtistName.Visible = true;
-            bunifuCustomLabelArtistExtraInfo.Visible = true;
-            bunifuImageButtonSettings.Location = new Point(527, 60);
-            bunifuSliderMain.Size = new Size(527, 30);
-            bunifuSliderMain.Location = new Point(140, 13);
-            bunifuCustomLabelStartTimer.Location = new Point(106, 18);
-            bunifuCustomLabelEndTimer.Location = new Point(672, 18);
-            bunifuCustomLabelStartTimer.Text = "0:00";
-            bunifuCustomLabelEndTimer.Text = "0:00";
-            bunifuImageButtonSettings.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right);
+            panelVideoTools.Visible = false;
         }
 
         private void bunifuFlatButtonVideo_Click(object sender, EventArgs e)
@@ -900,22 +883,9 @@ namespace RedSuper_Player
             {
                 panelVideo.Visible = true;
                 webBrowserYoutube.Visible = false;
-                panelYoutube.Visible = false;
-                bunifuImageButtonFullscreen.Visible = true;
-                bunifuImageButtonRewind.Visible = true;
-                bunifuImageButtonForward.Visible = true;
-                bunifuImageButtonStop.Visible = true;
-                pictureBoxCoverSlider.Visible = false;
-                bunifuCustomLabelArtistName.Visible = false;
-                bunifuCustomLabelArtistExtraInfo.Visible = false;
-                bunifuImageButtonSettings.Location = new Point(6, 65);
-                bunifuSliderMain.Size = new Size(596, 30);
-                bunifuSliderMain.Location = new Point(61, 13);
-                bunifuCustomLabelStartTimer.Location = new Point(6, 18);
-                bunifuCustomLabelEndTimer.Location = new Point(662, 18);
-                bunifuCustomLabelStartTimer.Text = "00:00:00";
-                bunifuCustomLabelEndTimer.Text = "00:00:00";
-                bunifuImageButtonSettings.Anchor = (AnchorStyles.Top | AnchorStyles.Left);
+                panelYoutube.Visible = true;
+                panelVideoTools.Visible = true;
+                panelVideoTools.BringToFront();
             }
         }
 
@@ -1181,6 +1151,75 @@ namespace RedSuper_Player
             get { return pictureBoxEqualizer.Image; }
             set { pictureBoxEqualizer.Image = value; }
         }
+
+        ////////////Video
+
+        public Image fullScreenIcon
+        {
+            get { return bunifuImageButtonFullScreenVideo.Image; }
+            set { bunifuImageButtonFullScreenVideo.Image = value; }
+        }
+
+        public Image rewindIcon
+        {
+            get { return bunifuImageButtonRewindVideo.Image; }
+            set { bunifuImageButtonRewindVideo.Image = value; }
+        }
+
+        public Image fastForwardIcon
+        {
+            get { return bunifuImageButtonFastForwardVideo.Image; }
+            set { bunifuImageButtonFastForwardVideo.Image = value; }
+        }
+
+        public Image stopIcon
+        {
+            get { return bunifuImageButtonStopVideo.Image; }
+            set { bunifuImageButtonStopVideo.Image = value; }
+        }
+
+        public Color trackBarVideoIndicatorColor
+        {
+            get { return bunifuSliderMainVideo.IndicatorColor; }
+            set { bunifuSliderMainVideo.IndicatorColor = value; }
+        }
+
+        public Color volumeSliderVideoColor
+        {
+            get { return bunifuSliderVolumeVideo.IndicatorColor; }
+            set { bunifuSliderVolumeVideo.IndicatorColor = value; }
+        }
+
+        public Image startVideoIcon
+        {
+            get { return bunifuImageButtonSkipToStartVideo.Image; }
+            set { bunifuImageButtonSkipToStartVideo.Image = value; }
+        }
+
+        public Image playVideoIcon
+        {
+            get { return bunifuImageButtonPlayVideo.Image; }
+            set { bunifuImageButtonPlayVideo.Image = value; }
+        }
+
+        public Image endVideoIcon
+        {
+            get { return bunifuImageButtonSkipToEndVideo.Image; }
+            set { bunifuImageButtonSkipToEndVideo.Image = value; }
+        }
+
+        public Image soundVideoIcon
+        {
+            get { return bunifuImageButtonSoundVideo.Image; }
+            set { bunifuImageButtonSoundVideo.Image = value; }
+        }
+
+        public Image optionsVideoIcon
+        {
+            get { return bunifuImageButtonOptionsVideo.Image; }
+            set { bunifuImageButtonOptionsVideo.Image = value; }
+        }
+
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     }

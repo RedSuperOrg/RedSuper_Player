@@ -81,7 +81,19 @@ namespace RedSuper_Player
             fr1Local.soundButtonIcon = Properties.Resources.Unmuted_;
             fr1Local.goButtonIcon = Properties.Resources.Go_100;
             fr1Local.volumeSliderIndicatorColor = Color.FromArgb(190, 1, 15);
+
             fr1Local.equalizer = Properties.Resources.rhythm;
+            fr1Local.fullScreenIcon = Properties.Resources.Full_Screen_100;
+            fr1Local.rewindIcon = Properties.Resources.Rewind_100;
+            fr1Local.fastForwardIcon = Properties.Resources.Fast_Forward_100;
+            fr1Local.stopIcon = Properties.Resources.Stop_100;
+            fr1Local.trackBarVideoIndicatorColor = Color.FromArgb(190, 1, 15);
+            fr1Local.volumeSliderVideoColor = Color.FromArgb(190, 1, 15);
+            fr1Local.startVideoIcon = Properties.Resources.Skip_to_Start_100;
+            fr1Local.playVideoIcon = Properties.Resources.Circled_Play_100__1_;
+            fr1Local.endVideoIcon = Properties.Resources.End_100;
+            fr1Local.optionsVideoIcon = Properties.Resources.Horizontal_Settings_Mixer_100;
+            fr1Local.soundVideoIcon = Properties.Resources.Unmuted_;
         }
 
         private void bunifuFlatButtonColorsBlue_Click(object sender, EventArgs e)
@@ -124,7 +136,19 @@ namespace RedSuper_Player
             fr1Local.soundButtonIcon = Properties.Resources.Room_SoundBlue;
             fr1Local.goButtonIcon = Properties.Resources.Go_Blue;
             fr1Local.volumeSliderIndicatorColor = Color.FromArgb(0, 72, 251);
+
             fr1Local.equalizer = Properties.Resources.equalizerBlue;
+            fr1Local.fullScreenIcon = Properties.Resources.Full_ScreenBlue;
+            fr1Local.rewindIcon = Properties.Resources.RewindBlue;
+            fr1Local.fastForwardIcon = Properties.Resources.Fast_ForwardBlue;
+            fr1Local.stopIcon = Properties.Resources.StopBlue;
+            fr1Local.trackBarVideoIndicatorColor = Color.FromArgb(0, 72, 251);
+            fr1Local.volumeSliderVideoColor = Color.FromArgb(0, 72, 251);
+            fr1Local.startVideoIcon = Properties.Resources.Skip_to_Start_Blue;
+            fr1Local.playVideoIcon = Properties.Resources.Circled_Play_100Blue;
+            fr1Local.endVideoIcon = Properties.Resources.End_Blue;
+            fr1Local.optionsVideoIcon = Properties.Resources.Horizontal_Settings_Mixer_Blue;
+            fr1Local.soundVideoIcon = Properties.Resources.Room_SoundBlue;
         }
 
         private void bunifuFlatButtonColorsGreen_Click(object sender, EventArgs e)
@@ -167,7 +191,19 @@ namespace RedSuper_Player
             fr1Local.soundButtonIcon = Properties.Resources.Room_SoundGreen;
             fr1Local.goButtonIcon = Properties.Resources.Go_Green;
             fr1Local.volumeSliderIndicatorColor = Color.FromArgb(84, 204, 84);
+
             fr1Local.equalizer = Properties.Resources.equalizerGreen;
+            fr1Local.fullScreenIcon = Properties.Resources.Full_ScreenGreen;
+            fr1Local.rewindIcon = Properties.Resources.RewindGreen;
+            fr1Local.fastForwardIcon = Properties.Resources.Fast_ForwardGreen;
+            fr1Local.stopIcon = Properties.Resources.StopGreen;
+            fr1Local.trackBarVideoIndicatorColor = Color.FromArgb(84, 204, 84);
+            fr1Local.volumeSliderVideoColor = Color.FromArgb(84, 204, 84);
+            fr1Local.startVideoIcon = Properties.Resources.Skip_to_Start_Green;
+            fr1Local.playVideoIcon = Properties.Resources.Circled_Play_100Green;
+            fr1Local.endVideoIcon = Properties.Resources.End_Green;
+            fr1Local.optionsVideoIcon = Properties.Resources.Horizontal_Settings_Mixer_Green;
+            fr1Local.soundVideoIcon = Properties.Resources.Room_SoundGreen;
         }
 
         private void bunifuFlatButtonColorsOrange_Click(object sender, EventArgs e)
@@ -210,7 +246,19 @@ namespace RedSuper_Player
             fr1Local.soundButtonIcon = Properties.Resources.Room_SoundOrange;
             fr1Local.goButtonIcon = Properties.Resources.Go_Orange;
             fr1Local.volumeSliderIndicatorColor = Color.FromArgb(255, 102, 0);
+
             fr1Local.equalizer = Properties.Resources.equalizerOrange;
+            fr1Local.fullScreenIcon = Properties.Resources.Full_ScreenOrange;
+            fr1Local.rewindIcon = Properties.Resources.RewindOrange;
+            fr1Local.fastForwardIcon = Properties.Resources.Fast_ForwardOrange;
+            fr1Local.stopIcon = Properties.Resources.StopOrange;
+            fr1Local.trackBarVideoIndicatorColor = Color.FromArgb(255, 102, 0);
+            fr1Local.volumeSliderVideoColor = Color.FromArgb(255, 102, 0);
+            fr1Local.startVideoIcon = Properties.Resources.Skip_to_Start_Orange;
+            fr1Local.playVideoIcon = Properties.Resources.Circled_Play_100Orange;
+            fr1Local.endVideoIcon = Properties.Resources.End_Orange;
+            fr1Local.optionsVideoIcon = Properties.Resources.Horizontal_Settings_Mixer_Orange;
+            fr1Local.soundVideoIcon = Properties.Resources.Room_SoundOrange;
         }
 
         private void bunifuFlatButtonColorsPink_Click(object sender, EventArgs e)
@@ -254,6 +302,18 @@ namespace RedSuper_Player
             fr1Local.goButtonIcon = Properties.Resources.Go_Pink;
             fr1Local.volumeSliderIndicatorColor = Color.FromArgb(255, 0, 128);
             fr1Local.equalizer = Properties.Resources.equalizerPink;
+
+            fr1Local.fullScreenIcon = Properties.Resources.Full_ScreenPink;
+            fr1Local.rewindIcon = Properties.Resources.RewindPink;
+            fr1Local.fastForwardIcon = Properties.Resources.Fast_ForwardPink;
+            fr1Local.stopIcon = Properties.Resources.StopPink;
+            fr1Local.trackBarVideoIndicatorColor = Color.FromArgb(255, 0, 128);
+            fr1Local.volumeSliderVideoColor = Color.FromArgb(255, 0, 128);
+            fr1Local.startVideoIcon = Properties.Resources.Skip_to_Start_Pink;
+            fr1Local.playVideoIcon = Properties.Resources.Circled_Play_100Pink;
+            fr1Local.endVideoIcon = Properties.Resources.End_Pink;
+            fr1Local.optionsVideoIcon = Properties.Resources.Horizontal_Settings_Mixer_Pink;
+            fr1Local.soundVideoIcon = Properties.Resources.Room_SoundPink;
         }
     }
 }
