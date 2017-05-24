@@ -30,33 +30,32 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAbout));
-            this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
+            this.bunifuElipseAnimator = new ns1.BunifuElipse(this.components);
             this.bunifuDragControlTopAbout = new ns1.BunifuDragControl(this.components);
+            this.bunifuGradientPanelTop = new ns1.BunifuGradientPanel();
+            this.bunifuDatepickerAbout = new ns1.BunifuDatepicker();
+            this.bunifuImageButtonCloseAbout = new ns1.BunifuImageButton();
             this.bunifuDragControlMainAbout = new ns1.BunifuDragControl(this.components);
             this.bunifuGradientPanelMain = new ns1.BunifuGradientPanel();
+            this.bunifuImageButtonRedDr3ad = new ns1.BunifuImageButton();
+            this.bunifuImageButtonWarSkeleton = new ns1.BunifuImageButton();
             this.bunifuCustomLabelBuilders = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabelNameL = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabelNameJ = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabelAKA = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabelWarSkeleton = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabelRedDr3ad = new ns1.BunifuCustomLabel();
-            this.bunifuGradientPanelTop = new ns1.BunifuGradientPanel();
-            this.bunifuDatepickerAbout = new ns1.BunifuDatepicker();
-            this.bunifuDatepicker1 = new ns1.BunifuDatepicker();
-            this.bunifuImageButtonCloseAbout = new ns1.BunifuImageButton();
-            this.bunifuImageButtonWarSkeleton = new ns1.BunifuImageButton();
-            this.bunifuImageButtonRedDr3ad = new ns1.BunifuImageButton();
-            this.bunifuGradientPanelMain.SuspendLayout();
             this.bunifuGradientPanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonCloseAbout)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonWarSkeleton)).BeginInit();
+            this.bunifuGradientPanelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonRedDr3ad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonWarSkeleton)).BeginInit();
             this.SuspendLayout();
             // 
-            // bunifuElipse1
+            // bunifuElipseAnimator
             // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
+            this.bunifuElipseAnimator.ElipseRadius = 5;
+            this.bunifuElipseAnimator.TargetControl = this;
             // 
             // bunifuDragControlTopAbout
             // 
@@ -64,6 +63,52 @@
             this.bunifuDragControlTopAbout.Horizontal = true;
             this.bunifuDragControlTopAbout.TargetControl = this.bunifuGradientPanelTop;
             this.bunifuDragControlTopAbout.Vertical = true;
+            // 
+            // bunifuGradientPanelTop
+            // 
+            this.bunifuGradientPanelTop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanelTop.BackgroundImage")));
+            this.bunifuGradientPanelTop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanelTop.Controls.Add(this.bunifuDatepickerAbout);
+            this.bunifuGradientPanelTop.Controls.Add(this.bunifuImageButtonCloseAbout);
+            this.bunifuGradientPanelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuGradientPanelTop.GradientBottomLeft = System.Drawing.Color.Red;
+            this.bunifuGradientPanelTop.GradientBottomRight = System.Drawing.Color.Black;
+            this.bunifuGradientPanelTop.GradientTopLeft = System.Drawing.Color.DarkRed;
+            this.bunifuGradientPanelTop.GradientTopRight = System.Drawing.Color.Brown;
+            this.bunifuGradientPanelTop.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanelTop.Name = "bunifuGradientPanelTop";
+            this.bunifuGradientPanelTop.Quality = 10;
+            this.bunifuGradientPanelTop.Size = new System.Drawing.Size(339, 56);
+            this.bunifuGradientPanelTop.TabIndex = 0;
+            // 
+            // bunifuDatepickerAbout
+            // 
+            this.bunifuDatepickerAbout.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDatepickerAbout.BorderRadius = 0;
+            this.bunifuDatepickerAbout.ForeColor = System.Drawing.Color.White;
+            this.bunifuDatepickerAbout.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.bunifuDatepickerAbout.FormatCustom = null;
+            this.bunifuDatepickerAbout.Location = new System.Drawing.Point(18, 8);
+            this.bunifuDatepickerAbout.Name = "bunifuDatepickerAbout";
+            this.bunifuDatepickerAbout.Size = new System.Drawing.Size(275, 45);
+            this.bunifuDatepickerAbout.TabIndex = 4;
+            this.bunifuDatepickerAbout.Value = new System.DateTime(2017, 5, 16, 16, 43, 2, 374);
+            this.bunifuDatepickerAbout.MouseHover += new System.EventHandler(this.bunifuDatepickerAbout_MouseHover);
+            // 
+            // bunifuImageButtonCloseAbout
+            // 
+            this.bunifuImageButtonCloseAbout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuImageButtonCloseAbout.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButtonCloseAbout.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButtonCloseAbout.Image")));
+            this.bunifuImageButtonCloseAbout.ImageActive = null;
+            this.bunifuImageButtonCloseAbout.Location = new System.Drawing.Point(301, 8);
+            this.bunifuImageButtonCloseAbout.Name = "bunifuImageButtonCloseAbout";
+            this.bunifuImageButtonCloseAbout.Size = new System.Drawing.Size(25, 19);
+            this.bunifuImageButtonCloseAbout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButtonCloseAbout.TabIndex = 2;
+            this.bunifuImageButtonCloseAbout.TabStop = false;
+            this.bunifuImageButtonCloseAbout.Zoom = 10;
+            this.bunifuImageButtonCloseAbout.Click += new System.EventHandler(this.bunifuImageButtonCloseAbout_Click);
             // 
             // bunifuDragControlMainAbout
             // 
@@ -94,6 +139,34 @@
             this.bunifuGradientPanelMain.Quality = 10;
             this.bunifuGradientPanelMain.Size = new System.Drawing.Size(339, 307);
             this.bunifuGradientPanelMain.TabIndex = 0;
+            // 
+            // bunifuImageButtonRedDr3ad
+            // 
+            this.bunifuImageButtonRedDr3ad.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButtonRedDr3ad.Image = global::RedSuper_Player.Properties.Resources.images;
+            this.bunifuImageButtonRedDr3ad.ImageActive = null;
+            this.bunifuImageButtonRedDr3ad.Location = new System.Drawing.Point(47, 89);
+            this.bunifuImageButtonRedDr3ad.Name = "bunifuImageButtonRedDr3ad";
+            this.bunifuImageButtonRedDr3ad.Size = new System.Drawing.Size(103, 79);
+            this.bunifuImageButtonRedDr3ad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bunifuImageButtonRedDr3ad.TabIndex = 10;
+            this.bunifuImageButtonRedDr3ad.TabStop = false;
+            this.bunifuImageButtonRedDr3ad.Zoom = 10;
+            this.bunifuImageButtonRedDr3ad.Click += new System.EventHandler(this.bunifuImageButtonRedDr3ad_Click);
+            // 
+            // bunifuImageButtonWarSkeleton
+            // 
+            this.bunifuImageButtonWarSkeleton.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButtonWarSkeleton.Image = global::RedSuper_Player.Properties.Resources._68858aa046861bcb905675ad64f7217fb7eb891e;
+            this.bunifuImageButtonWarSkeleton.ImageActive = null;
+            this.bunifuImageButtonWarSkeleton.Location = new System.Drawing.Point(201, 89);
+            this.bunifuImageButtonWarSkeleton.Name = "bunifuImageButtonWarSkeleton";
+            this.bunifuImageButtonWarSkeleton.Size = new System.Drawing.Size(89, 79);
+            this.bunifuImageButtonWarSkeleton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButtonWarSkeleton.TabIndex = 9;
+            this.bunifuImageButtonWarSkeleton.TabStop = false;
+            this.bunifuImageButtonWarSkeleton.Zoom = 10;
+            this.bunifuImageButtonWarSkeleton.Click += new System.EventHandler(this.bunifuImageButtonWarSkeleton_Click);
             // 
             // bunifuCustomLabelBuilders
             // 
@@ -167,94 +240,6 @@
             this.bunifuCustomLabelRedDr3ad.TabIndex = 3;
             this.bunifuCustomLabelRedDr3ad.Text = "RedDr3ad";
             // 
-            // bunifuGradientPanelTop
-            // 
-            this.bunifuGradientPanelTop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanelTop.BackgroundImage")));
-            this.bunifuGradientPanelTop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanelTop.Controls.Add(this.bunifuDatepickerAbout);
-            this.bunifuGradientPanelTop.Controls.Add(this.bunifuDatepicker1);
-            this.bunifuGradientPanelTop.Controls.Add(this.bunifuImageButtonCloseAbout);
-            this.bunifuGradientPanelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuGradientPanelTop.GradientBottomLeft = System.Drawing.Color.Red;
-            this.bunifuGradientPanelTop.GradientBottomRight = System.Drawing.Color.Black;
-            this.bunifuGradientPanelTop.GradientTopLeft = System.Drawing.Color.DarkRed;
-            this.bunifuGradientPanelTop.GradientTopRight = System.Drawing.Color.Brown;
-            this.bunifuGradientPanelTop.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanelTop.Name = "bunifuGradientPanelTop";
-            this.bunifuGradientPanelTop.Quality = 10;
-            this.bunifuGradientPanelTop.Size = new System.Drawing.Size(339, 56);
-            this.bunifuGradientPanelTop.TabIndex = 0;
-            // 
-            // bunifuDatepickerAbout
-            // 
-            this.bunifuDatepickerAbout.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDatepickerAbout.BorderRadius = 0;
-            this.bunifuDatepickerAbout.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepickerAbout.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepickerAbout.FormatCustom = null;
-            this.bunifuDatepickerAbout.Location = new System.Drawing.Point(20, 8);
-            this.bunifuDatepickerAbout.Name = "bunifuDatepickerAbout";
-            this.bunifuDatepickerAbout.Size = new System.Drawing.Size(275, 45);
-            this.bunifuDatepickerAbout.TabIndex = 4;
-            this.bunifuDatepickerAbout.Value = new System.DateTime(2017, 5, 16, 16, 43, 2, 374);
-            this.bunifuDatepickerAbout.MouseHover += new System.EventHandler(this.bunifuDatepickerAbout_MouseHover);
-            // 
-            // bunifuDatepicker1
-            // 
-            this.bunifuDatepicker1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDatepicker1.BorderRadius = 0;
-            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(20, 8);
-            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(275, 45);
-            this.bunifuDatepicker1.TabIndex = 3;
-            this.bunifuDatepicker1.Value = new System.DateTime(2017, 5, 16, 16, 34, 31, 817);
-            // 
-            // bunifuImageButtonCloseAbout
-            // 
-            this.bunifuImageButtonCloseAbout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuImageButtonCloseAbout.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButtonCloseAbout.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButtonCloseAbout.Image")));
-            this.bunifuImageButtonCloseAbout.ImageActive = null;
-            this.bunifuImageButtonCloseAbout.Location = new System.Drawing.Point(301, 8);
-            this.bunifuImageButtonCloseAbout.Name = "bunifuImageButtonCloseAbout";
-            this.bunifuImageButtonCloseAbout.Size = new System.Drawing.Size(25, 19);
-            this.bunifuImageButtonCloseAbout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButtonCloseAbout.TabIndex = 2;
-            this.bunifuImageButtonCloseAbout.TabStop = false;
-            this.bunifuImageButtonCloseAbout.Zoom = 10;
-            this.bunifuImageButtonCloseAbout.Click += new System.EventHandler(this.bunifuImageButtonCloseAbout_Click);
-            // 
-            // bunifuImageButtonWarSkeleton
-            // 
-            this.bunifuImageButtonWarSkeleton.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButtonWarSkeleton.Image = global::RedSuper_Player.Properties.Resources._68858aa046861bcb905675ad64f7217fb7eb891e;
-            this.bunifuImageButtonWarSkeleton.ImageActive = null;
-            this.bunifuImageButtonWarSkeleton.Location = new System.Drawing.Point(201, 89);
-            this.bunifuImageButtonWarSkeleton.Name = "bunifuImageButtonWarSkeleton";
-            this.bunifuImageButtonWarSkeleton.Size = new System.Drawing.Size(89, 79);
-            this.bunifuImageButtonWarSkeleton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButtonWarSkeleton.TabIndex = 9;
-            this.bunifuImageButtonWarSkeleton.TabStop = false;
-            this.bunifuImageButtonWarSkeleton.Zoom = 10;
-            this.bunifuImageButtonWarSkeleton.Click += new System.EventHandler(this.bunifuImageButtonWarSkeleton_Click);
-            // 
-            // bunifuImageButtonRedDr3ad
-            // 
-            this.bunifuImageButtonRedDr3ad.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButtonRedDr3ad.Image = global::RedSuper_Player.Properties.Resources.images;
-            this.bunifuImageButtonRedDr3ad.ImageActive = null;
-            this.bunifuImageButtonRedDr3ad.Location = new System.Drawing.Point(47, 89);
-            this.bunifuImageButtonRedDr3ad.Name = "bunifuImageButtonRedDr3ad";
-            this.bunifuImageButtonRedDr3ad.Size = new System.Drawing.Size(103, 79);
-            this.bunifuImageButtonRedDr3ad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bunifuImageButtonRedDr3ad.TabIndex = 10;
-            this.bunifuImageButtonRedDr3ad.TabStop = false;
-            this.bunifuImageButtonRedDr3ad.Zoom = 10;
-            this.bunifuImageButtonRedDr3ad.Click += new System.EventHandler(this.bunifuImageButtonRedDr3ad_Click);
-            // 
             // FormAbout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,26 +249,24 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAbout";
             this.Text = "About";
-            this.Load += new System.EventHandler(this.FormAbout_Load);
-            this.bunifuGradientPanelMain.ResumeLayout(false);
-            this.bunifuGradientPanelMain.PerformLayout();
             this.bunifuGradientPanelTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonCloseAbout)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonWarSkeleton)).EndInit();
+            this.bunifuGradientPanelMain.ResumeLayout(false);
+            this.bunifuGradientPanelMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonRedDr3ad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonWarSkeleton)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private ns1.BunifuElipse bunifuElipse1;
+        private ns1.BunifuElipse bunifuElipseAnimator;
         private ns1.BunifuGradientPanel bunifuGradientPanelMain;
         private ns1.BunifuGradientPanel bunifuGradientPanelTop;
         private ns1.BunifuImageButton bunifuImageButtonCloseAbout;
         private ns1.BunifuDragControl bunifuDragControlTopAbout;
         private ns1.BunifuDragControl bunifuDragControlMainAbout;
-        private ns1.BunifuDatepicker bunifuDatepicker1;
         private ns1.BunifuDatepicker bunifuDatepickerAbout;
         private ns1.BunifuCustomLabel bunifuCustomLabelNameL;
         private ns1.BunifuCustomLabel bunifuCustomLabelNameJ;

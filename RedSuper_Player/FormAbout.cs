@@ -12,18 +12,17 @@ namespace RedSuper_Player
 {
     public partial class FormAbout : Form
     {
+        /// <summary>
+        /// Initializes with property to be opened from main form
+        /// </summary>
+        /// <param name="about"></param>
         public FormAbout(Form1 about)
         {
             InitializeComponent();
         }
 
-        private void FormAbout_Load(object sender, EventArgs e)
-        {
-
-        }
-
         /// <summary>
-        /// Closes the form
+        /// Closes about form
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -32,6 +31,11 @@ namespace RedSuper_Player
             this.Close();
         }
 
+        /// <summary>
+        /// Changes hovering color to black
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bunifuDatepickerAbout_MouseHover(object sender, EventArgs e)
         {
             bunifuDatepickerAbout.ForeColor = Color.Black;

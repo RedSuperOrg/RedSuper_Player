@@ -10,37 +10,50 @@ using System.Windows.Forms;
 
 namespace RedSuper_Player
 {
-    public partial class FormOptions : Form
+    public partial class FormColors : Form
     {
+        // ASSIGNS TO MAIN FORM
         Form1 fr1Local;
 
-        public FormOptions(Form1 options)
+        /// <summary>
+        /// INITIALIZES FORM WITH ABILITY TO 'MODIFY OBJECTS' ON MAIN FORM
+        /// </summary>
+        /// <param name="colors"></param>
+        public FormColors(Form1 colors)
         {
             InitializeComponent();
-            fr1Local = options;
+            fr1Local = colors;
         }
 
-        private void FormOptions_Load(object sender, EventArgs e)
+        /// <summary>
+        /// CLOSE COLORS FORM
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bunifuImageButtonColorsClose_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
+
+        // INITIALIZES PUBLIC FORM 1 WITH GET/SET METHOD TO GET COLORS ON CLICK AND SET ON MAIN FORM
+        /// <summary>
+        /// gets value to set on main
+        /// </summary>
         public Form1 Form1
         {
             get { return fr1Local; }
             set { fr1Local = value; }
         }
 
-        private void bunifuImageButtonColorsClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void bunifuGradientPanelColorsOrange_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////// COLORS RELATED / ON EACH COLOR'S CLICK, GET VALUE AND RETURN //////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>
+        /// GET FOR RED
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bunifuFlatButtonColorsRed_Click(object sender, EventArgs e)
         {
             fr1Local.panelTopImage = Properties.Resources.Spotify_Effect_OP1T3;
@@ -96,6 +109,11 @@ namespace RedSuper_Player
             fr1Local.soundVideoIcon = Properties.Resources.Unmuted_;
         }
 
+        /// <summary>
+        /// get for blue
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bunifuFlatButtonColorsBlue_Click(object sender, EventArgs e)
         {
             fr1Local.panelTopImage = Properties.Resources.Spotify_Effect_The_OneBlue;
@@ -151,6 +169,11 @@ namespace RedSuper_Player
             fr1Local.soundVideoIcon = Properties.Resources.Room_SoundBlue;
         }
 
+        /// <summary>
+        /// get for green
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bunifuFlatButtonColorsGreen_Click(object sender, EventArgs e)
         {
             fr1Local.panelTopImage = Properties.Resources.Spotify_Effect_The_OneGreen;
@@ -206,6 +229,11 @@ namespace RedSuper_Player
             fr1Local.soundVideoIcon = Properties.Resources.Room_SoundGreen;
         }
 
+        /// <summary>
+        /// get for orange
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bunifuFlatButtonColorsOrange_Click(object sender, EventArgs e)
         {
             fr1Local.panelTopImage = Properties.Resources.Spotify_Effect_The_OneOrange;
@@ -261,6 +289,11 @@ namespace RedSuper_Player
             fr1Local.soundVideoIcon = Properties.Resources.Room_SoundOrange;
         }
 
+        /// <summary>
+        /// get for pink
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bunifuFlatButtonColorsPink_Click(object sender, EventArgs e)
         {
             fr1Local.panelTopImage = Properties.Resources.Spotify_Effect_The_One;

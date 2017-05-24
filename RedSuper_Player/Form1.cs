@@ -34,13 +34,10 @@ namespace RedSuper_Player
             // INITIAL VOLUME
             wave.Volume = 1.0f;
 
-            bunifuThinButton23.BackColor = Color.Transparent;
-            bunifuThinButton24.BackColor = Color.Transparent;
+            // INITIAL TRANSPARENCY FOR THE BACKGROUND OF 2 BUTTONS
+            bunifuThinButtonColors.BackColor = Color.Transparent;
+            bunifuThinButtonAbout.BackColor = Color.Transparent;
         }
-
-        private Video video;
-
-        private int selectedIndex = 0;
 
         // VARIABLE FOR THE URL FOR YOUTUBE
         string _ytUrl;
@@ -63,7 +60,18 @@ namespace RedSuper_Player
         // VARIABLE TO ASSIGN LAST VOLUME ON "MUTE" CLICK
         private float lastVolume = 1.0f;
 
+        // BOOLEAN TO CHECK IF IT'S SELECTING VIDEO OR AUDIO
         bool type = true;
+
+        /// <summary>
+        /// CLEARS EVERYTHING ON EXIT
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DisposeWave();
+        }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -86,7 +94,7 @@ namespace RedSuper_Player
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        private void bunifuImageButtonExit_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }
@@ -96,7 +104,7 @@ namespace RedSuper_Player
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void bunifuImageButton3_Click(object sender, EventArgs e)
+        private void bunifuImageButtonMaximize_Click(object sender, EventArgs e)
         {
             // If its maximized, go back to normal. Else, maximize
             if (this.WindowState == FormWindowState.Maximized)
@@ -132,7 +140,7 @@ namespace RedSuper_Player
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void bunifuImageButton4_Click(object sender, EventArgs e)
+        private void bunifuImageButtonMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
@@ -170,6 +178,7 @@ namespace RedSuper_Player
                 string[] songs = myOpenFileDialog.FileNames;
                 foreach (string song in songs)
                 {
+                    // VERIFIES IF THERE'S ALREADY THAT ONE SONG
                     if (!musicList.Contains(song))
                     {
                         musicList.Add(song);
@@ -179,6 +188,8 @@ namespace RedSuper_Player
 
                 // START WITH NO SOUND SELECTED
                 listBoxMusic.ClearSelected();
+
+                // DISABLE EQUALIZER ANIMATION
                 pictureBoxEqualizer.Enabled = false;
             }
             else
@@ -196,6 +207,7 @@ namespace RedSuper_Player
                 string[] videos = myOpenFileDialog.FileNames;
                 foreach (string video in videos)
                 {
+                    // VERIFIES IF THERE'S ALREADY THAT ONE SONG
                     if (!videoList.Contains(video))
                     {
                         videoList.Add(video);
@@ -224,11 +236,12 @@ namespace RedSuper_Player
             // IF IT'S HIDDEN, SHOW, ELSE HIDE
             if (panelMenu.Width == 55)
             {
+                // HIDE EXTRAS, USE ANIMATIONS  
                 panelMenu.Visible = false;
                 panelMenu.Width = 200;
                 bunifuTransitionSlidingMenu.ShowSync(panelMenu);
 
-                //CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON (RED)
+                // CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON (RED)
                 if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(190, 1, 15))
                 {
                     bunifuImageButtonSlideMenu.Image = Resources.Expand_Arrow_96;
@@ -266,17 +279,16 @@ namespace RedSuper_Player
                     }
                 }
 
-                bunifuFlatButtonBrowse.OnHovercolor = Color.Transparent;
-                bunifuFlatButtonVideo.OnHovercolor = Color.Transparent;
-                bunifuFlatButtonYoutube.OnHovercolor = Color.Transparent;
-                bunifuFlatButtonMySongs.OnHovercolor = Color.Transparent;
-                bunifuFlatButtonPlaylists.OnHovercolor = Color.Transparent;
-                bunifuTransitionSlidingMenu1.ShowSync(panelText);
+                // CALL METHOD FOR TRANSPARENCY ON HOVERING WITH MOUSE
+                hoverButtonsTransparency();
+
+                // ANIMATIONS FOR HIDING/SHOWING MENUS
+                bunifuTransitionSlidingMenuSecondary.ShowSync(panelText);
                 bunifuTransitionSlidingMenu.HideSync(pictureBoxLogo);
             }
             else
             {
-                bunifuTransitionSlidingMenu1.HideSync(panelText);
+                bunifuTransitionSlidingMenuSecondary.HideSync(panelText);
                 panelMenu.Visible = false;
                 panelMenu.Width = 55;
 
@@ -318,40 +330,11 @@ namespace RedSuper_Player
                     }
                 }
 
-
-                bunifuFlatButtonBrowse.OnHovercolor = Color.DimGray;
-                bunifuFlatButtonVideo.OnHovercolor = Color.DimGray;
-                bunifuFlatButtonYoutube.OnHovercolor = Color.DimGray;
-                bunifuFlatButtonMySongs.OnHovercolor = Color.DimGray;
-                bunifuFlatButtonPlaylists.OnHovercolor = Color.DimGray;
-                bunifuTransitionSlidingMenu.ShowSync(panelMenu);
-                bunifuTransitionSlidingMenu.ShowSync(pictureBoxLogo);
+                // CALL METHOD FOR TRANSPARENCY ON HOVERING WITH MOUSE
+                hoverButtonsTransparency();
             }
         }
 
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        ////////////////////////////////////////////////////// METHOD TO RESET OUTPUT ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-        /// <summary>
-        /// READY TO USE THIS METHOD TO RESET OUTPUT
-        /// </summary>
-        private void DisposeWave()
-        {
-            if (output != null)
-            {
-                if (output.PlaybackState == NAudio.Wave.PlaybackState.Playing) output.Stop();
-                output.Dispose();
-                output = null;
-            }
-            if (stream != null)
-            {
-                stream.Dispose();
-                stream = null;
-            }
-            timerAudio.Enabled = false;
-        }
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         private void bunifuImageButtonPlay_Click(object sender, EventArgs e)
         {
@@ -399,6 +382,8 @@ namespace RedSuper_Player
                             }
                         }
                     }
+
+                    // DISABLE EQUALIZER ANIMATION
                     pictureBoxEqualizer.Enabled = false;
                 }
                 else
@@ -407,7 +392,7 @@ namespace RedSuper_Player
                     if (output.PlaybackState == NAudio.Wave.PlaybackState.Paused)
                     {
                         output.Play();
-                        //CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON (RED)
+                        // CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON (RED)
                         if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(190, 1, 15))
                         {
                             bunifuImageButtonPlay.Image = Resources.Circled_Pause_Filled_100;
@@ -427,6 +412,7 @@ namespace RedSuper_Player
                                     bunifuImageButtonPlay.Image = Resources.Circled_Pause_Filled_Orange;
                                 }
                                 else
+        
                                 {
                                     //GREEN
                                     if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(84, 204, 84))
@@ -444,30 +430,23 @@ namespace RedSuper_Player
                                 }
                             }
                         }
+                        // ENABLES EQUALIZER ANIMATION
                         pictureBoxEqualizer.Enabled = true;
                     }
                 }
-                
+
                 // RESETS TIMER WHEN MUSIC SELECTED CHANGES
-                timerAudio.Enabled = true;
-            } 
+                timerAudioSongs.Enabled = true;
+            }
         }
 
-       ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        /// <summary>
-        /// CLEARS EVERYTHING ON EXIT
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DisposeWave();
-        }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////// LIST BOX (SELECTING SONGS) ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////// LIST BOX (SELECTING SONGS) ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>
         /// WILL PLAY SELECTED SONG
         /// </summary>
@@ -510,7 +489,7 @@ namespace RedSuper_Player
                 output.Play();
 
                 // BOOL TO RESET TIMER
-                timerAudio.Enabled = true;
+                timerAudioSongs.Enabled = true;
 
                 // TAGS FROM FILE TO EXTRA INFORMATION
                 TagLib.File tagFile = TagLib.File.Create(song);
@@ -521,7 +500,7 @@ namespace RedSuper_Player
                 // EXTRA INFORMATION PLACED ON LABEL
                 bunifuCustomLabelArtistName.Text = artist;
                 bunifuCustomLabelArtistExtraInfo.Text = album;
-                
+
                 //////////////Protection FROM ERRORS
 
                 //Needs to have something written
@@ -539,7 +518,7 @@ namespace RedSuper_Player
                 // FILE TO ADD TO TABS
 
                 var file = TagLib.File.Create(song);
-                
+
                 ////////////////Protection FROM ERRORS
 
                 // If tag has lenght (!= 0) Add the picture
@@ -549,7 +528,7 @@ namespace RedSuper_Player
                     pictureBoxCoverSlider.Image = Image.FromStream(new MemoryStream(bin)).GetThumbnailImage(100, 100, null, IntPtr.Zero);
                     pictureBoxSideCover.Image = Image.FromStream(new MemoryStream(bin)).GetThumbnailImage(170, 170, null, IntPtr.Zero);
                     pictureBoxSideCover.Visible = false;
-                    bunifuTransitionSlidingMenu1.ShowSync(pictureBoxSideCover);
+                    bunifuTransitionSlidingMenuSecondary.ShowSync(pictureBoxSideCover);
                 }
                 else
                 {
@@ -648,7 +627,7 @@ namespace RedSuper_Player
         /// <param name="e"></param>
         private void bunifuSliderVolume_ValueChanged(object sender, EventArgs e)
         {
-            float volume =  bunifuSliderVolume.Value / 100.0f;
+            float volume = bunifuSliderVolume.Value / 100.0f;
             lastVolume = volume;
             wave.Volume = Math.Max(0.00f, volume);
             if (bunifuSliderVolume.Value == 0)
@@ -771,7 +750,7 @@ namespace RedSuper_Player
             // CURRENT TIMER
             string curTime = stream.CurrentTime.ToString("mm\\:ss");
             bunifuCustomLabelStartTimer.Text = curTime;
-            bunifuSliderMain.Value = (int)stream.CurrentTime.TotalSeconds; 
+            bunifuSliderMain.Value = (int)stream.CurrentTime.TotalSeconds;
         }
 
         /// <summary>
@@ -855,7 +834,7 @@ namespace RedSuper_Player
             {
                 wave.Volume = lastVolume;
                 //CHECKS THE COLOR OF THE FORM TO CHANGE ARROW ICON (RED)
-                if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(190, 1, 15)) 
+                if (bunifuFlatButtonBrowse.OnHoverTextColor == Color.FromArgb(190, 1, 15))
                 {
                     bunifuImageButtonMute.Image = Resources.Unmuted_;
                 }
@@ -897,6 +876,7 @@ namespace RedSuper_Player
         // ON 'YOUTUBE' CLICK HIDE PANELS FROM AUDIO AND SHOW YOUTUBE CONTROLS
         private void bunifuFlatButtonYoutube_Click(object sender, EventArgs e)
         {
+            //CHECKS CURRENT TYPE TO AVOID RANDOM ANIMATIONS
             if (webBrowserYoutube.Visible == false)
             {
                 panelVideo.Visible = false;
@@ -920,10 +900,12 @@ namespace RedSuper_Player
             listBoxVideos.Visible = false;
         }
 
+        // ON 'VIDEO' CLICK ADJUST PANELS FOR VIDEO CONTROLS
         private void bunifuFlatButtonVideo_Click(object sender, EventArgs e)
         {
             type = false;
             if (panelVideo.Visible == false)
+            //CHECKS CURRENT TYPE TO AVOID RANDOM ANIMATIONS
             {
                 panelVideo.Visible = true;
                 webBrowserYoutube.Visible = false;
@@ -941,14 +923,14 @@ namespace RedSuper_Player
             webBrowserYoutube.Navigate($"http://youtube.com/v/{VideoId}?version=3");
         }
 
-        // POPS NEW FORM WITH COLORS
+        // POPS NEW FORM WITH COLORS AVAILABLE
         private void bunifuThinButton23_Click(object sender, EventArgs e)
         {
-            FormOptions myOptions= new FormOptions(this);
+            FormColors myOptions = new FormColors(this);
             myOptions.ShowDialog();
         }
 
-        // POPS FORM WITH FOUNDERS INFORMATION
+        // POPS FORM WITH FOUNDERS INFORMATION AND GETHUB LINK ON CLICK
         private void bunifuThinButton24_Click(object sender, EventArgs e)
         {
             FormAbout aboutUs = new FormAbout(this);
@@ -956,9 +938,16 @@ namespace RedSuper_Player
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        ////////////////////////////////////////////////////// COLORS RELATED ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////// COLORS RELATED /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ///// USES GET/SET METHOD TO GET COLOUR FROM SECOND FORM AND APPLY ON MAIN FORM 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        /// <summary>
+        /// Get value, return it, set it on main form
+        /// </summary>
         public Image panelTopImage
         {
             get { return panelTop.BackgroundImage; }
@@ -971,92 +960,90 @@ namespace RedSuper_Player
             set { panelTop.BackColor = value; }
         }
 
-        //Font color for colors button (background color)
         public Color colorsButtonActiveForeColor
         {
-            get { return bunifuThinButton23.ActiveForecolor; }
-            set { bunifuThinButton23.ActiveForecolor = value; }
+            get { return bunifuThinButtonColors.ActiveForecolor; }
+            set { bunifuThinButtonColors.ActiveForecolor = value; }
         }
 
-        //Fill Color for colors button(background color)
         public Color colorsButtonIdleFillColor
         {
-            get { return bunifuThinButton23.IdleFillColor; }
-            set { bunifuThinButton23.IdleFillColor = value; }
+            get { return bunifuThinButtonColors.IdleFillColor; }
+            set { bunifuThinButtonColors.IdleFillColor = value; }
         }
 
         public Color colorsButtonActiveFillColor
         {
-            get { return bunifuThinButton23.ActiveFillColor; }
-            set { bunifuThinButton23.ActiveFillColor = value; }
+            get { return bunifuThinButtonColors.ActiveFillColor; }
+            set { bunifuThinButtonColors.ActiveFillColor = value; }
         }
 
         public Color colorsButtonActiveLineColor
         {
-            get { return bunifuThinButton23.ActiveLineColor; }
-            set { bunifuThinButton23.ActiveLineColor = value; }
+            get { return bunifuThinButtonColors.ActiveLineColor; }
+            set { bunifuThinButtonColors.ActiveLineColor = value; }
         }
 
         public Color colorsButtonForeColor
         {
-            get { return bunifuThinButton23.ForeColor; }
-            set { bunifuThinButton23.ForeColor = value; }
+            get { return bunifuThinButtonColors.ForeColor; }
+            set { bunifuThinButtonColors.ForeColor = value; }
         }
 
         public Color colorsButtonIdleForeColor
         {
-            get { return bunifuThinButton23.IdleForecolor; }
-            set { bunifuThinButton23.IdleForecolor = value; }
+            get { return bunifuThinButtonColors.IdleForecolor; }
+            set { bunifuThinButtonColors.IdleForecolor = value; }
         }
 
         public Color colorsButtonIdleLineColor
         {
-            get { return bunifuThinButton23.IdleLineColor; }
-            set { bunifuThinButton23.IdleLineColor = value; }
+            get { return bunifuThinButtonColors.IdleLineColor; }
+            set { bunifuThinButtonColors.IdleLineColor = value; }
         }
 
-        ////////////
+        //////////// Bunifu Related
 
         public Color aboutButtonActiveForeColor
         {
-            get { return bunifuThinButton24.ActiveForecolor; }
-            set { bunifuThinButton24.ActiveForecolor = value; }
+            get { return bunifuThinButtonAbout.ActiveForecolor; }
+            set { bunifuThinButtonAbout.ActiveForecolor = value; }
         }
 
         public Color aboutButtonIdleFillColor
         {
-            get { return bunifuThinButton24.IdleFillColor; }
-            set { bunifuThinButton24.IdleFillColor = value; }
+            get { return bunifuThinButtonAbout.IdleFillColor; }
+            set { bunifuThinButtonAbout.IdleFillColor = value; }
         }
 
         public Color aboutButtonActiveFillColor
         {
-            get { return bunifuThinButton24.ActiveFillColor; }
-            set { bunifuThinButton24.ActiveFillColor = value; }
+            get { return bunifuThinButtonAbout.ActiveFillColor; }
+            set { bunifuThinButtonAbout.ActiveFillColor = value; }
         }
 
         public Color aboutButtonActiveLineColor
         {
-            get { return bunifuThinButton24.ActiveLineColor; }
-            set { bunifuThinButton24.ActiveLineColor = value; }
+            get { return bunifuThinButtonAbout.ActiveLineColor; }
+            set { bunifuThinButtonAbout.ActiveLineColor = value; }
         }
 
         public Color aboutButtonForeColor
         {
-            get { return bunifuThinButton24.ForeColor; }
-            set { bunifuThinButton24.ForeColor = value; }
+            get { return bunifuThinButtonAbout.ForeColor; }
+            set { bunifuThinButtonAbout.ForeColor = value; }
         }
 
         public Color aboutButtonIdleForeColor
         {
-            get { return bunifuThinButton24.IdleForecolor; }
-            set { bunifuThinButton24.IdleForecolor = value; }
+            get { return bunifuThinButtonAbout.IdleForecolor; }
+            set { bunifuThinButtonAbout.IdleForecolor = value; }
         }
 
         public Color aboutButtonIdleLineColor
         {
-            get { return bunifuThinButton24.IdleLineColor; }
-            set { bunifuThinButton24.IdleLineColor = value; }
+            get { return bunifuThinButtonAbout.IdleLineColor; }
+            set { bunifuThinButtonAbout.IdleLineColor = value; }
         }
 
         public Color topSideLabel
@@ -1197,7 +1184,7 @@ namespace RedSuper_Player
             set { pictureBoxEqualizer.Image = value; }
         }
 
-        ////////////Video
+        ////////////Video Window
 
         public Image fullScreenIcon
         {
@@ -1264,57 +1251,54 @@ namespace RedSuper_Player
             get { return bunifuImageButtonOptionsVideo.Image; }
             set { bunifuImageButtonOptionsVideo.Image = value; }
         }
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////v
-
-        private void bunifuImageButtonSkipToEndVideo_Click(object sender, EventArgs e)
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////// CREATED METHODS TO HELP ON CODE /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>
+        /// ON HOVER CLICK TRANSPARENCY
+        /// </summary>
+        private void hoverButtonsTransparency()
         {
-            int index = listBoxVideos.SelectedIndex;
-            index++;
-            selectedIndex = index;
-            listBoxVideos.SelectedIndex = index;
+            bunifuFlatButtonBrowse.OnHovercolor = Color.DimGray;
+            bunifuFlatButtonVideo.OnHovercolor = Color.DimGray;
+            bunifuFlatButtonYoutube.OnHovercolor = Color.DimGray;
+            bunifuFlatButtonMySongs.OnHovercolor = Color.DimGray;
+            bunifuFlatButtonPlaylists.OnHovercolor = Color.DimGray;
+            bunifuTransitionSlidingMenu.ShowSync(panelMenu);
+            bunifuTransitionSlidingMenu.ShowSync(pictureBoxLogo);
         }
 
-
-        private void listBoxVideos_SelectedIndexChanged(object sender, EventArgs e)
+        /// <summary>
+        /// RESET OUTPUT (CLEAR EVERYTHING)
+        /// </summary>
+        private void DisposeWave()
         {
-
-            var selected = listBoxMusic.SelectedItem;
-            video = new Video(selected.ToString(), false);
-            video.Owner = panelVideo;
-            video.Play();
-        }
-
-        private void bunifuImageButtonSkipToStartVideo_Click(object sender, EventArgs e)
-        {
-            int index = listBoxVideos.SelectedIndex;
-            index--;
-            selectedIndex = index;
-            listBoxVideos.SelectedIndex = index;
-        }
-
-        private void bunifuImageButtonPlayVideo_Click(object sender, EventArgs e)
-        {
-            if (!video.Playing)
+            //CHECKS IF IT'S PLAYING TO STOP
+            if (output != null)
             {
-                video.Play();
+                if (output.PlaybackState == NAudio.Wave.PlaybackState.Playing) output.Stop();
+                output.Dispose();
+                output = null;
             }
-            else if (video.Playing)
+
+            //CHECKS IF IT'S NOT ALREADY NULL
+            if (stream != null)
             {
-                video.Pause();
+                stream.Dispose();
+                stream = null;
             }
+
+            //DISABLES TIMER
+            timerAudioSongs.Enabled = false;
         }
 
-        private void bunifuSliderVolumeVideo_ValueChanged(object sender, EventArgs e)
-        {
-            video.Audio.Volume = bunifuSliderVolumeVideo.Value;
-        }
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        private void bunifuImageButtonFullScreenVideo_Click(object sender, EventArgs e)
-        {
-
-        }
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////// VIDEO RELATED ////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         /*        
         private Video video;
@@ -1470,8 +1454,9 @@ namespace RedSuper_Player
                                     + " / " +
                                     string.Format("{0:00}:{1:00}:{2:00}", maxTime / 3600, (maxTime / 60) % 60, maxTime % 60);
         }
-         */
+            */
 
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+       ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     }
+
 }
