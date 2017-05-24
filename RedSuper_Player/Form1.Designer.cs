@@ -100,6 +100,7 @@
             this.bunifuTransitionSlidingMenuSecondary = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.timerAudioSongs = new System.Windows.Forms.Timer(this.components);
             this.bunifuElipseAnimator = new ns1.BunifuElipse(this.components);
+            this.bunifuThinButtonDeleteSong = new ns1.BunifuThinButton2();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonSlideMenu)).BeginInit();
             this.panelText.SuspendLayout();
@@ -1111,6 +1112,7 @@
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
             this.panelTop.BackgroundImage = global::RedSuper_Player.Properties.Resources.Spotify_Effect_OP1T3;
             this.panelTop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panelTop.Controls.Add(this.bunifuThinButtonDeleteSong);
             this.panelTop.Controls.Add(this.bunifuThinButtonColors);
             this.panelTop.Controls.Add(this.bunifuThinButtonAbout);
             this.panelTop.Controls.Add(this.bunifuCustomLabelVersionText);
@@ -1313,6 +1315,33 @@
             this.bunifuElipseAnimator.ElipseRadius = 5;
             this.bunifuElipseAnimator.TargetControl = this;
             // 
+            // bunifuThinButtonDeleteSong
+            // 
+            this.bunifuThinButtonDeleteSong.ActiveBorderThickness = 1;
+            this.bunifuThinButtonDeleteSong.ActiveCornerRadius = 6;
+            this.bunifuThinButtonDeleteSong.ActiveFillColor = System.Drawing.Color.White;
+            this.bunifuThinButtonDeleteSong.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.bunifuThinButtonDeleteSong.ActiveLineColor = System.Drawing.Color.White;
+            this.bunifuThinButtonDeleteSong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.bunifuThinButtonDeleteSong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButtonDeleteSong.BackgroundImage")));
+            this.bunifuThinButtonDeleteSong.ButtonText = "Del";
+            this.bunifuThinButtonDeleteSong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransitionSlidingMenuSecondary.SetDecoration(this.bunifuThinButtonDeleteSong, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransitionSlidingMenu.SetDecoration(this.bunifuThinButtonDeleteSong, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuThinButtonDeleteSong.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButtonDeleteSong.ForeColor = System.Drawing.Color.White;
+            this.bunifuThinButtonDeleteSong.IdleBorderThickness = 1;
+            this.bunifuThinButtonDeleteSong.IdleCornerRadius = 6;
+            this.bunifuThinButtonDeleteSong.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.bunifuThinButtonDeleteSong.IdleForecolor = System.Drawing.Color.White;
+            this.bunifuThinButtonDeleteSong.IdleLineColor = System.Drawing.Color.White;
+            this.bunifuThinButtonDeleteSong.Location = new System.Drawing.Point(661, 114);
+            this.bunifuThinButtonDeleteSong.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButtonDeleteSong.Name = "bunifuThinButtonDeleteSong";
+            this.bunifuThinButtonDeleteSong.Size = new System.Drawing.Size(45, 45);
+            this.bunifuThinButtonDeleteSong.TabIndex = 15;
+            this.bunifuThinButtonDeleteSong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1440,6 +1469,7 @@
         private ns1.BunifuImageButton bunifuImageButtonSlideVideoList;
         private System.Windows.Forms.ListBox listBoxVideos;
         private ns1.BunifuElipse bunifuElipseAnimator;
+        private ns1.BunifuThinButton2 bunifuThinButtonDeleteSong;
     }
 }
 

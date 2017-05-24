@@ -1400,6 +1400,16 @@
   <metadata name="bunifuDragControlTop.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>959, 17</value>
   </metadata>
+  <data name="bunifuThinButtonDeleteSong.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADvSURBVGhD7ZihDoNAEAX7qxgMBoNBYzAYDJ+EwdRgMGgM
+        hgQuObZ9R0JTgn5Zkp1k1K0YkO+1RpE8TYtmadEsnx29pan4tpV9mkQbaPJdJ1ue/6IRjAfXNLJl2d9X
+        aRBNrq5lH8cQHqLxhxF8PdamKwrxw3BEy7LImiS3h9oER/SX66NWgUUzBBbNEFg0Q2DRDIFFMwQWzRBY
+        NENg0QyBRTMEFs0QWDRDYNEMwYOjnZM1jm+PtHlG+74XV5a3R5rEeop1N0QjGGskJt/roRqTRPz7HSbf
+        EA1dVck+z+H3q2RZzjn6jH6SFs3SojlG8gGJUEF6y9LC1AAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="bunifuThinButtonColors.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAH4AAAAzCAYAAABR5bw6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
