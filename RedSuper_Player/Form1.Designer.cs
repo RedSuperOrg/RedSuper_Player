@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.bunifuImageButtonSlideMenu = new ns1.BunifuImageButton();
             this.panelText = new System.Windows.Forms.Panel();
@@ -89,6 +89,7 @@
             this.bunifuDragControlText = new ns1.BunifuDragControl(this.components);
             this.bunifuDragControlTop = new ns1.BunifuDragControl(this.components);
             this.panelTop = new System.Windows.Forms.Panel();
+            this.bunifuThinButtonDeleteSong = new ns1.BunifuThinButton2();
             this.bunifuThinButtonColors = new ns1.BunifuThinButton2();
             this.bunifuThinButtonAbout = new ns1.BunifuThinButton2();
             this.bunifuCustomLabelVersionText = new ns1.BunifuCustomLabel();
@@ -100,7 +101,6 @@
             this.bunifuTransitionSlidingMenuSecondary = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.timerAudioSongs = new System.Windows.Forms.Timer(this.components);
             this.bunifuElipseAnimator = new ns1.BunifuElipse(this.components);
-            this.bunifuThinButtonDeleteSong = new ns1.BunifuThinButton2();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButtonSlideMenu)).BeginInit();
             this.panelText.SuspendLayout();
@@ -1129,6 +1129,33 @@
             this.panelTop.TabIndex = 1;
             this.panelTop.DoubleClick += new System.EventHandler(this.panelTop_DoubleClick);
             // 
+            // bunifuThinButtonDeleteSong
+            // 
+            this.bunifuThinButtonDeleteSong.ActiveBorderThickness = 1;
+            this.bunifuThinButtonDeleteSong.ActiveCornerRadius = 6;
+            this.bunifuThinButtonDeleteSong.ActiveFillColor = System.Drawing.Color.White;
+            this.bunifuThinButtonDeleteSong.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.bunifuThinButtonDeleteSong.ActiveLineColor = System.Drawing.Color.White;
+            this.bunifuThinButtonDeleteSong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.bunifuThinButtonDeleteSong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButtonDeleteSong.BackgroundImage")));
+            this.bunifuThinButtonDeleteSong.ButtonText = "Del";
+            this.bunifuThinButtonDeleteSong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransitionSlidingMenuSecondary.SetDecoration(this.bunifuThinButtonDeleteSong, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransitionSlidingMenu.SetDecoration(this.bunifuThinButtonDeleteSong, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuThinButtonDeleteSong.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButtonDeleteSong.ForeColor = System.Drawing.Color.White;
+            this.bunifuThinButtonDeleteSong.IdleBorderThickness = 1;
+            this.bunifuThinButtonDeleteSong.IdleCornerRadius = 6;
+            this.bunifuThinButtonDeleteSong.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.bunifuThinButtonDeleteSong.IdleForecolor = System.Drawing.Color.White;
+            this.bunifuThinButtonDeleteSong.IdleLineColor = System.Drawing.Color.White;
+            this.bunifuThinButtonDeleteSong.Location = new System.Drawing.Point(658, 121);
+            this.bunifuThinButtonDeleteSong.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButtonDeleteSong.Name = "bunifuThinButtonDeleteSong";
+            this.bunifuThinButtonDeleteSong.Size = new System.Drawing.Size(48, 38);
+            this.bunifuThinButtonDeleteSong.TabIndex = 15;
+            this.bunifuThinButtonDeleteSong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // bunifuThinButtonColors
             // 
             this.bunifuThinButtonColors.ActiveBorderThickness = 1;
@@ -1155,7 +1182,7 @@
             this.bunifuThinButtonColors.Size = new System.Drawing.Size(126, 51);
             this.bunifuThinButtonColors.TabIndex = 13;
             this.bunifuThinButtonColors.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButtonColors.Click += new System.EventHandler(this.bunifuThinButton23_Click);
+            this.bunifuThinButtonColors.Click += new System.EventHandler(this.bunifuThinButtonColors_Click);
             // 
             // bunifuThinButtonAbout
             // 
@@ -1183,7 +1210,7 @@
             this.bunifuThinButtonAbout.Size = new System.Drawing.Size(126, 51);
             this.bunifuThinButtonAbout.TabIndex = 14;
             this.bunifuThinButtonAbout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButtonAbout.Click += new System.EventHandler(this.bunifuThinButton24_Click);
+            this.bunifuThinButtonAbout.Click += new System.EventHandler(this.bunifuThinButtonAbout_Click);
             // 
             // bunifuCustomLabelVersionText
             // 
@@ -1268,43 +1295,43 @@
             // 
             this.bunifuTransitionSlidingMenu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.bunifuTransitionSlidingMenu.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.bunifuTransitionSlidingMenu.DefaultAnimation = animation2;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.bunifuTransitionSlidingMenu.DefaultAnimation = animation4;
             // 
             // bunifuTransitionSlidingMenuSecondary
             // 
             this.bunifuTransitionSlidingMenuSecondary.AnimationType = BunifuAnimatorNS.AnimationType.ScaleAndRotate;
             this.bunifuTransitionSlidingMenuSecondary.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(30);
-            animation1.RotateCoeff = 0.5F;
-            animation1.RotateLimit = 0.2F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.bunifuTransitionSlidingMenuSecondary.DefaultAnimation = animation1;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(30);
+            animation3.RotateCoeff = 0.5F;
+            animation3.RotateLimit = 0.2F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.bunifuTransitionSlidingMenuSecondary.DefaultAnimation = animation3;
             // 
             // timerAudioSongs
             // 
@@ -1314,33 +1341,6 @@
             // 
             this.bunifuElipseAnimator.ElipseRadius = 5;
             this.bunifuElipseAnimator.TargetControl = this;
-            // 
-            // bunifuThinButtonDeleteSong
-            // 
-            this.bunifuThinButtonDeleteSong.ActiveBorderThickness = 1;
-            this.bunifuThinButtonDeleteSong.ActiveCornerRadius = 6;
-            this.bunifuThinButtonDeleteSong.ActiveFillColor = System.Drawing.Color.White;
-            this.bunifuThinButtonDeleteSong.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
-            this.bunifuThinButtonDeleteSong.ActiveLineColor = System.Drawing.Color.White;
-            this.bunifuThinButtonDeleteSong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
-            this.bunifuThinButtonDeleteSong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButtonDeleteSong.BackgroundImage")));
-            this.bunifuThinButtonDeleteSong.ButtonText = "Del";
-            this.bunifuThinButtonDeleteSong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransitionSlidingMenuSecondary.SetDecoration(this.bunifuThinButtonDeleteSong, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransitionSlidingMenu.SetDecoration(this.bunifuThinButtonDeleteSong, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuThinButtonDeleteSong.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButtonDeleteSong.ForeColor = System.Drawing.Color.White;
-            this.bunifuThinButtonDeleteSong.IdleBorderThickness = 1;
-            this.bunifuThinButtonDeleteSong.IdleCornerRadius = 6;
-            this.bunifuThinButtonDeleteSong.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
-            this.bunifuThinButtonDeleteSong.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButtonDeleteSong.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButtonDeleteSong.Location = new System.Drawing.Point(661, 114);
-            this.bunifuThinButtonDeleteSong.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButtonDeleteSong.Name = "bunifuThinButtonDeleteSong";
-            this.bunifuThinButtonDeleteSong.Size = new System.Drawing.Size(45, 45);
-            this.bunifuThinButtonDeleteSong.TabIndex = 15;
-            this.bunifuThinButtonDeleteSong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 

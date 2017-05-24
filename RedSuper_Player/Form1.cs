@@ -924,14 +924,14 @@ namespace RedSuper_Player
         }
 
         // POPS NEW FORM WITH COLORS AVAILABLE
-        private void bunifuThinButton23_Click(object sender, EventArgs e)
+        private void bunifuThinButtonColors_Click(object sender, EventArgs e)
         {
             FormColors myOptions = new FormColors(this);
             myOptions.ShowDialog();
         }
 
         // POPS FORM WITH FOUNDERS INFORMATION AND GETHUB LINK ON CLICK
-        private void bunifuThinButton24_Click(object sender, EventArgs e)
+        private void bunifuThinButtonAbout_Click(object sender, EventArgs e)
         {
             FormAbout aboutUs = new FormAbout(this);
             aboutUs.ShowDialog();
@@ -1456,7 +1456,7 @@ namespace RedSuper_Player
         }
             */
 
-       ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     }
 
 }
