@@ -49,6 +49,7 @@ namespace RedSuper_Player
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////////////// COLORS RELATED / ON EACH COLOR'S CLICK, GET VALUE AND RETURN //////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
         /// <summary>
         /// GET FOR RED
         /// </summary>
@@ -85,10 +86,22 @@ namespace RedSuper_Player
             fr1Local.playlistsButtonIcon = Properties.Resources.playlist;
             fr1Local.playlistsButtonOnHoverTextColor = Color.FromArgb(190, 1, 15);
             fr1Local.menuButtonIcon = Properties.Resources.Expand_Arrow_96;
-            fr1Local.coverIcon = Properties.Resources.Music_Record_Filled_100;
+            // CHECKS FOR MUSIC COVER
+            if (fr1Local.musicCover != true)
+            {
+                fr1Local.coverIcon = Properties.Resources.Music_Record_Filled_100;
+            }
             fr1Local.trackBarIndicatorColor = Color.FromArgb(190, 1, 15);
             fr1Local.startButtonIcon = Properties.Resources.Skip_to_Start_100;
-            fr1Local.playButtonIcon = Properties.Resources.Circled_Play_100__1_;
+            //CHECKS MUSIC STATUS (PLAYING OR PAUSED)
+            if (fr1Local.musicStatus != true)
+            {
+                fr1Local.playButtonIcon = Properties.Resources.Circled_Play_100__1_;
+            }
+            else
+            {
+                fr1Local.playButtonIcon = Properties.Resources.Circled_Pause_Filled_100;
+            }
             fr1Local.endButtonIcon = Properties.Resources.End_100;
             fr1Local.settingsButtonIcon = Properties.Resources.Horizontal_Settings_Mixer_100;
             fr1Local.soundButtonIcon = Properties.Resources.Unmuted_;
@@ -145,10 +158,22 @@ namespace RedSuper_Player
             fr1Local.playlistsButtonIcon = Properties.Resources.playlistBlue;
             fr1Local.playlistsButtonOnHoverTextColor = Color.FromArgb(0, 72, 251);
             fr1Local.menuButtonIcon = Properties.Resources.Expand_Arrow_Blue;
-            fr1Local.coverIcon = Properties.Resources.Music_Record_FilledBlue;
+            // CHECKS FOR MUSIC COVER
+            if (fr1Local.musicCover != true)
+            {
+                fr1Local.coverIcon = Properties.Resources.Music_Record_FilledBlue;
+            }
             fr1Local.trackBarIndicatorColor = Color.FromArgb(0, 72, 251);
             fr1Local.startButtonIcon = Properties.Resources.Skip_to_Start_Blue;
-            fr1Local.playButtonIcon = Properties.Resources.Circled_Play_100Blue;
+            //CHECKS MUSIC STATUS (PLAYING OR PAUSED)
+            if (fr1Local.musicStatus != true)
+            {
+                fr1Local.playButtonIcon = Properties.Resources.Circled_Play_100Blue;
+            }
+            else
+            {
+                fr1Local.playButtonIcon = Properties.Resources.Circled_Pause_Filled_Blue;
+            }
             fr1Local.endButtonIcon = Properties.Resources.End_Blue;
             fr1Local.settingsButtonIcon = Properties.Resources.Horizontal_Settings_Mixer_Blue;
             fr1Local.soundButtonIcon = Properties.Resources.Room_SoundBlue;
@@ -205,10 +230,22 @@ namespace RedSuper_Player
             fr1Local.playlistsButtonIcon = Properties.Resources.playlistGreen;
             fr1Local.playlistsButtonOnHoverTextColor = Color.FromArgb(84, 204, 84);
             fr1Local.menuButtonIcon = Properties.Resources.Expand_Arrow_Green;
-            fr1Local.coverIcon = Properties.Resources.Music_Record_FilledGreen;
+            // CHECKS FOR MUSIC COVER
+            if (fr1Local.musicCover != true)
+            {
+                fr1Local.coverIcon = Properties.Resources.Music_Record_FilledGreen;
+            }
             fr1Local.trackBarIndicatorColor = Color.FromArgb(84, 204, 84);
             fr1Local.startButtonIcon = Properties.Resources.Skip_to_Start_Green;
-            fr1Local.playButtonIcon = Properties.Resources.Circled_Play_100Green;
+            //CHECKS MUSIC STATUS (PLAYING OR PAUSED)
+            if (fr1Local.musicStatus != true)
+            {
+                fr1Local.playButtonIcon = Properties.Resources.Circled_Play_100Green;
+            }
+            else
+            {
+                fr1Local.playButtonIcon = Properties.Resources.Circled_Pause_Filled_Green;
+            }
             fr1Local.endButtonIcon = Properties.Resources.End_Green;
             fr1Local.settingsButtonIcon = Properties.Resources.Horizontal_Settings_Mixer_Green;
             fr1Local.soundButtonIcon = Properties.Resources.Room_SoundGreen;
@@ -265,10 +302,22 @@ namespace RedSuper_Player
             fr1Local.playlistsButtonIcon = Properties.Resources.playlistOrange;
             fr1Local.playlistsButtonOnHoverTextColor = Color.FromArgb(255, 102, 0);
             fr1Local.menuButtonIcon = Properties.Resources.Expand_Arrow_Orange;
-            fr1Local.coverIcon = Properties.Resources.Music_Record_FilledOrange;
+            // CHECKS FOR MUSIC COVER
+            if (fr1Local.musicCover != true)
+            {
+                fr1Local.coverIcon = Properties.Resources.Music_Record_FilledOrange;
+            }
             fr1Local.trackBarIndicatorColor = Color.FromArgb(255, 102, 0);
             fr1Local.startButtonIcon = Properties.Resources.Skip_to_Start_Orange;
-            fr1Local.playButtonIcon = Properties.Resources.Circled_Play_100Orange;
+            //CHECKS MUSIC STATUS (PLAYING OR PAUSED)
+            if (fr1Local.musicStatus != true)
+            {
+                fr1Local.playButtonIcon = Properties.Resources.Circled_Play_100Orange;
+            }
+            else
+            {
+                fr1Local.playButtonIcon = Properties.Resources.Circled_Pause_Filled_Orange;
+            }
             fr1Local.endButtonIcon = Properties.Resources.End_Orange;
             fr1Local.settingsButtonIcon = Properties.Resources.Horizontal_Settings_Mixer_Orange;
             fr1Local.soundButtonIcon = Properties.Resources.Room_SoundOrange;
@@ -325,10 +374,22 @@ namespace RedSuper_Player
             fr1Local.playlistsButtonIcon = Properties.Resources.playlistPink;
             fr1Local.playlistsButtonOnHoverTextColor = Color.FromArgb(255, 0, 128);
             fr1Local.menuButtonIcon = Properties.Resources.Expand_Arrow_Pink;
-            fr1Local.coverIcon = Properties.Resources.Music_Record_FilledPink;
+            // CHECKS FOR MUSIC COVER
+            if (fr1Local.musicCover != true)
+            {
+                fr1Local.coverIcon = Properties.Resources.Music_Record_FilledPink;
+            }
             fr1Local.trackBarIndicatorColor = Color.FromArgb(255, 0, 128);
             fr1Local.startButtonIcon = Properties.Resources.Skip_to_Start_Pink;
-            fr1Local.playButtonIcon = Properties.Resources.Circled_Play_100Pink;
+            //CHECKS MUSIC STATUS (PLAYING OR PAUSED)
+            if (fr1Local.musicStatus != true)
+            {
+                fr1Local.playButtonIcon = Properties.Resources.Circled_Play_100Pink;
+            }
+            else
+            {
+                fr1Local.playButtonIcon = Properties.Resources.Circled_Pause_Filled_Pink;
+            }
             fr1Local.endButtonIcon = Properties.Resources.End_Pink;
             fr1Local.settingsButtonIcon = Properties.Resources.Horizontal_Settings_Mixer_Pink;
             fr1Local.soundButtonIcon = Properties.Resources.Room_SoundPink;

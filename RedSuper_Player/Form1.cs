@@ -63,6 +63,12 @@ namespace RedSuper_Player
         // BOOLEAN TO CHECK IF IT'S SELECTING VIDEO OR AUDIO
         bool type = true;
 
+        private int selectedIndex = 0;
+
+        private Video video;
+
+        private string[] videoPaths;
+
         /// <summary>
         /// CLEARS EVERYTHING ON EXIT
         /// </summary>
@@ -203,17 +209,17 @@ namespace RedSuper_Player
                 // POPS THE FILE DIALOG
                 if (myOpenFileDialog.ShowDialog() != DialogResult.OK) return;
 
-                // FOR EACH SONG BROWSED, ADD TO THE LISTBOX IF THERE'S NOT A COPY
-                string[] videos = myOpenFileDialog.FileNames;
-                foreach (string video in videos)
+                videoPaths = myOpenFileDialog.FileNames;
+
+                if (videoPaths != null)
                 {
-                    // VERIFIES IF THERE'S ALREADY THAT ONE SONG
-                    if (!videoList.Contains(video))
+                    foreach (string path in videoPaths)
                     {
-                        videoList.Add(video);
+                        videoList.Add(path);
                         listBoxVideos.Refresh();
                     }
                 }
+                listBoxVideos.SelectedIndex = selectedIndex;
 
                 pictureBoxEqualizer.Enabled = false;
             }
@@ -279,12 +285,16 @@ namespace RedSuper_Player
                     }
                 }
 
-                // CALL METHOD FOR TRANSPARENCY ON HOVERING WITH MOUSE
-                hoverButtonsTransparency();
+                // BACK TO DEFAULT COLORSS
+                bunifuFlatButtonBrowse.OnHovercolor = Color.Transparent;
+                bunifuFlatButtonVideo.OnHovercolor = Color.Transparent;
+                bunifuFlatButtonYoutube.OnHovercolor = Color.Transparent;
+                bunifuFlatButtonMySongs.OnHovercolor = Color.Transparent;
+                bunifuFlatButtonPlaylists.OnHovercolor = Color.Transparent;
 
                 // ANIMATIONS FOR HIDING/SHOWING MENUS
-                bunifuTransitionSlidingMenuSecondary.ShowSync(panelText);
                 bunifuTransitionSlidingMenu.HideSync(pictureBoxLogo);
+                bunifuTransitionSlidingMenuSecondary.ShowSync(panelText);
             }
             else
             {
@@ -498,8 +508,8 @@ namespace RedSuper_Player
                 string title = tagFile.Tag.Title;
 
                 // EXTRA INFORMATION PLACED ON LABEL
-                bunifuCustomLabelArtistName.Text = artist;
-                bunifuCustomLabelArtistExtraInfo.Text = album;
+                bunifuCustomLabelArtistName.Text = title;
+                bunifuCustomLabelArtistExtraInfo.Text = artist;
 
                 //////////////Protection FROM ERRORS
 
@@ -1251,6 +1261,19 @@ namespace RedSuper_Player
             get { return bunifuImageButtonOptionsVideo.Image; }
             set { bunifuImageButtonOptionsVideo.Image = value; }
         }
+
+        public Boolean musicCover
+        {
+            get { return pictureBoxEqualizer.Visible; }
+            set { pictureBoxEqualizer.Visible = value; }
+        }
+
+        public Boolean musicStatus
+        {
+            get { return pictureBoxEqualizer.Enabled; }
+            set { pictureBoxEqualizer.Enabled = value; }
+        }
+
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1293,6 +1316,24 @@ namespace RedSuper_Player
             //DISABLES TIMER
             timerAudioSongs.Enabled = false;
         }
+
+        private void listBoxVideos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                video.Stop();
+                video.Dispose();
+            }
+            catch { }
+
+            int index = listBoxVideos.SelectedIndex;
+            selectedIndex = index;
+            video = new Video(videoPaths[index], false);
+            video.Owner = panelVideo;
+            panelVideo.Size = new Size(564, 335);
+            video.Play();
+        }
+
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
